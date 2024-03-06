@@ -2,7 +2,7 @@
 
 <p align="center">
     <img src="https://github.com/Loloxon/Pandefense/assets/92650724/884b8787-2690-4071-9495-35fa94cdc83e">
-p>
+</p>
 
 ### Short description
 ***Help the animals save the pandas from greedy humans. Build strong fortifications that will become a nightmare for your enemies. Face the lumberjacks, the medics, the bulldozers, and even the army as humanity becomes ever so obsessed with razing your home to the ground!
