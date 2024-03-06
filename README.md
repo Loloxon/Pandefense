@@ -1,7 +1,7 @@
 # Pandefense
 
 <p align="center">
-    <img src="https://github.com/Loloxon/Pandefense/assets/92650724/884b8787-2690-4071-9495-35fa94cdc83e">
+    <img src="https://github.com/Loloxon/Pandefense/assets/92650724/c6522945-8da6-43c0-a3d9-e649df1aed65">
 </p>
 
 ### Short description
