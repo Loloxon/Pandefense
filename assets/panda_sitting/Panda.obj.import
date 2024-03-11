@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpq4eicp00ob1"
+path="res://.godot/imported/Panda.obj-ff0c98e4833a3002211ca1dd9517c385.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Panda.obj-ff0c98e4833a3002211ca1dd9517c385.mesh"]
+
+source_file="res://assets/panda_sitting/Panda.obj"
+dest_files=["res://.godot/imported/Panda.obj-ff0c98e4833a3002211ca1dd9517c385.mesh", "res://.godot/imported/Panda.obj-ff0c98e4833a3002211ca1dd9517c385.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
