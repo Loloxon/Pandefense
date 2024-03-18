@@ -1,100 +1,46 @@
-[gd_scene load_steps=6 format=3 uid="uid://c28trobxc6j5a"]
+[gd_scene load_steps=12 format=3 uid="uid://72lu3y2bauhu"]
 
-[ext_resource type="PackedScene" uid="uid://d1536hsmbsop5" path="res://assets/GLTF format/tile_straight.glb" id="1_46vo5"]
-[ext_resource type="PackedScene" uid="uid://dng7v70xpk8o1" path="res://assets/GLTF format/tile.glb" id="1_occex"]
-[ext_resource type="PackedScene" uid="uid://dktivlhj2gvnd" path="res://assets/GLTF format/tile_cornerRound.glb" id="2_qoxic"]
-[ext_resource type="PackedScene" uid="uid://bn7ru2qw0n51i" path="res://assets/GLTF format/tile_endRoundSpawn.glb" id="5_0cdv7"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_v46vx"]
+[ext_resource type="PackedScene" uid="uid://c6gxxdpkt0iev" path="res://assets/tile_endRoundSpawn.glb" id="2_mcfgm"]
+[ext_resource type="PackedScene" uid="uid://bdrnn6npdar2e" path="res://assets/tile_straight.glb" id="2_yhbse"]
+[ext_resource type="PackedScene" uid="uid://kfapvo0krven" path="res://assets/tile_cornerRound.glb" id="3_smncr"]
+[ext_resource type="PackedScene" uid="uid://brj1k4f7ddhcv" path="res://assets/tile_crossing.glb" id="5_q7okj"]
+[ext_resource type="PackedScene" uid="uid://d3t7dcfftj43s" path="res://assets/enemy_ufoGreen.glb" id="6_3i54s"]
+[ext_resource type="PackedScene" uid="uid://cfmwnsfmblns3" path="res://assets/tile.glb" id="6_126yl"]
+[ext_resource type="PackedScene" uid="uid://wvtlhwxwqkkn" path="res://assets/tile_crystal.glb" id="7_3vpw8"]
+[ext_resource type="PackedScene" uid="uid://7m32o5h2v6eb" path="res://assets/tile_rock.glb" id="8_v4qn1"]
+[ext_resource type="PackedScene" uid="uid://chcs51hvpbwnl" path="res://assets/tile_tree.glb" id="9_wbi5n"]
 
-[sub_resource type="GDScript" id="GDScript_8c0cj"]
-script/source = "extends Node3D
-
-@export var tile_straght: PackedScene
-@export var tile_corner: PackedScene
-@export var tile_empty: PackedScene
-@export var tile_spawn: PackedScene
-
-@export var map_length: int = 12
-@export var map_height: int = 4
-
-@export var max_size: int = map_length*map_height
-@export var min_size: int = map_length+10
-
-
-var _pg: PathGenerator
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	_pg = PathGenerator.new(map_length, map_height)
-	_display_path()
-	
-func _complete_grid(_path):
-	for x in range(map_length+1):
-		for y in range(-map_height, map_height+1):
-			if not _path.has(Vector2i(x, y)):
-				var tile: Node3D = tile_empty.instantiate()
-				var tile_rotation = Vector3(0, 0, 0)
-				add_child(tile)
-				tile.global_position = Vector3(x, 0, y)
-				tile.global_rotation_degrees = tile_rotation
-
-func _display_path():
-	var _path: Array[Vector2i] = _pg.generate_path()
-	
-	while _path.size() > max_size or _path.size() < min_size:
-		_path = _pg.generate_path()
-		
-	#print(_path)
-	for element in _path:
-		var tile_score: int = _pg.get_tile_score(element)
-		var tile: Node3D = tile_empty.instantiate()
-		var tile_rotation: Vector3 = Vector3.ZERO
-		
-		if tile_score == 2:
-			tile = tile_spawn.instantiate()
-			tile_rotation = Vector3(0, 270, 0)
-		elif tile_score == 8:
-			tile = tile_spawn.instantiate()
-			tile_rotation = Vector3(0, 90, 0)
-			
-		elif tile_score == 10:
-			tile = tile_straght.instantiate()
-			tile_rotation = Vector3(0, 90, 0)
-		elif tile_score == 5:
-			tile = tile_straght.instantiate()
-			tile_rotation = Vector3(0, 0, 0)
-			
-		elif tile_score == 3:
-			tile = tile_corner.instantiate()
-			tile_rotation = Vector3(0, 270, 0)
-		elif tile_score == 6:
-			tile = tile_corner.instantiate()
-			tile_rotation = Vector3(0, 180, 0)
-		elif tile_score == 12:
-			tile = tile_corner.instantiate()
-			tile_rotation = Vector3(0, 90, 0)
-		elif tile_score == 9:
-			tile = tile_corner.instantiate()
-			tile_rotation = Vector3(0, 0, 0)
-
-		
-		add_child(tile)
-		tile.global_position = Vector3(element.x, 0, element.y)
-		tile.global_rotation_degrees = tile_rotation
-		
-		_complete_grid(_path)
-
-"
+[sub_resource type="Environment" id="Environment_wmip2"]
+background_mode = 1
+background_color = Color(0.223529, 0.247059, 0.411765, 1)
+ssao_enabled = true
+ssil_enabled = true
+glow_normalized = true
+glow_intensity = 1.13
+glow_strength = 1.5
 
 [node name="main" type="Node3D"]
-script = SubResource("GDScript_8c0cj")
-tile_straght = ExtResource("1_46vo5")
-tile_corner = ExtResource("2_qoxic")
-tile_empty = ExtResource("1_occex")
-tile_spawn = ExtResource("5_0cdv7")
+script = ExtResource("1_v46vx")
+tile_start = ExtResource("2_mcfgm")
+tile_end = ExtResource("2_mcfgm")
+tile_straight = ExtResource("2_yhbse")
+tile_corner = ExtResource("3_smncr")
+tile_crossroads = ExtResource("5_q7okj")
+tile_enemy = ExtResource("6_3i54s")
+tile_empty = Array[PackedScene]([ExtResource("7_3vpw8"), ExtResource("8_v4qn1"), ExtResource("9_wbi5n"), ExtResource("6_126yl"), ExtResource("6_126yl"), ExtResource("6_126yl"), ExtResource("6_126yl")])
+min_path_size = 42
+max_path_size = 60
+min_loops = 2
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 6, 6, 4)
-fov = 90.5559
+transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 7.5, 9, 9.5)
+fov = 60.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 8, 8)
+transform = Transform3D(-0.194673, -0.96642, 0.167732, 0.385333, 0.0819051, 0.919135, -0.902009, 0.243563, 0.356449, 0, 3.43783, 12.0872)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wmip2")
