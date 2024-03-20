@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="Tower Defense Tutorial 2"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://main/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"

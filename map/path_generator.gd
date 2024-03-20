@@ -7,9 +7,11 @@ var _loop_count:int
 
 var _path: Array[Vector2i]
 
-func _init(length:int, height:int):
-	_grid_length = length
-	_grid_height = height
+const path_config: PathGeneratorConfig = preload("res://resources/basic_path_config.res")
+
+func _init():
+	_grid_length = path_config.map_length
+	_grid_height = path_config.map_height
 
 ## Function that does the main amount of work! Generates a random path going left to right, up or
 ## down as it goes along. If add_loops is true, a post path function takes place to see where a 
