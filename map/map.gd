@@ -6,21 +6,7 @@ var _path_generator: PathGenerator
 
 func _init():
 	_path_generator = PathGenerator.new()
-	_generate_path()
-
-func _generate_path():
-	var iteration_count:int = 1
-	_path_generator.generate_path(true)
-
-	while _path_generator.get_path().size() < path_config.min_path_size or\
-	 _path_generator.get_path().size() > path_config.max_path_size or\
-	 _path_generator.get_loop_count() < path_config.min_loops or\
-	 _path_generator.get_loop_count() > path_config.max_loops:
-		iteration_count += 1
-		_path_generator.generate_path(true)
-
-	print("Generated a path of %d tiles after %d iterations" % [_path_generator.get_path().size(), iteration_count])
-	print(_path_generator.get_path())
+	_path_generator.generate_path()
 
 
 func get_path():
@@ -29,7 +15,7 @@ func get_path():
 
 func display(main):
 	_display_path(main)
-	_complete_grid(main)
+	_display_complete_grid(main)
 
 
 func _display_path(main):
@@ -45,7 +31,7 @@ func _display_path(main):
 		tile.global_rotation_degrees = tile_rotation
 
 
-func _complete_grid(main):
+func _display_complete_grid(main):
 	for x in range(path_config.map_length):
 		for y in range(path_config.map_height):
 			if not _path_generator.get_path().has(Vector2i(x,y)):
