@@ -1,4 +1,3 @@
-extends Resource
-class_name EnemiesTilesConfig
+class_name EnemiesTilesConfig extends Resource
 
 @export var panda_tile:PackedScene

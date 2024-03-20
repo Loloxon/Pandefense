@@ -1,17 +1,12 @@
-extends Node3D
-
-
-var _map:Map
+class_name Main extends Node3D
 
 
 func _ready():
-	_map = Map.new(self)
-	
-	_map._display_path()
-	_map._complete_grid()
+	var _map:Map = Map.new()
+	_map.display(self)
 	
 	await get_tree().create_timer(2).timeout
-	
+
 	var pan:Panda = Panda.new(self)
-	pan._pop_along_grid(_map)
+	pan._move_along(_map.get_path())
 	

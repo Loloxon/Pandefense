@@ -1,23 +1,23 @@
-extends Object
-class_name Enemy
+class_name Enemy extends Object
 
-var _tile:PackedScene
 var _main
+var _box
 
 func _init(tile, main):
-	_tile = tile
 	_main = main
+	_create_model(tile)
 
-func _pop_along_grid(map):
-	var _path_generator = map.get_path_gen()
-	var box = _tile.instantiate()
-	
-	box.global_rotation_degrees = Vector3(0, 180, 0)
-	box.scale = Vector3(0.4, 0.4, 0.4)
-	
+
+func _create_model(tile):
+	_box = tile.instantiate()
+	_box.global_rotation_degrees = Vector3(0, 180, 0)
+	_box.scale = Vector3(0.4, 0.4, 0.4)
+
+
+func _move_along(_path):
 	var c3d:Curve3D = Curve3D.new()
 	
-	for element in _path_generator.get_path():
+	for element in _path:
 		c3d.add_point(Vector3(element.x, 0.1, element.y))
 
 	var p3d:Path3D = Path3D.new()
@@ -26,7 +26,7 @@ func _pop_along_grid(map):
 	
 	var pf3d:PathFollow3D = PathFollow3D.new()
 	p3d.add_child(pf3d)
-	pf3d.add_child(box)
+	pf3d.add_child(_box)
 	
 	var curr_distance:float = 0.0
 	

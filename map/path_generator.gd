@@ -1,11 +1,10 @@
-extends Object
-class_name PathGenerator
+class_name PathGenerator extends Object
 
 var _grid_length:int
 var _grid_height:int
 var _loop_count:int
 
-var _path: Array[Vector2i]
+var _path:Array[Vector2i]
 
 const path_config: PathGeneratorConfig = preload("res://resources/basic_path_config.res")
 
