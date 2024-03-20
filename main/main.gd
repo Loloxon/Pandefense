@@ -1,12 +1,11 @@
 class_name Main extends Node3D
 
 
-func _ready():
-	var _map:Map = Map.new()
-	_map.display(self)
-	
-	await get_tree().create_timer(2).timeout
+var map:Map = Map.new()
+var wave_manager:WaveManager = WaveManager.new(self, map)
 
-	var pan:Panda = Panda.new(self)
-	pan._move_along(_map.get_path())
-	
+func _ready():
+	map.display(self)
+
+	wave_manager.spawn_wave()
+	wave_manager.simulate_fights()

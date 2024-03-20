@@ -1,7 +1,5 @@
 class_name PathGenerator extends Object
 
-var _grid_length:int
-var _grid_height:int
 var _loop_count:int
 
 var _path:Array[Vector2i]
@@ -9,30 +7,44 @@ var _path:Array[Vector2i]
 const path_config: PathGeneratorConfig = preload("res://resources/basic_path_config.res")
 
 func _init():
-	_grid_length = path_config.map_length
-	_grid_height = path_config.map_height
+	pass
+
+func generate_path():
+	var iteration_count:int = 1
+	_generate_path(path_config.add_loops)
+
+	while get_path().size() < path_config.min_path_size or\
+	 get_path().size() > path_config.max_path_size or\
+	 get_loop_count() < path_config.min_loops or\
+	 get_loop_count() > path_config.max_loops:
+		iteration_count += 1
+		_generate_path(path_config.add_loops)
+
+	print("Generated a path of %d tiles after %d iterations" % [get_path().size(), iteration_count])
+	print(get_path())
+
 
 ## Function that does the main amount of work! Generates a random path going left to right, up or
 ## down as it goes along. If add_loops is true, a post path function takes place to see where a 
 ## loop could be placed. Note that loops can contain loops within them, making for some
 ## interesting results!
-func generate_path(add_loops:bool = false):
+func _generate_path(add_loops:bool = false):
 	_path.clear()
 	_loop_count = 0
 	randomize()
 	
 	var x = 0
-	var y = int(_grid_height/2.0)
+	var y = int(path_config.map_height/2.0)
 	
-	while x < _grid_length:
+	while x < path_config.map_length:
 		if not _path.has(Vector2i(x,y)):
 			_path.append(Vector2i(x,y))
 		
 		var choice:int = randi_range(0,2)
 
-		if choice == 0 or x < 2 or x % 2 == 0 or x == _grid_length-1:
+		if choice == 0 or x < 2 or x % 2 == 0 or x == path_config.map_length-1:
 			x += 1
-		elif choice == 1 and y < _grid_height-2 and not _path.has(Vector2i(x,y+1)):
+		elif choice == 1 and y < path_config.map_height-2 and not _path.has(Vector2i(x,y+1)):
 			y += 1
 		elif choice == 2 and y > 1 and not _path.has(Vector2i(x,y-1)):
 			y -= 1
@@ -90,7 +102,7 @@ func _is_loop_option(index:int) -> Array[Vector2i]:
 	var return_path:Array[Vector2i]
 
 	#Yellow
-	if (x < _grid_length-1 and y > 1
+	if (x < path_config.map_length-1 and y > 1
 		and _tile_loc_free(x, y-3) and _tile_loc_free(x+1, y-3) and _tile_loc_free(x+2, y-3)		
 		and _tile_loc_free(x-1, y-2) and _tile_loc_free(x, y-2) and _tile_loc_free(x+1, y-2) and _tile_loc_free(x+2, y-2) and _tile_loc_free(x+3, y-2)
 		and _tile_loc_free(x-1, y-1) and _tile_loc_free(x, y-1) and _tile_loc_free(x+1, y-1) and _tile_loc_free(x+2, y-1) and _tile_loc_free(x+3, y-1)
@@ -118,7 +130,7 @@ func _is_loop_option(index:int) -> Array[Vector2i]:
 		_loop_count += 1
 		return_path.append(Vector2i(x,y))
 	#Red
-	elif (x < _grid_length-1 and y < _grid_height-2
+	elif (x < path_config.map_length-1 and y < path_config.map_height-2
 			and _tile_loc_free(x, y+3) and _tile_loc_free(x+1, y+3) and _tile_loc_free(x+2, y+3)		
 			and _tile_loc_free(x+1, y-1) and _tile_loc_free(x+2, y-1)
 			and _tile_loc_free(x+1, y) and _tile_loc_free(x+2, y) and _tile_loc_free(x+3, y)
@@ -132,7 +144,7 @@ func _is_loop_option(index:int) -> Array[Vector2i]:
 		_loop_count += 1
 		return_path.append(Vector2i(x,y))
 	# Brown
-	elif (x > 2 and y < _grid_height-2
+	elif (x > 2 and y < path_config.map_height-2
 			and _tile_loc_free(x, y+3) and _tile_loc_free(x-1, y+3) and _tile_loc_free(x-2, y+3)
 			and _tile_loc_free(x-1, y-1) and _tile_loc_free(x-2, y-1)
 			and _tile_loc_free(x-1, y) and _tile_loc_free(x-2, y) and _tile_loc_free(x-3, y)
