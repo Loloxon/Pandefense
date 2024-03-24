@@ -14,10 +14,10 @@ func spawn_wave():
 	_create_wave()
 	_move_wave()
 	while true:
-		print(wave)
-		for e in wave:
-			if e.is_alive():
-				print(e.get_info())
+		#print(wave)
+		#for e in wave:
+			#if e.is_alive():
+				#print(e.get_info())
 		await _main.get_tree().create_timer(1).timeout
 
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvpgx5dmcfpy2"]
+
+[ext_resource type="PackedScene" uid="uid://b6a0glf6yo3mt" path="res://assets/GLTF format/towerRound_base.glb" id="1_0tf78"]
+[ext_resource type="Script" path="res://towers/initial_turret.gd" id="1_q2c1u"]
+[ext_resource type="PackedScene" uid="uid://da7v3ibf8dac1" path="res://assets/GLTF format/weapon_cannon.glb" id="2_5ph5i"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tcibm"]
+radius = 2.0
+
+[node name="Turret_testing" type="Node3D"]
+script = ExtResource("1_q2c1u")
+
+[node name="towerRound_base2" parent="." instance=ExtResource("1_0tf78")]
+
+[node name="weapon_cannon2" parent="." instance=ExtResource("2_5ph5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+
+[node name="PatrolZone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PatrolZone"]
+shape = SubResource("CylinderShape3D_tcibm")
+
+[connection signal="area_entered" from="PatrolZone" to="." method="_on_patrol_zone_area_entered"]
+[connection signal="area_exited" from="PatrolZone" to="." method="_on_patrol_zone_area_exited"]
