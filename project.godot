@@ -14,3 +14,8 @@ config/name="Tower Defense Tutorial 2"
 run/main_scene="res://main/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[layer_names]
+
+3d_physics/layer_1="Path"
+3d_physics/layer_2="Enemy"
