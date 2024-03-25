@@ -24,7 +24,7 @@ func _ready():
 
 
 func _physics_process(_delta):
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if _is_dragged:
 		var space_state = _draggable.get_world_3d().direct_space_state
 		var mouse_pos:Vector2 = get_viewport().get_mouse_position()
 		var origin:Vector3 = _camera.project_ray_origin(mouse_pos)
@@ -74,7 +74,6 @@ func _process(delta):
 
 func _on_button_down():
 	_is_dragged = true
-
 
 func _on_button_up():
 	_is_dragged = false

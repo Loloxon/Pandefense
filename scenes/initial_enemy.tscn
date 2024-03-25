@@ -6,11 +6,11 @@
 radius = 1.5
 height = 6.0
 
-[node name="initial_enemy" type="Node3D"]
+[node name="initial_enemy" type="Node3D" groups=["enemy"]]
 
 [node name="uploads_files_3834887_panda" parent="." instance=ExtResource("1_jcceq")]
 
-[node name="Area3D" type="Area3D" parent="uploads_files_3834887_panda"]
+[node name="Area3D" type="Area3D" parent="uploads_files_3834887_panda" groups=["enemy"]]
 collision_layer = 2
 collision_mask = 0
 
