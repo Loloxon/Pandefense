@@ -65,15 +65,11 @@ func apply_material_on_children(node:Node, with_error:bool=true):
 func set_material_on_mesh(mesh: MeshInstance3D, material_to_apply:BaseMaterial3D=null):
 	for surface in mesh.mesh.get_surface_count():
 		mesh.set_surface_override_material(surface, material_to_apply)
-	
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
 func _on_button_down():
 	_is_dragged = true
+	_is_location_valid = false
 
 func _on_button_up():
 	_is_dragged = false
@@ -81,5 +77,5 @@ func _on_button_up():
 	
 	if _is_location_valid:
 		var new_tower = button_draggable.instantiate()
-		add_child(new_tower)
+		get_viewport().add_child(new_tower)
 		new_tower.global_position = _last_valid_location
