@@ -23,3 +23,4 @@ enabled=PackedStringArray("res://addons/godot_state_charts/plugin.cfg")
 
 3d_physics/layer_1="Path"
 3d_physics/layer_2="Enemy"
+3d_physics/layer_3="projectiles"
