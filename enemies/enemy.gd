@@ -1,4 +1,4 @@
-class_name Enemy extends Object
+class_name Enemy extends Node3D
 
 var _main:Main
 var _wave_manager:WaveManager
@@ -87,16 +87,5 @@ func _kill():
 	_box.hide()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+func _on_area_3d_area_entered(area):
+	print("Hit!")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cus8ewxk4bj5p"]
+
+[ext_resource type="PackedScene" uid="uid://j0ahhs5y6o7q" path="res://assets/uploads_files_3834887_panda.glb" id="1_jcceq"]
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_w32ws"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_40dy7"]
+radius = 1.5
+height = 6.0
+
+[node name="initial_enemy" type="Node3D" groups=["enemy"]]
+script = ExtResource("1_w32ws")
+
+[node name="uploads_files_3834887_panda" parent="." instance=ExtResource("1_jcceq")]
+
+[node name="Area3D" type="Area3D" parent="uploads_files_3834887_panda" groups=["enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="uploads_files_3834887_panda/Area3D"]
+shape = SubResource("CapsuleShape3D_40dy7")
+
+[connection signal="area_entered" from="uploads_files_3834887_panda/Area3D" to="." method="_on_area_3d_area_entered"]

@@ -14,3 +14,13 @@ config/name="Tower Defense Tutorial 2"
 run/main_scene="res://main/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_state_charts/plugin.cfg")
+
+[layer_names]
+
+3d_physics/layer_1="Path"
+3d_physics/layer_2="Enemy"
+3d_physics/layer_3="projectiles"
