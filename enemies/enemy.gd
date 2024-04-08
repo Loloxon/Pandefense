@@ -3,6 +3,7 @@ class_name Enemy extends Node3D
 var _main:Main
 var _wave_manager:WaveManager
 var _box:Node3D
+@onready var _movement_animation:AnimationPlayer
 var _max_hp:float
 var _current_hp:float
 var _speed:float
@@ -30,6 +31,9 @@ func _check_validity():
 func _create_model():
 	_box.global_rotation_degrees = Vector3(0, 180, 0)
 	_box.scale = Vector3(0.4, 0.4, 0.4)
+	print(_movement_animation)
+	$woman_running/AnimationPlayer.play("mixamo_com")
+	#_movement_animation.play()
 
 
 func move_along(_path):
@@ -53,7 +57,7 @@ func move_along(_path):
 	while curr_distance < c3d.point_count-1:
 		curr_distance += _speed
 		pf3d.progress = clamp(curr_distance, 0, c3d.point_count-1.00001)
-		await _main.get_tree().create_timer(0.01).timeout		
+		await _main.get_tree().create_timer(0.01).timeout
 
 func instakill():
 	_kill()
