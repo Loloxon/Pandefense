@@ -23,3 +23,4 @@ func _process(delta):
 		
 	else:
 		queue_free()
+

@@ -1,6 +1,5 @@
 class_name Main extends Node3D
 
-
 var map:Map = Map.new()
 var wave_manager:WaveManager = WaveManager.new(self, map)
 

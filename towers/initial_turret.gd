@@ -2,6 +2,7 @@ extends Node3D
 
 @export var attack_speed_rate:int = 1000
 @export var tower_projectile:PackedScene = null
+@export var tower_dmg:int = 5
 
 var _enemies_in_range:Array[Node3D]
 var _slerp_progress:float = 0
@@ -77,3 +78,11 @@ func _fire_projectile_if_possible():
 
 func _on_attacking_state_entered():
 	_latest_projectile_fired = 0
+	
+func _on_enemy_area_3d_area_entered(area):
+	print("Hit!")
+	#print(area.get_node(".."))
+	#print(area.get_node("../.."))
+	#print(area.get_node("../../.."))
+	#print(area.get_node("../../..")._current_enemy)
+

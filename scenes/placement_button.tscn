@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bp7qr10cgion5"]
 
-[ext_resource type="Script" path="res://tower_button.gd" id="1_qpr2p"]
+[ext_resource type="Script" path="res://buttons/tower_button.gd" id="1_qpr2p"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ug3ce"]
 
