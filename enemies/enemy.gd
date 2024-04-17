@@ -41,16 +41,23 @@ func heal_dmg(heal):
 
 
 func _resize_model():
-	_instance.scale = Vector3(_current_hp/_max_hp*0.6, _current_hp/_max_hp*0.6, _current_hp/_max_hp*0.6)
+	pass
 
 func is_alive():
 	return _alive
 
 
 func _check_if_dying():
-	if _current_hp<=0:
+	if _current_hp<=3:
 		_kill()
 
 func _kill():
+	print("Dead!")
 	_alive = false
-	_instance.hide()
+	queue_free()
+
+func _on_enemy_area_3d_area_entered(area):
+	print("Hit!")
+	receive_dmg(area.get_node("../../..").tower_dmg)
+	area.get_node("../..").destroy_projectile()
+	

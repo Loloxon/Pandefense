@@ -1,10 +1,11 @@
-class_name WaveManager extends Object
+class_name WaveManager extends Node
 
 var enemies_number:int = 5
 var delay:float = 2
 var _main:Main
 var _map:Map
 var wave:Array[Enemy]
+var woman_walking_scene = preload("res://scenes/enemies/woman_walking_scene.tscn")
 
 func _init(main, map):
 	_main = main
@@ -42,8 +43,7 @@ func kill_enemy(enemy):
 
 func _create_wave():
 	for i in range(enemies_number):
-		wave.append(WomanEnemy.new())
-		#wave.append()
+		wave.append(woman_walking_scene.instantiate())
 
 
 func _move_wave():
@@ -66,17 +66,13 @@ func move_along(e, path):
 	
 	var pf3d:PathFollow3D = PathFollow3D.new()
 	p3d.add_child(pf3d)
-	#e.instantiate()
-	pf3d.add_child(e._instance)
-	e._create_model()
-	#print(e)
-	#print(e._max_hp)
-	#print(e.position())
 	
+	pf3d.add_child(e)
+	e._create_model()	
 	
 	var curr_distance:float = 0.0
 	
-	while curr_distance < c3d.point_count-1:
+	while is_instance_valid(e) and curr_distance < c3d.point_count-1:
 		curr_distance += e._speed
 		pf3d.progress = clamp(curr_distance, 0, c3d.point_count-1.00001)
 		e._movement_animation.play("mixamo_com")
