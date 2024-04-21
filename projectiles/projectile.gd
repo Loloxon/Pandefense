@@ -16,10 +16,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if target != null and lerp_pos < 1:
+	if target != null:
 		global_position = starting_position.lerp(target.global_position, lerp_pos)
 		global_rotation_degrees += rotation_speed_deg
 		lerp_pos += delta * speed
 		
 	else:
 		queue_free()
+
+func destroy_projectile():
+	queue_free()

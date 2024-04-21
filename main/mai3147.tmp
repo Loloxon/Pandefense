@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://72lu3y2bauhu"]
+
+[ext_resource type="Script" path="res://main/main.gd" id="1_v46vx"]
+[ext_resource type="PackedScene" uid="uid://bp7qr10cgion5" path="res://scenes/placement_button.tscn" id="2_syn2g"]
+[ext_resource type="Texture2D" uid="uid://bmf8k8ajvpw6i" path="res://images/cannon01a.png" id="3_yqrt0"]
+[ext_resource type="PackedScene" uid="uid://cvpgx5dmcfpy2" path="res://scenes/initial_turret.tscn" id="4_2ving"]
+
+[sub_resource type="Environment" id="Environment_wmip2"]
+background_mode = 1
+background_color = Color(0.223529, 0.247059, 0.411765, 1)
+ssao_enabled = true
+ssil_enabled = true
+glow_normalized = true
+glow_intensity = 1.13
+glow_strength = 1.5
+adjustment_enabled = true
+adjustment_contrast = 1.25
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_v46vx")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 7.5, 9, 9.5)
+fov = 60.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.194673, -0.96642, 0.167732, 0.385333, 0.0819051, 0.919135, -0.902009, 0.243563, 0.356449, 0, 3.43783, 12.0872)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wmip2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 0.999
+anchor_bottom = 1.003
+offset_right = 0.151855
+offset_bottom = 0.0559692
+
+[node name="placement_Button" parent="Control" instance=ExtResource("2_syn2g")]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -99.0
+offset_right = 48.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+button_icon = ExtResource("3_yqrt0")
+button_draggable = ExtResource("4_2ving")
