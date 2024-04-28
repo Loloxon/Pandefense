@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqwx4yqf11i21"]
+
+[ext_resource type="Script" path="res://scenes/audio_manager/audio_manager.gd" id="1_0kwnb"]
+[ext_resource type="AudioStream" uid="uid://6wewnre1mw0m" path="res://audio/panda_theme_song.ogg" id="1_1dk6o"]
+
+[node name="AudioManager" type="Node3D"]
+script = ExtResource("1_0kwnb")
+
+[node name="Music_player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_1dk6o")
+volume_db = -32.0
+autoplay = true
+
+[node name="projectile_effect_player" type="Node3D" parent="."]
+
+[node name="projectile_effect1" type="AudioStreamPlayer" parent="projectile_effect_player"]
+volume_db = -15.0
+
+[node name="projectile_effect2" type="AudioStreamPlayer" parent="projectile_effect_player"]
+volume_db = -15.0
+
+[node name="enemy_effect_player" type="Node3D" parent="."]
+
+[node name="enemy_effect1" type="AudioStreamPlayer" parent="enemy_effect_player"]
+
+[node name="enemy_effect2" type="AudioStreamPlayer" parent="enemy_effect_player"]

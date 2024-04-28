@@ -2,6 +2,7 @@ class_name Enemy extends Node3D
 
 @onready var _instance:Node3D
 @onready var _movement_animation:AnimationPlayer
+
 var _max_hp:float
 var _current_hp:float
 var _speed:float
@@ -32,7 +33,8 @@ func instakill():
 func receive_dmg(dmg):
 	_current_hp = max(snappedf(_current_hp-dmg, 0.01), 0)
 	_check_if_dying()
-	_resize_model()
+	_change_health_bar()
+	#_resize_model() -> turned off in favour of health bar
 
 
 func heal_dmg(heal):
@@ -43,21 +45,21 @@ func heal_dmg(heal):
 func _resize_model():
 	pass
 
+func _change_health_bar():
+	pass
+
 func is_alive():
 	return _alive
 
 
 func _check_if_dying():
-	if _current_hp<=3:
+	if _current_hp<=0:
 		_kill()
 
 func _kill():
-	print("Dead!")
-	_alive = false
-	queue_free()
+	pass
 
 func _on_enemy_area_3d_area_entered(area):
-	print("Hit!")
 	receive_dmg(area.get_node("../../..").tower_dmg)
 	area.get_node("../..").destroy_projectile()
 	

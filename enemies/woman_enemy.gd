@@ -1,5 +1,7 @@
 class_name WomanEnemy extends "res://enemies/enemy.gd"
 
+@export var dying_sound = load("res://audio/body_fall_short.mp3")
+@onready var health_bar = $woman_walking/Area3D/health_bar/ProgressBar
 
 func _init():
 	_speed = 0.02
@@ -13,4 +15,12 @@ func _create_model():
 	_movement_animation = $woman_walking/AnimationPlayer
 
 func _resize_model():
-	$woman_walking.scale = Vector3(_current_hp/_max_hp*0.6, _current_hp/_max_hp*0.6, _current_hp/_max_hp*0.6)
+	$woman_walking.scale = Vector3(_current_hp/_max_hp*0.4, _current_hp/_max_hp*0.4, _current_hp/_max_hp*0.4)
+
+func _change_health_bar():
+	health_bar.value = (_current_hp * 100) / _max_hp
+
+func _kill():
+	_alive = false
+	AudioManager.play_effect(dying_sound, "enemy")
+	queue_free()

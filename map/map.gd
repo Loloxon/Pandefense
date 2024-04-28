@@ -35,7 +35,18 @@ func _display_complete_grid(main):
 	for x in range(path_config.map_length):
 		for y in range(path_config.map_height):
 			if not _path_generator.get_path().has(Vector2i(x,y)):
-				var tile:Node3D = tile_config.tile_empty.pick_random().instantiate()
+				var tile:Node3D = tile_config.tile_empty[0].instantiate()
+				
+				if not (_path_generator.get_path().has(Vector2i(x-1,y)) 
+					or _path_generator.get_path().has(Vector2i(x+1,y)) 
+					or _path_generator.get_path().has(Vector2i(x,y-1))
+					or _path_generator.get_path().has(Vector2i(x,y+1))
+					or _path_generator.get_path().has(Vector2i(x+1,y+1))
+					or _path_generator.get_path().has(Vector2i(x-1,y+1))
+					or _path_generator.get_path().has(Vector2i(x-1,y-1))
+					or _path_generator.get_path().has(Vector2i(x+1,y-1))):
+					tile = tile_config.tile_empty.pick_random().instantiate()
+					
 				main.add_child(tile)
 				tile.global_position = Vector3(x, 0, y)
 				tile.global_rotation_degrees = Vector3(0, randi_range(0,3)*90, 0)
