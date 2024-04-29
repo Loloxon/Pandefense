@@ -55,3 +55,12 @@ grow_horizontal = 2
 grow_vertical = 0
 button_icon = ExtResource("3_yqrt0")
 button_draggable = ExtResource("4_2ving")
+activity_cost = 40
+
+[node name="money_label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 28
+text = "Money: 0 ¥"
+horizontal_alignment = 1

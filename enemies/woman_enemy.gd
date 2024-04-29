@@ -6,6 +6,7 @@ class_name WomanEnemy extends "res://enemies/enemy.gd"
 func _init():
 	_speed = 0.02
 	_max_hp = 10
+	_kill_reward = 15
 	super._init()
 
 func _create_model():
@@ -23,4 +24,5 @@ func _change_health_bar():
 func _kill():
 	_alive = false
 	AudioManager.play_effect(dying_sound, "enemy")
+	$"../../..".money += _kill_reward
 	queue_free()
