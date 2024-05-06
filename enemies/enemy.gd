@@ -28,7 +28,7 @@ func _create_model():
 
 
 func instakill():
-	_kill()
+	_kill(false)
 
 
 func receive_dmg(dmg):
@@ -55,12 +55,16 @@ func is_alive():
 
 func _check_if_dying():
 	if _current_hp<=0:
-		_kill()
+		_kill(false)
 
-func _kill():
+func _kill(by_base:bool):
 	pass
 
 func _on_enemy_area_3d_area_entered(area):
-	receive_dmg(area.get_node("../../..").tower_dmg)
-	area.get_node("../..").destroy_projectile()
+	var groups = area.get_groups()
+	if len(groups) > 0 and groups[0] == "base":
+		_kill(true)
+	else:
+		receive_dmg(area.get_node("../../..").tower_dmg)
+		area.get_node("../..").destroy_projectile()
 	

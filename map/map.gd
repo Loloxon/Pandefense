@@ -61,7 +61,7 @@ func _score_to_tile(tile_score):
 		tile_rotation = Vector3(0, 270, 0)
 	elif tile_score == 8:
 		tile = tile_config.tile_end.instantiate()
-		tile_rotation = Vector3(0, 90, 0)
+		#tile_rotation = Vector3(0, 90, 0)
 		
 	elif tile_score == 10:
 		tile = tile_config.tile_straight.instantiate()

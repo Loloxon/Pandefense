@@ -14,10 +14,10 @@ autoplay = true
 [node name="projectile_effect_player" type="Node3D" parent="."]
 
 [node name="projectile_effect1" type="AudioStreamPlayer" parent="projectile_effect_player"]
-volume_db = -15.0
+volume_db = -20.0
 
 [node name="projectile_effect2" type="AudioStreamPlayer" parent="projectile_effect_player"]
-volume_db = -15.0
+volume_db = -20.0
 
 [node name="enemy_effect_player" type="Node3D" parent="."]
 

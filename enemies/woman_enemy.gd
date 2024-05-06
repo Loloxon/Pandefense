@@ -21,8 +21,9 @@ func _resize_model():
 func _change_health_bar():
 	health_bar.value = (_current_hp * 100) / _max_hp
 
-func _kill():
+func _kill(by_base:bool):
 	_alive = false
-	AudioManager.play_effect(dying_sound, "enemy")
-	$"../../..".money += _kill_reward
+	if not by_base:
+		AudioManager.play_effect(dying_sound, "enemy")
+		$"../../..".money += _kill_reward
 	queue_free()
