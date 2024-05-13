@@ -40,6 +40,7 @@ shape = SubResource("BoxShape3D_d8ocp")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0944649, 1, 0)
+billboard = 1
 texture = SubResource("ViewportTexture_aqynd")
 
 [node name="base_health" type="SubViewport" parent="."]

@@ -3,6 +3,7 @@ class_name Main extends Node3D
 var map:Map = Map.new()
 var wave_manager:WaveManager
 @export var money = 100
+@export var score = 0
 
 func _ready():
 	map.display(self)
@@ -14,3 +15,4 @@ func _ready():
 
 func _process(delta):
 	$Control/money_label.text = "Money: %d ¥" % money
+	$Control/score_label.text = "Score: %d" % score

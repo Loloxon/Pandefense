@@ -7,6 +7,7 @@ func _init():
 	_speed = 0.02
 	_max_hp = 10
 	_kill_reward = 15
+	_kill_score = 1
 	super._init()
 
 func _create_model():
@@ -26,4 +27,5 @@ func _kill(by_base:bool):
 	if not by_base:
 		AudioManager.play_effect(dying_sound, "enemy")
 		$"../../..".money += _kill_reward
+		$"../../..".score += _kill_score
 	queue_free()

@@ -8,6 +8,7 @@ var _current_hp:float
 var _speed:float
 var _alive:bool = false
 var _kill_reward:int
+var _kill_score:int
 
 func _init():
 	_current_hp = _max_hp
