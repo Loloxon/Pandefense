@@ -7,6 +7,9 @@ var _map:Map
 var wave:Array[Enemy]
 var woman_walking_scene = preload("res://scenes/enemies/woman_walking_scene.tscn")
 
+var enemies_remaining = 0
+var wave_spawned = false
+
 func _init(main, map):
 	_main = main
 	_map = map
@@ -43,7 +46,19 @@ func kill_enemy(enemy):
 
 func _create_wave():
 	for i in range(enemies_number):
-		wave.append(woman_walking_scene.instantiate())
+		var enemy = woman_walking_scene.instantiate()
+		wave.append(enemy)
+		enemy.connect("enemy_killed", _can_spawn_next_wave)
+		enemies_remaining += 1
+	wave_spawned = true
+
+
+func _can_spawn_next_wave():
+	enemies_remaining -= 1
+	if enemies_remaining <= 0 and wave_spawned:
+		wave = []
+		_main.ready_for_next_wave()
+		wave_spawned = false
 
 
 func _move_wave():

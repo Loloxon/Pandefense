@@ -10,6 +10,8 @@ var _alive:bool = false
 var _kill_reward:int
 var _kill_score:int
 
+signal enemy_killed
+
 func _init():
 	_current_hp = _max_hp
 	_check_validity()
@@ -30,7 +32,7 @@ func _create_model():
 
 func instakill():
 	_kill(false)
-
+	enemy_killed.emit()
 
 func receive_dmg(dmg):
 	_current_hp = max(snappedf(_current_hp-dmg, 0.01), 0)
@@ -57,6 +59,7 @@ func is_alive():
 func _check_if_dying():
 	if _current_hp<=0:
 		_kill(false)
+		enemy_killed.emit()
 
 func _kill(by_base:bool):
 	pass
@@ -65,6 +68,7 @@ func _on_enemy_area_3d_area_entered(area):
 	var groups = area.get_groups()
 	if len(groups) > 0 and groups[0] == "base":
 		_kill(true)
+		enemy_killed.emit()
 	else:
 		receive_dmg(area.get_node("../../..").tower_dmg)
 		area.get_node("../..").destroy_projectile()
