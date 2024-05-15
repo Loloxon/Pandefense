@@ -2,7 +2,7 @@ class_name Main extends Node3D
 
 var map:Map = Map.new()
 var wave_manager:WaveManager
-@export var money = 50
+@export var money = 100
 @export var score = 0
 
 func _ready():

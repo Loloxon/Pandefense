@@ -63,7 +63,7 @@ to = NodePath("../../Patrolling")
 event = &"to_patrolling"
 
 [node name="monkey" parent="." instance=ExtResource("9_v6xo2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.40148, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.40148, 0)
 
 [node name="RootNode" parent="monkey" index="0"]
 transform = Transform3D(-0.15, 0, -2.26494e-08, 0, 0.15, 0, 2.26494e-08, 0, -0.15, 0, -1.24583, 0.0720194)

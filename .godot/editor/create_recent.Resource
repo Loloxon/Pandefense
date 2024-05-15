@@ -1,0 +1,2 @@
+Resource
+MapTilesConfig

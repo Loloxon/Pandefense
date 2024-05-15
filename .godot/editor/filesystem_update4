@@ -1,0 +1,17 @@
+res://main/main.tscn
+res://enemies/enemies_config.gd
+res://enemies/enemy.gd
+res://scenes/healt_bar/health_bar_colors.tres
+res://resources/basic_tiles_config.res
+res://map/path_generator_config.gd
+res://scenes/enemies/woman_enemy_lvl3_scene.tscn
+res://scenes/turrets/initial_turret_scene.tscn
+res://scenes/projectiles/banana_scene.tscn
+res://scenes/audio_manager/audio_manager.tscn
+res://map/map.tscn
+res://scenes/placement_button.tscn
+res://scenes/tiles/fake_base.tscn
+res://scenes/enemies/woman_enemy_lvl2_scene.tscn
+res://scenes/enemies/tank_enemy_lvl5_scene.tscn
+res://enemies/tank_enemy_lvl5.gd
+res://towers/initial_turret.gd
