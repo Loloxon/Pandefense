@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvpgx5dmcfpy2"]
+[gd_scene load_steps=10 format=3 uid="uid://cvpgx5dmcfpy2"]
 
 [ext_resource type="PackedScene" uid="uid://b6a0glf6yo3mt" path="res://assets/GLTF format/towerRound_base.glb" id="1_0tf78"]
 [ext_resource type="Script" path="res://towers/initial_turret.gd" id="1_q2c1u"]
-[ext_resource type="PackedScene" uid="uid://da7v3ibf8dac1" path="res://assets/GLTF format/weapon_cannon.glb" id="2_5ph5i"]
 [ext_resource type="PackedScene" uid="uid://cm4gjmtg7s4vq" path="res://scenes/projectiles/banana_scene.tscn" id="2_egvb7"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="4_fygqd"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="5_lplbf"]
@@ -18,10 +17,6 @@ script = ExtResource("1_q2c1u")
 tower_projectile = ExtResource("2_egvb7")
 
 [node name="tower_base" parent="." instance=ExtResource("1_0tf78")]
-
-[node name="cannon" parent="." instance=ExtResource("2_5ph5i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
-visible = false
 
 [node name="PatrolZone" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
