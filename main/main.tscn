@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://72lu3y2bauhu"]
+[gd_scene load_steps=10 format=3 uid="uid://72lu3y2bauhu"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_v46vx"]
 [ext_resource type="PackedScene" uid="uid://bp7qr10cgion5" path="res://scenes/placement_button.tscn" id="2_syn2g"]
 [ext_resource type="Texture2D" uid="uid://bmf8k8ajvpw6i" path="res://images/cannon01a.png" id="3_yqrt0"]
 [ext_resource type="PackedScene" uid="uid://cvpgx5dmcfpy2" path="res://scenes/turrets/initial_turret_scene.tscn" id="4_2ving"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="5_5dvxe"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="6_0lr6o"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="7_5crt2"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="8_dkxsf"]
 
 [sub_resource type="Environment" id="Environment_wmip2"]
 background_mode = 1
@@ -20,7 +24,8 @@ adjustment_contrast = 1.25
 script = ExtResource("1_v46vx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 7.5, 9, 9.5)
+transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 7.5, 8.5, 10)
+current = true
 fov = 60.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -54,3 +59,65 @@ grow_horizontal = 2
 grow_vertical = 0
 button_icon = ExtResource("3_yqrt0")
 button_draggable = ExtResource("4_2ving")
+activity_cost = 40
+
+[node name="money_label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 28
+text = "Money: 0 ¥"
+horizontal_alignment = 1
+
+[node name="score_label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 953.0
+offset_top = 1.0
+offset_right = 1058.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 28
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="wave_button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 111.0
+offset_bottom = 37.0
+text = "Spawn Wave"
+
+[node name="WaveState" type="Node" parent="."]
+script = ExtResource("5_5dvxe")
+
+[node name="CompoundWaveState" type="Node" parent="WaveState"]
+script = ExtResource("6_0lr6o")
+initial_state = NodePath("Initial")
+
+[node name="Initial" type="Node" parent="WaveState/CompoundWaveState"]
+script = ExtResource("7_5crt2")
+
+[node name="Active" type="Node" parent="WaveState/CompoundWaveState/Initial"]
+script = ExtResource("8_dkxsf")
+to = NodePath("../../Active")
+event = &"to_active"
+
+[node name="Complete" type="Node" parent="WaveState/CompoundWaveState"]
+script = ExtResource("7_5crt2")
+
+[node name="Active" type="Node" parent="WaveState/CompoundWaveState/Complete"]
+script = ExtResource("8_dkxsf")
+to = NodePath("../../Active")
+event = &"to_active"
+
+[node name="Active" type="Node" parent="WaveState/CompoundWaveState"]
+script = ExtResource("7_5crt2")
+
+[node name="Complete" type="Node" parent="WaveState/CompoundWaveState/Active"]
+script = ExtResource("8_dkxsf")
+to = NodePath("../../Complete")
+event = &"to_complete"
+
+[connection signal="pressed" from="Control/wave_button" to="." method="_on_wave_button_pressed"]
+[connection signal="state_entered" from="WaveState/CompoundWaveState/Complete" to="." method="_on_complete_state_entered"]
+[connection signal="state_entered" from="WaveState/CompoundWaveState/Active" to="." method="_on_active_state_entered"]

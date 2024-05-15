@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://b65e1k2t75er0"]
+
+[ext_resource type="PackedScene" uid="uid://dng7v70xpk8o1" path="res://assets/GLTF format/tile.glb" id="1_bs4mp"]
+[ext_resource type="Script" path="res://map/fake_base.gd" id="1_ga1bg"]
+[ext_resource type="PackedScene" uid="uid://cblshugbukexh" path="res://assets/GLTF format/detail_crystalLarge.glb" id="2_yaa8q"]
+[ext_resource type="PackedScene" uid="uid://chr7js7gnkm4t" path="res://assets/GLTF format/detail_crystal.glb" id="3_ovbu2"]
+[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="4_71mk6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d8ocp"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_aqynd"]
+viewport_path = NodePath("base_health")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_735i3"]
+bg_color = Color(0.0196078, 0.0196078, 0.0196078, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igfx6"]
+resource_local_to_scene = true
+bg_color = Color(0.211765, 0.65098, 0.831373, 1)
+
+[node name="fake_base" type="Area3D" groups=["base"]]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_ga1bg")
+
+[node name="tile2" parent="." instance=ExtResource("1_bs4mp")]
+
+[node name="detail_crystalLarge2" parent="." instance=ExtResource("2_yaa8q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000490248, 0.190703, -0.00625953)
+
+[node name="detail_crystal2" parent="." instance=ExtResource("3_ovbu2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.381593, 0.151568, 0.325018)
+
+[node name="detail_crystal3" parent="." instance=ExtResource("3_ovbu2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.257131, 0.154286, 0.283943)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.493777, 0)
+shape = SubResource("BoxShape3D_d8ocp")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0944649, 1, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_aqynd")
+
+[node name="base_health" type="SubViewport" parent="."]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(128, 128)
+render_target_update_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="base_health" groups=["path"]]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -10.0
+offset_right = 30.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_735i3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_igfx6")
+value = 100.0
+show_percentage = false
+script = ExtResource("4_71mk6")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="value_changed" from="base_health/ProgressBar" to="base_health/ProgressBar" method="_on_value_changed"]
