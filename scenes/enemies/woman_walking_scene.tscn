@@ -1,27 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://cus8ewxk4bj5p"]
+[gd_scene load_steps=7 format=3 uid="uid://cus8ewxk4bj5p"]
 
 [ext_resource type="Script" path="res://enemies/woman_enemy.gd" id="1_jy3t3"]
 [ext_resource type="PackedScene" uid="uid://dxjjsl2iutlim" path="res://assets/walking/Walking.fbx" id="2_kybe2"]
-[ext_resource type="AudioStream" uid="uid://bb18n3tmsdfwh" path="res://audio/body_fall_short.mp3" id="3_yg42q"]
-[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="4_gdh7e"]
+[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="3_5vf84"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_40dy7"]
 radius = 1.0
 height = 4.89855
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_xi46l"]
-viewport_path = NodePath("woman_walking/Area3D/health_bar")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_735i3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crot8"]
 bg_color = Color(0.0196078, 0.0196078, 0.0196078, 0.501961)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qppj2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yl78x"]
 resource_local_to_scene = true
-bg_color = Color(0.243137, 0.639216, 0.87451, 1)
+bg_color = Color(0.211765, 0.65098, 0.831373, 1)
 
 [node name="woman_walking_scene" type="Node3D" groups=["enemy"]]
 script = ExtResource("1_jy3t3")
-dying_sound = ExtResource("3_yg42q")
 
 [node name="woman_walking" parent="." instance=ExtResource("2_kybe2")]
 
@@ -90,18 +85,13 @@ collision_mask = 4
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -0.5, 0)
 shape = SubResource("CapsuleShape3D_40dy7")
 
-[node name="Sprite3D" type="Sprite3D" parent="woman_walking/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00194827, 1.31524, -0.13665)
-billboard = 1
-texture = SubResource("ViewportTexture_xi46l")
-
 [node name="health_bar" type="SubViewport" parent="woman_walking/Area3D"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(128, 128)
 render_target_update_mode = 4
 
-[node name="ProgressBar" type="ProgressBar" parent="woman_walking/Area3D/health_bar"]
+[node name="ProgressBar" type="ProgressBar" parent="woman_walking/Area3D/health_bar" groups=["path"]]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -109,15 +99,15 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -50.0
 offset_top = -10.0
-offset_right = 50.0
+offset_right = 30.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_735i3")
-theme_override_styles/fill = SubResource("StyleBoxFlat_qppj2")
+theme_override_styles/background = SubResource("StyleBoxFlat_crot8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yl78x")
 value = 100.0
 show_percentage = false
-script = ExtResource("4_gdh7e")
+script = ExtResource("3_5vf84")
 
 [connection signal="area_entered" from="woman_walking/Area3D" to="." method="_on_enemy_area_3d_area_entered"]
 [connection signal="value_changed" from="woman_walking/Area3D/health_bar/ProgressBar" to="woman_walking/Area3D/health_bar/ProgressBar" method="_on_value_changed"]

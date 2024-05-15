@@ -24,7 +24,7 @@ adjustment_contrast = 1.25
 script = ExtResource("1_v46vx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 7.5, 8.5, 10)
+transform = Transform3D(1, 0, 0, 0, 0.687303, 0.726371, 0, -0.726371, 0.687303, 7.5, 7.41529, 11.7933)
 current = true
 fov = 60.0
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b65e1k2t75er0"]
+[gd_scene load_steps=10 format=3 uid="uid://bakd6lriwfuky"]
 
 [ext_resource type="PackedScene" uid="uid://dng7v70xpk8o1" path="res://assets/GLTF format/tile.glb" id="1_bs4mp"]
 [ext_resource type="Script" path="res://map/fake_base.gd" id="1_ga1bg"]

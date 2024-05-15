@@ -9,6 +9,7 @@ var _slerp_progress:float = 0
 var _current_enemy_targeted:bool = false
 var _current_enemy:Node3D = null
 var _latest_projectile_fired:int
+@onready var _movement_animation:AnimationPlayer = $monkey/AnimationPlayer
 		
 
 func _on_patrol_zone_area_entered(area):
@@ -28,9 +29,15 @@ func set_patrolling(patrolling: bool):
 	$PatrolZone.monitoring = patrolling
 	
 func follow_target(target, delta):
-	var target_vector = $cannon.global_position.direction_to(Vector3(target.global_position.x, global_position.y, target.global_position.z))
-	var target_basis:Basis = Basis.looking_at(target_vector)
-	$cannon.basis = $cannon.basis.slerp(target_basis, _slerp_progress)
+	var target_vector = $monkey.global_position.direction_to(
+		Vector3(target.global_position.x, target.global_position.y, target.global_position.z))
+	var target_basis:Basis = Basis.looking_at(
+		Vector3(target_vector.x, 0, target_vector.z))
+	$monkey.basis = $monkey.basis.slerp(target_basis, _slerp_progress)
+	#var target_vector = $monkey.global_position.direction_to(Vector3(global_position.x, target.global_position.y, global_position.z))
+	#var target_basis:Basis = Basis.looking_at(target_vector)
+	#var target_basis:Basis = Basis.looking_at(Vector3(target.global_position.x, global_position.y, target.global_position.z))
+	#$monkey.basis = $monkey.basis.slerp(target_basis, _slerp_progress)
 	_slerp_progress += delta
 
 	if _slerp_progress > 1:
@@ -60,7 +67,17 @@ func _on_targeting_state_physics_processing(delta):
 
 func _on_attacking_state_physics_processing(delta):
 	if _current_enemy != null and _enemies_in_range.has(_current_enemy):
-		$cannon.look_at(_current_enemy.global_position)
+		
+		var target_vector = $monkey.global_position.direction_to(
+			Vector3(_current_enemy.global_position.x, _current_enemy.global_position.y, _current_enemy.global_position.z))
+		var target_basis:Basis = Basis.looking_at(
+			Vector3(target_vector.x, 0, target_vector.z))
+		$monkey.basis = $monkey.basis.slerp(target_basis, _slerp_progress)
+		#$monkey.direction_to(Vector3(global_position.x, global_position.y, _current_enemy.global_position.z))
+		#$monkey.look_at(_current_enemy.global_rotation)
+		#var target_basis:Basis = Basis.looking_at(Vector3(_current_enemy.global_position.x, global_position.y, _current_enemy.global_position.z))
+		#$monkey.basis = $monkey.basis.slerp(target_basis, _slerp_progress)
+		#$monkey.looking_at(target_vector)
 		_fire_projectile_if_possible()
 	
 	else:
@@ -68,9 +85,11 @@ func _on_attacking_state_physics_processing(delta):
 		
 
 func _fire_projectile_if_possible():
+	_movement_animation.speed_scale = 2.75
+	_movement_animation.play("mixamo_com")
 	if Time.get_ticks_msec() > (_latest_projectile_fired + attack_speed_rate):
 		var projectile:Projectile = tower_projectile.instantiate()
-		projectile.starting_position = $cannon/projectile_spawn.global_position
+		projectile.starting_position = $monkey/projectile_spawn.global_position
 		projectile.target = _current_enemy
 		add_child(projectile)
 		_latest_projectile_fired = Time.get_ticks_msec()

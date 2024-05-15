@@ -11,6 +11,7 @@ func _init():
 
 func generate_path():
 	var iteration_count:int = 1
+	print(path_config.max_loops)
 	_generate_path(path_config.add_loops)
 
 	while get_path().size() < path_config.min_path_size or\

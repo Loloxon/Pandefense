@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvpgx5dmcfpy2"]
+[gd_scene load_steps=11 format=3 uid="uid://cvpgx5dmcfpy2"]
 
 [ext_resource type="PackedScene" uid="uid://b6a0glf6yo3mt" path="res://assets/GLTF format/towerRound_base.glb" id="1_0tf78"]
 [ext_resource type="Script" path="res://towers/initial_turret.gd" id="1_q2c1u"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="5_lplbf"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="6_3n664"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="7_jwrjs"]
+[ext_resource type="PackedScene" uid="uid://bhoxgtpu77w8u" path="res://assets/monkey/monkey.fbx" id="9_v6xo2"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tcibm"]
 radius = 2.0
@@ -20,9 +21,7 @@ tower_projectile = ExtResource("2_egvb7")
 
 [node name="cannon" parent="." instance=ExtResource("2_5ph5i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
-
-[node name="projectile_spawn" type="Node3D" parent="cannon"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.255155, -0.284879)
+visible = false
 
 [node name="PatrolZone" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -68,6 +67,52 @@ script = ExtResource("7_jwrjs")
 to = NodePath("../../Patrolling")
 event = &"to_patrolling"
 
+[node name="monkey" parent="." instance=ExtResource("9_v6xo2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.40148, 0)
+
+[node name="RootNode" parent="monkey" index="0"]
+transform = Transform3D(-0.15, 0, -2.26494e-08, 0, 0.15, 0, 2.26494e-08, 0, -0.15, 0, -1.24583, 0.0720194)
+
+[node name="Skeleton3D" parent="monkey/RootNode" index="0"]
+bones/0/position = Vector3(0.0454038, 1.63438, 0.0238993)
+bones/0/rotation = Quaternion(-0.00505998, -0.0672846, -0.0195033, 0.99753)
+bones/1/rotation = Quaternion(0.0272547, 0.0143415, 0.022547, 0.999271)
+bones/2/rotation = Quaternion(0.00809444, 0.00523988, 0.00911471, 0.999912)
+bones/3/rotation = Quaternion(0.00807837, 0.00537596, 0.0090495, 0.999912)
+bones/4/rotation = Quaternion(-0.0231024, 0.00494913, 0.0267129, 0.999364)
+bones/5/rotation = Quaternion(-0.0579472, 0.0309115, -0.0120212, 0.997769)
+bones/7/rotation = Quaternion(0.609547, 0.38445, -0.557744, 0.411792)
+bones/8/rotation = Quaternion(0.432066, 0.109754, 0.171645, 0.878528)
+bones/9/rotation = Quaternion(0.000447708, -0.000496731, 0.0943179, 0.995542)
+bones/10/rotation = Quaternion(0.0141447, 0.286225, 0.124146, 0.949981)
+bones/11/rotation = Quaternion(-0.0662198, 0.0254533, 0.183252, 0.980503)
+bones/12/rotation = Quaternion(0.0967835, 0.0852738, -0.0877605, 0.987755)
+bones/13/rotation = Quaternion(-0.141179, 0.112101, -0.0188536, 0.983436)
+bones/15/rotation = Quaternion(0.116783, -0.00636501, 0.0697939, 0.990682)
+bones/16/rotation = Quaternion(0.116726, 8.37399e-06, -0.0479625, 0.992005)
+bones/17/rotation = Quaternion(0.00382129, 0.00395089, 0.0393795, 0.999209)
+bones/19/rotation = Quaternion(0.67033, -0.312464, 0.557879, 0.376558)
+bones/20/rotation = Quaternion(0.392147, -0.0341638, -0.077282, 0.916014)
+bones/21/rotation = Quaternion(8.35609e-05, 0.000328548, -0.0112367, 0.999937)
+bones/22/rotation = Quaternion(-0.0194011, -0.418716, -0.00651947, 0.907887)
+bones/23/rotation = Quaternion(-0.0770111, -0.017404, -0.218005, 0.972749)
+bones/24/rotation = Quaternion(0.287101, 0.00855049, 0.114708, 0.950969)
+bones/25/rotation = Quaternion(-0.287026, -0.190063, 0.0604832, 0.936928)
+bones/27/rotation = Quaternion(0.0801729, 0.00701942, -0.0365624, 0.996085)
+bones/28/rotation = Quaternion(0.190297, 0.00218938, -0.0852474, 0.978016)
+bones/29/rotation = Quaternion(0.11908, -0.00137597, -0.0354986, 0.992249)
+bones/31/rotation = Quaternion(0.122319, 0.129713, 0.972421, -0.150369)
+bones/32/rotation = Quaternion(-0.220535, 0.034303, 0.0185804, 0.974599)
+bones/33/rotation = Quaternion(0.67974, -0.0510447, -0.101206, 0.724641)
+bones/34/rotation = Quaternion(0.104557, -0.00369224, -0.0117518, 0.994443)
+bones/36/rotation = Quaternion(-0.0644357, 0.0190094, 0.99749, 0.0223752)
+bones/37/rotation = Quaternion(-0.201674, 0.0685852, -0.0176902, 0.976888)
+bones/38/rotation = Quaternion(0.743502, 0.0116835, 0.0580384, 0.666107)
+bones/39/rotation = Quaternion(0.11736, 0.00122799, 0.0104484, 0.993034)
+
+[node name="projectile_spawn" type="Node3D" parent="monkey"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0992526, -0.443016, -0.00648244)
+
 [connection signal="area_entered" from="PatrolZone" to="." method="_on_patrol_zone_area_entered"]
 [connection signal="area_exited" from="PatrolZone" to="." method="_on_patrol_zone_area_exited"]
 [connection signal="state_processing" from="StateChart/CompoundState/Patrolling" to="." method="_on_patrolling_state_processing"]
@@ -75,3 +120,5 @@ event = &"to_patrolling"
 [connection signal="state_physics_processing" from="StateChart/CompoundState/Targeting" to="." method="_on_targeting_state_physics_processing"]
 [connection signal="state_entered" from="StateChart/CompoundState/Attacking" to="." method="_on_attacking_state_entered"]
 [connection signal="state_physics_processing" from="StateChart/CompoundState/Attacking" to="." method="_on_attacking_state_physics_processing"]
+
+[editable path="monkey"]
