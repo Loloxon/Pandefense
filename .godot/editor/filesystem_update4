@@ -15,3 +15,15 @@ res://scenes/enemies/woman_enemy_lvl2_scene.tscn
 res://scenes/enemies/tank_enemy_lvl5_scene.tscn
 res://enemies/tank_enemy_lvl5.gd
 res://towers/initial_turret.gd
+res://scenes/audio_manager/audio_manager.gd
+res://map/fake_base.gd
+res://main/main.gd
+res://map/map.gd
+res://map/map_tiles_config.gd
+res://map/path_generator.gd
+res://projectiles/projectile.gd
+res://addons/godot_state_charts/state_chart_state.gd
+res://buttons/tower_button.gd
+res://enemies/wave_manager.gd
+res://enemies/woman_enemy_lvl2.gd
+res://enemies/woman_enemy_lvl3.gd
