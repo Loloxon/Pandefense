@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://du6ikisqmnvx5"]
 
 [ext_resource type="Script" path="res://enemies/tank_enemy_lvl5.gd" id="1_0ly5u"]
+[ext_resource type="PackedScene" uid="uid://c3y7oj1d6brts" path="res://assets/enemies-final/lvl5_tank (1024).glb" id="2_hllrg"]
 [ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="3_al066"]
-[ext_resource type="PackedScene" uid="uid://cwnglauffjrpn" path="res://assets/enemies-final/lvl5_tank.glb" id="4_crap5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0x4t3"]
 radius = 2.59956
@@ -22,7 +22,7 @@ viewport_path = NodePath("tank/Area3D/health_bar")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.785393, 0)
 script = ExtResource("1_0ly5u")
 
-[node name="tank" parent="." instance=ExtResource("4_crap5")]
+[node name="tank" parent="." instance=ExtResource("2_hllrg")]
 
 [node name="Area3D" type="Area3D" parent="tank" groups=["enemy"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000440001, 0.021638, 0.13665)

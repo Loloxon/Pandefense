@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716118577
+::res://::1716127523
 default_bus_layout.tres::AudioBusLayout::-1::1715761699::0::1::::<><>::
 icon.svg::CompressedTexture2D::7849736505738642964::1710795279::1710795279::1::::<><>::
 README.md::TextFile::-1::1710793798::0::1::::<><>::
 ::res://addons/::1712061783
-::res://addons/godot_state_charts/::1712061786
+::res://addons/godot_state_charts/::1716127244
 all_of_guard.gd::GDScript::-1::1712061783::0::1::::AllOfGuard<>Guard<>res://addons/godot_state_charts/all_of_guard.svg::
 all_of_guard.svg::CompressedTexture2D::1453032692278690117::1712061783::1712061786::1::::<><>::
 animation_player_state.gd::GDScript::-1::1712061783::0::1::::AnimationPlayerState<>AtomicState<>res://addons/godot_state_charts/animation_player_state.svg::
@@ -31,7 +31,7 @@ plugin.cfg::TextFile::-1::1712061783::0::1::::<><>::
 saved_state.gd::GDScript::-1::1712061783::0::1::::SavedState<>Resource<>::
 state_chart.gd::GDScript::-1::1712061783::0::1::::StateChart<>Node<>res://addons/godot_state_charts/state_chart.svg::
 state_chart.svg::CompressedTexture2D::1484392366363671583::1712061783::1712061786::1::::<><>::
-state_chart_state.gd::GDScript::-1::1712061783::0::1::::StateChartState<>Node<>::
+state_chart_state.gd::GDScript::-1::1716127244::0::1::::StateChartState<>Node<>::
 state_is_active_guard.gd::GDScript::-1::1712061783::0::1::::StateIsActiveGuard<>Guard<>::
 state_is_active_guard.svg::CompressedTexture2D::1892599481997606910::1712061783::1712061786::1::::<><>::
 toggle_sidebar.svg::CompressedTexture2D::1486402018277283815::1712061783::1712061786::1::::<><>::
@@ -66,7 +66,7 @@ banana.glb::PackedScene::1170042549248929965::1712061783::1712061787::1::::<><>:
 banana_banana.jpg::CompressedTexture2D::4603821879741436651::1712061783::1712061787::1::::<><>::
 ::res://assets/edited-NK/::1715761706
 walking_custom.res::Animation::9093639316457170434::1715761706::0::1::::<><>::
-::res://assets/enemies-final/::1715787230
+::res://assets/enemies-final/::1716128385
 lvl1_running-019a138e5eb9327cc4205c8360adff48_ao_met_rough_Ch22_1001_Glossiness.png::CompressedTexture2D::3587875564699873068::1715786493::1715786507::1::::<><>::
 lvl1_running-019a138e5eb9327cc4205c8360adff48_Ch22_1001_Diffuse.png::CompressedTexture2D::220072790188989521::1715786496::1715786507::1::::<><>::
 lvl1_running-019a138e5eb9327cc4205c8360adff48_Ch22_1001_Normal.png::CompressedTexture2D::1712599108095272135::1715786487::1715786507::1::::<><>::
@@ -187,20 +187,34 @@ lvl4_digger_bolt_baseColor.png::CompressedTexture2D::461324464313705622::1715786
 lvl4_digger_matii_baseColor.png::CompressedTexture2D::7837928089650952207::1715786169::1715786406::1::::<><>::
 lvl4_digger_tyar_baseColor.png::CompressedTexture2D::709152181350262708::1715786169::1715786406::1::::<><>::
 lvl4_digger_yellow_baseColor.png::CompressedTexture2D::4249505768412884405::1715786169::1715786406::1::::<><>::
-lvl5_tank.glb::PackedScene::6344216815045565319::1715786073::1715786469::1::::<><>::uid://bivdpta7gdphy::::res://assets/enemies-final/lvl5_tank_Image_0.jpg<>uid://dexd68g684kjx::::res://assets/enemies-final/lvl5_tank_Image_1.png<>uid://1psrxrpcq5c3::::res://assets/enemies-final/lvl5_tank_Image_2.jpg<>uid://sjhnlb55efgg::::res://assets/enemies-final/lvl5_tank_Image_9.jpg<>uid://kknft3khtfpx::::res://assets/enemies-final/lvl5_tank_Image_10.png<>uid://brejssuvrtvem::::res://assets/enemies-final/lvl5_tank_Image_11.jpg<>uid://ckux2vj3xk7a1::::res://assets/enemies-final/lvl5_tank_Image_3.jpg<>uid://t0s8fl4sski::::res://assets/enemies-final/lvl5_tank_Image_4.png<>uid://c2lj5lrih16sw::::res://assets/enemies-final/lvl5_tank_Image_5.jpg<>uid://cpk8frhqev8yy::::res://assets/enemies-final/lvl5_tank_Image_6.jpg<>uid://cwf4qa16a85b2::::res://assets/enemies-final/lvl5_tank_Image_7.png<>uid://l0usnu6ksci1::::res://assets/enemies-final/lvl5_tank_Image_8.jpg
-lvl5_tank_Image_0.jpg::CompressedTexture2D::2991493302925228090::1715786181::1715786407::1::::<><>::
-lvl5_tank_Image_1.png::CompressedTexture2D::7487737368557288905::1715786175::1715786407::1::::<><>::
-lvl5_tank_Image_2.jpg::CompressedTexture2D::1857000100249514264::1715786171::1715786407::1::::<><>::
-lvl5_tank_Image_3.jpg::CompressedTexture2D::5517463184313732762::1715786201::1715786407::1::::<><>::
-lvl5_tank_Image_4.png::CompressedTexture2D::40774987970434340::1715786194::1715786407::1::::<><>::
-lvl5_tank_Image_5.jpg::CompressedTexture2D::6691248932052201846::1715786190::1715786407::1::::<><>::
-lvl5_tank_Image_6.jpg::CompressedTexture2D::5848331293671863284::1715786208::1715786406::1::::<><>::
-lvl5_tank_Image_7.png::CompressedTexture2D::6329107223260663965::1715786206::1715786406::1::::<><>::
-lvl5_tank_Image_8.jpg::CompressedTexture2D::824933923137679810::1715786205::1715786406::1::::<><>::
-lvl5_tank_Image_9.jpg::CompressedTexture2D::1282427400246221798::1715786188::1715786406::1::::<><>::
-lvl5_tank_Image_10.png::CompressedTexture2D::723331505459048177::1715786186::1715786406::1::::<><>::
-lvl5_tank_Image_11.jpg::CompressedTexture2D::3588468111075100720::1715786185::1715786406::1::::<><>::
-::res://assets/enemies-final/lvl1_running.fbm/::1715786414
+lvl5_tank (1024).glb::PackedScene::6789642513284597300::1716128375::1716128384::1::::<><>::uid://duylflult5nh1::::res://assets/enemies-final/lvl5_tank (1024)_1.jpg<>uid://ch743q5lwjjj4::::res://assets/enemies-final/lvl5_tank (1024)_0.png<>uid://bky58cxt8gvs1::::res://assets/enemies-final/lvl5_tank (1024)_2.jpg<>uid://cnvnx3xiww538::::res://assets/enemies-final/lvl5_tank (1024)_4.jpg<>uid://cx73636sxroey::::res://assets/enemies-final/lvl5_tank (1024)_3.png<>uid://cg7g5dsoao3gq::::res://assets/enemies-final/lvl5_tank (1024)_5.jpg<>uid://b2q0g71ch1jgi::::res://assets/enemies-final/lvl5_tank (1024)_7.jpg<>uid://ca8lmj1o041ip::::res://assets/enemies-final/lvl5_tank (1024)_6.png<>uid://db6qqspacx5ye::::res://assets/enemies-final/lvl5_tank (1024)_8.jpg<>uid://dxfjblg3550k8::::res://assets/enemies-final/lvl5_tank (1024)_10.jpg<>uid://d01v4dfwgjjl8::::res://assets/enemies-final/lvl5_tank (1024)_9.png<>uid://c7qr8gldl3eqf::::res://assets/enemies-final/lvl5_tank (1024)_11.jpg
+lvl5_tank.glb::PackedScene::1213737841710202736::1716127445::1716127532::1::::<><>::uid://coclindaa58nd::::res://assets/enemies-final/lvl5_tank_Image_0.jpg<>uid://k0n6wvtye2m2::::res://assets/enemies-final/lvl5_tank_Image_1.png<>uid://dk6nu1qj2g3c1::::res://assets/enemies-final/lvl5_tank_Image_2.jpg<>uid://ccvaq7hpn68g::::res://assets/enemies-final/lvl5_tank_Image_9.jpg<>uid://mgmygruamrcw::::res://assets/enemies-final/lvl5_tank_Image_10.png<>uid://cre24yy54a2s2::::res://assets/enemies-final/lvl5_tank_Image_11.jpg<>uid://bamdi7wj1bbw2::::res://assets/enemies-final/lvl5_tank_Image_3.jpg<>uid://qxmq515f8kki::::res://assets/enemies-final/lvl5_tank_Image_4.png<>uid://dotole30ofcvb::::res://assets/enemies-final/lvl5_tank_Image_5.jpg<>uid://bedig8pj46rc0::::res://assets/enemies-final/lvl5_tank_Image_6.jpg<>uid://bqahm51t58p2h::::res://assets/enemies-final/lvl5_tank_Image_7.png<>uid://3oj6u01ytvyh::::res://assets/enemies-final/lvl5_tank_Image_8.jpg
+lvl5_tank_compressed.glb::::-1::1716128131::0::0::::<><>::
+lvl5_tank_Image_0.jpg::CompressedTexture2D::5760296794537628145::1716127457::1716127526::1::::<><>::
+lvl5_tank_Image_1.png::CompressedTexture2D::754343749598963935::1716127450::1716127526::1::::<><>::
+lvl5_tank_Image_2.jpg::CompressedTexture2D::7925972625388784590::1716127446::1716127526::1::::<><>::
+lvl5_tank_Image_3.jpg::CompressedTexture2D::2411391369247963475::1716127477::1716127526::1::::<><>::
+lvl5_tank_Image_4.png::CompressedTexture2D::1171260980404041372::1716127470::1716127526::1::::<><>::
+lvl5_tank_Image_5.jpg::CompressedTexture2D::8181998975473294715::1716127465::1716127526::1::::<><>::
+lvl5_tank_Image_6.jpg::CompressedTexture2D::2673867399104502729::1716127484::1716127525::1::::<><>::
+lvl5_tank_Image_7.png::CompressedTexture2D::3509890247147940769::1716127482::1716127525::1::::<><>::
+lvl5_tank_Image_8.jpg::CompressedTexture2D::1994791813268971811::1716127481::1716127525::1::::<><>::
+lvl5_tank_Image_9.jpg::CompressedTexture2D::145782389778264604::1716127464::1716127525::1::::<><>::
+lvl5_tank_Image_10.png::CompressedTexture2D::855424195458638142::1716127462::1716127525::1::::<><>::
+lvl5_tank_Image_11.jpg::CompressedTexture2D::5976001666114486011::1716127461::1716127525::1::::<><>::
+lvl5_tank (1024)_0.png::CompressedTexture2D::5332035043249194491::1716128376::1716128385::1::::<><>::
+lvl5_tank (1024)_1.jpg::CompressedTexture2D::8613261415006655420::1716128377::1716128384::1::::<><>::
+lvl5_tank (1024)_2.jpg::CompressedTexture2D::3139734768637549746::1716128377::1716128384::1::::<><>::
+lvl5_tank (1024)_3.png::CompressedTexture2D::6455001813991371344::1716128377::1716128385::1::::<><>::
+lvl5_tank (1024)_4.jpg::CompressedTexture2D::5729480168259743777::1716128378::1716128384::1::::<><>::
+lvl5_tank (1024)_5.jpg::CompressedTexture2D::5260452579131263612::1716128378::1716128384::1::::<><>::
+lvl5_tank (1024)_6.png::CompressedTexture2D::4841655663263205183::1716128378::1716128385::1::::<><>::
+lvl5_tank (1024)_7.jpg::CompressedTexture2D::4316079866580899960::1716128379::1716128384::1::::<><>::
+lvl5_tank (1024)_8.jpg::CompressedTexture2D::7294447618275911364::1716128379::1716128384::1::::<><>::
+lvl5_tank (1024)_9.png::CompressedTexture2D::8968983974809039075::1716128379::1716128385::1::::<><>::
+lvl5_tank (1024)_10.jpg::CompressedTexture2D::8784476170592318377::1716128380::1716128384::1::::<><>::
+lvl5_tank (1024)_11.jpg::CompressedTexture2D::7053005860229147365::1716128380::1716128384::1::::<><>::
+::res://assets/enemies-final/lvl1_running.fbm/::1716127523
 Ch22_1001_Diffuse.png::CompressedTexture2D::1438167752903290684::1716118950::1715786412::1::::<><>::
 Ch22_1001_Glossiness.png::CompressedTexture2D::565944095929138857::1716118950::1715786411::1::::<><>::
 Ch22_1001_Normal.png::CompressedTexture2D::6970947322215386845::1716118950::1715786414::1::::<><>::
@@ -625,15 +639,15 @@ body_fall_short.mp3::AudioStreamMP3::2512311725593236095::1715761699::1715761702
 coin_gained.mp3::AudioStreamMP3::2547521289024591829::1715761699::1715761702::1::::<><>::
 panda_theme_song.mp3::AudioStreamMP3::3655913095795992918::1715761699::1715761702::1::::<><>::
 panda_theme_song.ogg::AudioStreamOggVorbis::2221553328087503862::1715761699::1715761702::1::::<><>::
-::res://buttons/::1715764483
-tower_button.gd::GDScript::-1::1715764483::0::1::::<>Button<>::
-::res://enemies/::1716119966
-enemies_config.gd::GDScript::-1::1716118586::0::1::::EnemiesConfig<>Resource<>::
-enemy.gd::GDScript::-1::1716118586::0::1::::Enemy<>Node3D<>::
-tank_enemy_lvl5.gd::GDScript::-1::1716119966::0::1::::TankEnemy5<>Node3D<>::
-wave_manager.gd::GDScript::-1::1715788856::0::1::::WaveManager<>Node<>::
-woman_enemy_lvl2.gd::GDScript::-1::1715788725::0::1::::WomanEnemy2<>Node3D<>::
-woman_enemy_lvl3.gd::GDScript::-1::1715788385::0::1::::WomanEnemy3<>Node3D<>::
+::res://buttons/::1716127244
+tower_button.gd::GDScript::-1::1716127244::0::1::::<>Button<>::
+::res://enemies/::1716127244
+enemies_config.gd::GDScript::-1::1716127244::0::1::::EnemiesConfig<>Resource<>::
+enemy.gd::GDScript::-1::1716127244::0::1::::Enemy<>Node3D<>::
+tank_enemy_lvl5.gd::GDScript::-1::1716127244::0::1::::TankEnemy5<>Node3D<>::
+wave_manager.gd::GDScript::-1::1716127244::0::1::::WaveManager<>Node<>::
+woman_enemy_lvl2.gd::GDScript::-1::1716127244::0::1::::WomanEnemy2<>Node3D<>::
+woman_enemy_lvl3.gd::GDScript::-1::1716127244::0::1::::WomanEnemy3<>Node3D<>::
 ::res://godot_state_charts_examples/::1712061783
 new_theme.tres::Theme::1319215900418314941::1712061783::0::1::::<><>::
 ::res://godot_state_charts_examples/ant_hill/::1712061783
@@ -714,44 +728,44 @@ terrain_tiles.tres::TileSet::5047831526213325618::1712061783::0::1::::<><>::uid:
 ::res://godot_state_charts_examples/stepping/::1712061783
 stepping.gd::GDScript::-1::1712061783::0::1::::<>Node2D<>::
 stepping.tscn::PackedScene::571145321256240574::1712061783::0::1::::<><>::res://godot_state_charts_examples/stepping/stepping.gd<>uid://bcwkugn6v3oy7::::res://addons/godot_state_charts/utilities/state_chart_debugger.tscn<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/parallel_state.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd
-::res://images/::1716121429
+::res://images/::1716126990
 cannon01a.png::CompressedTexture2D::3241031948528283494::1712061783::1716121671::1::::<><>::
-cannon_monkey.png::CompressedTexture2D::1212734949597621260::1716121428::1716121669::1::::<><>::
-::res://main/::1716121461
-main.gd::GDScript::-1::1715787757::0::1::::Main<>Node3D<>::
-main.tscn::PackedScene::2302486307532405442::1716121461::0::1::::<><>::res://main/main.gd<>uid://bp7qr10cgion5::::res://scenes/placement_button.tscn<>uid://rjptj7suj20g::::res://images/cannon_monkey.png<>uid://cvpgx5dmcfpy2::::res://scenes/turrets/initial_turret_scene.tscn<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd
-::res://map/::1716121461
-fake_base.gd::GDScript::-1::1715761699::0::1::::<>Node3D<>::
-map.gd::GDScript::-1::1715761699::0::1::::Map<>Object<>::
-map.tscn::PackedScene::7021510803344267330::1716121461::0::1::::<><>::res://map/map.gd
-map_tiles_config.gd::GDScript::-1::1710901262::0::1::::MapTilesConfig<>Resource<>::
-path_generator.gd::GDScript::-1::1715762368::0::1::::PathGenerator<>Object<>::
-path_generator_config.gd::GDScript::-1::1716118586::0::1::::PathGeneratorConfig<>Resource<>::
+cannon_monkey.png::CompressedTexture2D::1212734949597621260::1716126990::1716126990::1::::<><>::
+::res://main/::1716128494
+main.gd::GDScript::-1::1716127244::0::1::::Main<>Node3D<>::
+main.tscn::PackedScene::2302486307532405442::1716128494::0::1::::<><>::res://main/main.gd<>uid://bp7qr10cgion5::::res://scenes/placement_button.tscn<>uid://rjptj7suj20g::::res://images/cannon_monkey.png<>uid://cvpgx5dmcfpy2::::res://scenes/turrets/initial_turret_scene.tscn<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd
+::res://map/::1716128494
+fake_base.gd::GDScript::-1::1716127244::0::1::::<>Node3D<>::
+map.gd::GDScript::-1::1716127244::0::1::::Map<>Object<>::
+map.tscn::PackedScene::7021510803344267330::1716128494::0::1::::<><>::res://map/map.gd
+map_tiles_config.gd::GDScript::-1::1716127244::0::1::::MapTilesConfig<>Resource<>::
+path_generator.gd::GDScript::-1::1716127244::0::1::::PathGenerator<>Object<>::
+path_generator_config.gd::GDScript::-1::1716127244::0::1::::PathGeneratorConfig<>Resource<>::
 ::res://metrials/::1712061783
 red_transparent.material::StandardMaterial3D::5431174046568134699::1712061783::0::1::::<><>::
-::res://projectiles/::1715761699
-projectile.gd::GDScript::-1::1715761699::0::1::::Projectile<>Node3D<>::
+::res://projectiles/::1716127244
+projectile.gd::GDScript::-1::1716127244::0::1::::Projectile<>Node3D<>::
 ::res://resources/::1716118586
 basic_enemies_config.res::Resource/Resource::9020982673102247300::1715786989::0::1::::<><>::res://enemies/enemies_config.gd<>uid://cus8ewxk4bj5p::::res://scenes/enemies/woman_enemy_lvl3_scene.tscn
 basic_path_config.res::Resource/Resource::3629905666296553483::1715762735::0::1::::<><>::res://map/path_generator_config.gd
 basic_tiles_config.res::Resource/MapTilesConfig::2585107968423127086::1716118586::0::1::::<><>::res://map/map_tiles_config.gd<>uid://c1ytyvphi2m2o::::res://scenes/tiles/tile_start.tscn<>uid://bakd6lriwfuky::::res://scenes/tiles/fake_base.tscn<>uid://hi166uk0h6rs::::res://scenes/tiles/tile_straight.tscn<>uid://dmutgserws5x2::::res://scenes/tiles/tile_corner.tscn<>uid://bosi8vix3gqpy::::res://scenes/tiles/tile_crossing.tscn<>uid://dsp6xj4cgalyf::::res://scenes/tiles/tile_empty.tscn<>uid://qnje7css5uo6::::res://scenes/tiles/trees.tscn
 ::res://scenes/::1716118586
 placement_button.tscn::PackedScene::3506316661100580400::1716118586::0::1::::<><>::res://buttons/tower_button.gd
-::res://scenes/audio_manager/::1716121461
-audio_manager.gd::GDScript::-1::1715761699::0::1::::<>Node3D<>::
-audio_manager.tscn::PackedScene::8329149424274235104::1716121461::0::1::::<><>::res://scenes/audio_manager/audio_manager.gd<>uid://6wewnre1mw0m::::res://audio/panda_theme_song.ogg
-::res://scenes/enemies/::1716121461
-tank_enemy_lvl5_scene.tscn::PackedScene::8627538676833804072::1716121461::0::1::::<><>::res://enemies/tank_enemy_lvl5.gd<>res://scenes/healt_bar/progress_bar.gd<>uid://cwnglauffjrpn::::res://assets/enemies-final/lvl5_tank.glb
-woman_enemy_lvl2_scene.tscn::PackedScene::3478271799242710657::1716121461::0::1::::<><>::res://enemies/woman_enemy_lvl2.gd<>uid://cf0sdfcuf7h3w::::res://assets/enemies-final/lvl2_walking.fbx<>res://scenes/healt_bar/progress_bar.gd
-woman_enemy_lvl3_scene.tscn::PackedScene::6215789035194202119::1716121461::0::1::::<><>::res://enemies/woman_enemy_lvl3.gd<>res://scenes/healt_bar/progress_bar.gd<>uid://cmc4cqoxc6ucl::::res://assets/enemies-final/lvl3_running.fbx
+::res://scenes/audio_manager/::1716128494
+audio_manager.gd::GDScript::-1::1716127244::0::1::::<>Node3D<>::
+audio_manager.tscn::PackedScene::8329149424274235104::1716128494::0::1::::<><>::res://scenes/audio_manager/audio_manager.gd<>uid://6wewnre1mw0m::::res://audio/panda_theme_song.ogg
+::res://scenes/enemies/::1716128494
+tank_enemy_lvl5_scene.tscn::PackedScene::8627538676833804072::1716128494::0::1::::<><>::res://enemies/tank_enemy_lvl5.gd<>uid://c3y7oj1d6brts::::res://assets/enemies-final/lvl5_tank (1024).glb<>res://scenes/healt_bar/progress_bar.gd
+woman_enemy_lvl2_scene.tscn::PackedScene::3478271799242710657::1716128494::0::1::::<><>::res://enemies/woman_enemy_lvl2.gd<>uid://cf0sdfcuf7h3w::::res://assets/enemies-final/lvl2_walking.fbx<>res://scenes/healt_bar/progress_bar.gd
+woman_enemy_lvl3_scene.tscn::PackedScene::6215789035194202119::1716128494::0::1::::<><>::res://enemies/woman_enemy_lvl3.gd<>res://scenes/healt_bar/progress_bar.gd<>uid://cmc4cqoxc6ucl::::res://assets/enemies-final/lvl3_running.fbx
 ::res://scenes/healt_bar/::1716118586
 health_bar.tscn::PackedScene::8195431442301262081::1715761699::0::1::::<><>::res://scenes/healt_bar/progress_bar.gd
 health_bar_colors.tres::GradientTexture1D::4070838908446336502::1716118586::0::1::::<><>::
 progress_bar.gd::GDScript::-1::1715761699::0::1::::<>ProgressBar<>::
-::res://scenes/projectiles/::1716121461
-banana_scene.tscn::PackedScene::5675355479959669726::1716121461::0::1::::<><>::uid://qw1ou5px26td::::res://assets/custom_models/banana.glb<>res://projectiles/projectile.gd
-::res://scenes/tiles/::1716121461
-fake_base.tscn::PackedScene::2407302576234679428::1716121461::0::1::::<><>::uid://dng7v70xpk8o1::::res://assets/GLTF format/tile.glb<>res://map/fake_base.gd<>uid://cblshugbukexh::::res://assets/GLTF format/detail_crystalLarge.glb<>uid://chr7js7gnkm4t::::res://assets/GLTF format/detail_crystal.glb<>res://scenes/healt_bar/progress_bar.gd
+::res://scenes/projectiles/::1716128494
+banana_scene.tscn::PackedScene::5675355479959669726::1716128494::0::1::::<><>::uid://qw1ou5px26td::::res://assets/custom_models/banana.glb<>res://projectiles/projectile.gd
+::res://scenes/tiles/::1716128494
+fake_base.tscn::PackedScene::2407302576234679428::1716128494::0::1::::<><>::uid://dng7v70xpk8o1::::res://assets/GLTF format/tile.glb<>res://map/fake_base.gd<>uid://cblshugbukexh::::res://assets/GLTF format/detail_crystalLarge.glb<>uid://chr7js7gnkm4t::::res://assets/GLTF format/detail_crystal.glb<>res://scenes/healt_bar/progress_bar.gd
 tile_corner.tscn::PackedScene::8043981019844944305::1713385629::0::1::::<><>::uid://dktivlhj2gvnd::::res://assets/GLTF format/tile_cornerRound.glb
 tile_crossing.tscn::PackedScene::3406769077771099046::1712061783::0::1::::<><>::uid://bin122uev8bv0::::res://assets/GLTF format/tile_crossing.glb
 tile_empty.tscn::PackedScene::8455550720518737473::1712061783::0::1::::<><>::uid://dng7v70xpk8o1::::res://assets/GLTF format/tile.glb
@@ -759,7 +773,7 @@ tile_end.tscn::PackedScene::1068356949815731036::1712061783::0::1::::<><>::uid:/
 tile_start.tscn::PackedScene::6648493976480992972::1712061783::0::1::::<><>::uid://bxhgo00nuvxf1::::res://assets/GLTF format/tile_endSpawn.glb
 tile_straight.tscn::PackedScene::509472588529701720::1712061783::0::1::::<><>::uid://d1536hsmbsop5::::res://assets/GLTF format/tile_straight.glb
 trees.tscn::PackedScene::1150413689801720859::1715763213::0::1::::<><>::uid://b24ael4xe7bvp::::res://assets/GLTF format/detail_tree.glb<>uid://cfmwnsfmblns3::::res://assets/others/tile.glb
-::res://scenes/turrets/::1716121461
-initial_turret_scene.tscn::PackedScene::6278179706195220239::1716121461::0::1::::<><>::uid://b6a0glf6yo3mt::::res://assets/GLTF format/towerRound_base.glb<>res://towers/initial_turret.gd<>uid://cm4gjmtg7s4vq::::res://scenes/projectiles/banana_scene.tscn<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd<>uid://bhoxgtpu77w8u::::res://assets/monkey/monkey.fbx
-::res://towers/::1715787812
-initial_turret.gd::GDScript::-1::1715787812::0::1::::<>Node3D<>::
+::res://scenes/turrets/::1716128494
+initial_turret_scene.tscn::PackedScene::6278179706195220239::1716128494::0::1::::<><>::uid://b6a0glf6yo3mt::::res://assets/GLTF format/towerRound_base.glb<>res://towers/initial_turret.gd<>uid://cm4gjmtg7s4vq::::res://scenes/projectiles/banana_scene.tscn<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd<>uid://bhoxgtpu77w8u::::res://assets/monkey/monkey.fbx
+::res://towers/::1716127244
+initial_turret.gd::GDScript::-1::1716127244::0::1::::<>Node3D<>::
