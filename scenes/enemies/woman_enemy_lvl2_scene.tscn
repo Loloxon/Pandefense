@@ -1,0 +1,125 @@
+[gd_scene load_steps=8 format=3 uid="uid://bps5vmmy68tyn"]
+
+[ext_resource type="Script" path="res://enemies/woman_enemy_lvl2.gd" id="1_0oa7y"]
+[ext_resource type="PackedScene" uid="uid://cf0sdfcuf7h3w" path="res://assets/enemies-final/lvl2_walking.fbx" id="2_0hutc"]
+[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="3_7iq7f"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_40dy7"]
+radius = 1.0
+height = 4.89855
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crot8"]
+bg_color = Color(0.0196078, 0.0196078, 0.0196078, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yl78x"]
+resource_local_to_scene = true
+bg_color = Color(0.211765, 0.65098, 0.831373, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ga1to"]
+viewport_path = NodePath("woman_walking/Area3D/health_bar")
+
+[node name="woman_walking_scene" type="Node3D" groups=["enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+script = ExtResource("1_0oa7y")
+
+[node name="woman_walking" parent="." instance=ExtResource("2_0hutc")]
+
+[node name="RootNode" parent="woman_walking" index="0"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Skeleton3D" parent="woman_walking/RootNode" index="0"]
+bones/0/position = Vector3(0.00142146, 1.1122, 0.00837004)
+bones/0/rotation = Quaternion(0.00849961, 0.0240148, -0.0164513, 0.99954)
+bones/1/rotation = Quaternion(-0.00114564, 0.0026776, 0.00559837, 0.99998)
+bones/2/rotation = Quaternion(-0.0249041, 0.00587419, 0.00453607, 0.999662)
+bones/3/rotation = Quaternion(0.034499, 0.00588929, 0.00454209, 0.999377)
+bones/4/rotation = Quaternion(4.35891e-06, -0.00397944, -0.0105421, 0.999937)
+bones/5/rotation = Quaternion(0.0235006, -0.0268053, 0.0160073, 0.999236)
+bones/9/rotation = Quaternion(-0.692817, -0.300966, 0.532467, -0.381972)
+bones/10/rotation = Quaternion(0.308584, -0.0741142, -0.0171728, 0.94815)
+bones/11/rotation = Quaternion(0.0854132, 0.163522, 0.264697, 0.94652)
+bones/12/rotation = Quaternion(-0.106794, 0.157164, 0.0964413, 0.977033)
+bones/13/rotation = Quaternion(0.278762, -0.00514985, 0.193656, 0.940618)
+bones/14/rotation = Quaternion(-0.00510626, -0.000504641, -0.0649185, 0.997877)
+bones/15/rotation = Quaternion(1.83648e-07, -6.61649e-08, -7.68373e-08, 1)
+bones/17/rotation = Quaternion(0.367058, 0.000426684, 0.0366498, 0.929476)
+bones/18/rotation = Quaternion(0.655542, -0.013551, 0.0595029, 0.752689)
+bones/19/rotation = Quaternion(2.74741e-07, 1.10063e-11, -8.18545e-08, 1)
+bones/21/rotation = Quaternion(0.522286, -0.0324449, 0.0783873, 0.84854)
+bones/22/rotation = Quaternion(0.776641, -0.00556818, 0.0801968, 0.624792)
+bones/23/rotation = Quaternion(-2.99781e-07, -2.99192e-08, -5.77597e-08, 1)
+bones/25/rotation = Quaternion(0.532121, -0.099839, 0.0291431, 0.840256)
+bones/26/rotation = Quaternion(0.793487, 0.00596926, 0.0533841, 0.606212)
+bones/27/rotation = Quaternion(1.24979e-07, -1.30445e-09, -2.30979e-07, 1)
+bones/29/rotation = Quaternion(0.601427, -0.14393, 0.0256659, 0.785437)
+bones/30/rotation = Quaternion(0.742404, 0.0299266, 0.0476786, 0.667583)
+bones/31/rotation = Quaternion(1.00825e-07, 7.81432e-08, -3.57861e-07, 1)
+bones/33/rotation = Quaternion(0.66297, -0.324489, 0.576053, 0.351198)
+bones/34/rotation = Quaternion(0.337102, 0.0903304, 0.138396, 0.926849)
+bones/35/rotation = Quaternion(0.113019, -0.119074, -0.203523, 0.965208)
+bones/36/rotation = Quaternion(-0.0564737, -0.19149, -0.0406651, 0.979024)
+bones/37/rotation = Quaternion(0.178039, 0.0163424, -0.207836, 0.961686)
+bones/38/rotation = Quaternion(0.110348, -0.189568, 0.125549, 0.967535)
+bones/39/rotation = Quaternion(1.8972e-07, 8.05804e-08, 1.01534e-07, 1)
+bones/41/rotation = Quaternion(0.339047, 0.0227869, 0.00240281, 0.94049)
+bones/42/rotation = Quaternion(0.551535, 0.027318, -0.0331687, 0.833044)
+bones/43/rotation = Quaternion(-6.93889e-18, 1.38778e-17, -3.67098e-07, 1)
+bones/45/rotation = Quaternion(0.415605, 0.0406222, -0.0129086, 0.908546)
+bones/46/rotation = Quaternion(0.595131, 0.0343673, -0.0447224, 0.801647)
+bones/47/rotation = Quaternion(-8.40108e-09, 3.43947e-08, -3.16977e-07, 1)
+bones/49/rotation = Quaternion(0.407604, 0.0133448, -0.037327, 0.912298)
+bones/50/rotation = Quaternion(0.645073, -0.0170674, -0.0591779, 0.761635)
+bones/51/rotation = Quaternion(-1.04083e-17, 3.3627e-24, -3.23078e-07, 1)
+bones/53/rotation = Quaternion(0.377679, 0.00397832, -0.063508, 0.923748)
+bones/54/rotation = Quaternion(0.686087, -0.0425237, -0.0846222, 0.721329)
+bones/65/rotation = Quaternion(0.0611329, 0.241998, 0.967125, -0.0486678)
+bones/66/rotation = Quaternion(-0.56833, 0.010003, 0.00198034, 0.822738)
+bones/67/rotation = Quaternion(0.486367, -0.00760976, -0.00842544, 0.873681)
+bones/68/rotation = Quaternion(0.334293, 0.0122968, -0.0124668, 0.942306)
+bones/70/rotation = Quaternion(-0.0747803, 0.120606, 0.989277, -0.0345299)
+bones/71/rotation = Quaternion(-0.225239, -0.0677651, 0.0100304, 0.971893)
+bones/72/rotation = Quaternion(0.55029, -0.018272, -0.0352075, 0.834031)
+bones/73/rotation = Quaternion(0.34713, 0.00681477, -0.00366573, 0.937785)
+
+[node name="Area3D" type="Area3D" parent="woman_walking" groups=["enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000440001, 2, 0.13665)
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="woman_walking/Area3D"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -0.5, 0)
+shape = SubResource("CapsuleShape3D_40dy7")
+
+[node name="health_bar" type="SubViewport" parent="woman_walking/Area3D"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(128, 128)
+render_target_update_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="woman_walking/Area3D/health_bar" groups=["path"]]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -10.0
+offset_right = 50.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_crot8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yl78x")
+value = 100.0
+show_percentage = false
+script = ExtResource("3_7iq7f")
+
+[node name="Sprite3D" type="Sprite3D" parent="woman_walking/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.394, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_ga1to")
+
+[connection signal="area_entered" from="woman_walking/Area3D" to="." method="_on_enemy_area_3d_area_entered"]
+[connection signal="value_changed" from="woman_walking/Area3D/health_bar/ProgressBar" to="woman_walking/Area3D/health_bar/ProgressBar" method="_on_value_changed"]
+
+[editable path="woman_walking"]

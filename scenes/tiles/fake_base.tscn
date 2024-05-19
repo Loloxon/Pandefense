@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b65e1k2t75er0"]
+[gd_scene load_steps=10 format=3 uid="uid://bakd6lriwfuky"]
 
 [ext_resource type="PackedScene" uid="uid://dng7v70xpk8o1" path="res://assets/GLTF format/tile.glb" id="1_bs4mp"]
 [ext_resource type="Script" path="res://map/fake_base.gd" id="1_ga1bg"]
@@ -19,7 +19,7 @@ resource_local_to_scene = true
 bg_color = Color(0.211765, 0.65098, 0.831373, 1)
 
 [node name="fake_base" type="Area3D" groups=["base"]]
-collision_layer = 7
+collision_layer = 5
 collision_mask = 7
 script = ExtResource("1_ga1bg")
 

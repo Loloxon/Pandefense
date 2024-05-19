@@ -1,11 +1,14 @@
 class_name WaveManager extends Node
 
-var enemies_number:int = 5
-var delay:float = 2
+
+
 var _main:Main
 var _map:Map
 var wave:Array[Enemy]
-var woman_walking_scene = preload("res://scenes/enemies/woman_walking_scene.tscn")
+var delays:Array[float]
+var WOMAN_ENEMY_LVL_2_SCENE = preload("res://scenes/enemies/woman_enemy_lvl2_scene.tscn")
+var WOMAN_ENEMY_LVL_3_SCENE = preload("res://scenes/enemies/woman_enemy_lvl3_scene.tscn")
+var TANK_ENEMY_LVL_5_SCENE = preload("res://scenes/enemies/tank_enemy_lvl5_scene.tscn")
 
 var enemies_remaining = 0
 var wave_spawned = false
@@ -15,7 +18,7 @@ func _init(main, map):
 	_map = map
 
 func spawn_wave():
-	_create_wave()
+	_create_wave(4, 2, 1)
 	_move_wave()
 	#while true:
 		#print(wave)
@@ -44,10 +47,23 @@ func kill_enemy(enemy):
 			break
 
 
-func _create_wave():
-	for i in range(enemies_number):
-		var enemy = woman_walking_scene.instantiate()
+func _create_wave(woman2, woman3, tank5):
+	for i in range(woman2):
+		var enemy = WOMAN_ENEMY_LVL_2_SCENE.instantiate()
 		wave.append(enemy)
+		delays.append(1.5)
+		enemy.connect("enemy_killed", _can_spawn_next_wave)
+		enemies_remaining += 1
+	for i in range(woman3):
+		var enemy = WOMAN_ENEMY_LVL_3_SCENE.instantiate()
+		wave.append(enemy)
+		delays.append(0.75)
+		enemy.connect("enemy_killed", _can_spawn_next_wave)
+		enemies_remaining += 1
+	for i in range(tank5):
+		var enemy = TANK_ENEMY_LVL_5_SCENE.instantiate()
+		wave.append(enemy)
+		delays.append(3)
 		enemy.connect("enemy_killed", _can_spawn_next_wave)
 		enemies_remaining += 1
 	wave_spawned = true
@@ -62,9 +78,11 @@ func _can_spawn_next_wave():
 
 
 func _move_wave():
-	for e in wave:
+	for i in range(len(wave)):
+		var enemy = wave[i]
+		var delay = delays[i]
 		await _main.get_tree().create_timer(delay).timeout
-		move_along(e, _map.get_path())
+		move_along(enemy, _map.get_path())
 		
 		
 func move_along(e, path):
@@ -90,5 +108,6 @@ func move_along(e, path):
 	while is_instance_valid(e) and curr_distance < c3d.point_count-1:
 		curr_distance += e._speed
 		pf3d.progress = clamp(curr_distance, 0, c3d.point_count-1.00001)
-		e._movement_animation.play("mixamo_com")
+		if e._movement_animation != null:
+			e._movement_animation.play("mixamo_com")
 		await _main.get_tree().create_timer(0.01).timeout

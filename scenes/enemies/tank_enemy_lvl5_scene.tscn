@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://du6ikisqmnvx5"]
+
+[ext_resource type="Script" path="res://enemies/tank_enemy_lvl5.gd" id="1_0ly5u"]
+[ext_resource type="PackedScene" uid="uid://c3y7oj1d6brts" path="res://assets/enemies-final/lvl5_tank (1024).glb" id="2_hllrg"]
+[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="3_al066"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0x4t3"]
+radius = 2.59956
+height = 8.77839
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3in7"]
+bg_color = Color(0.0196078, 0.0196078, 0.0196078, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nvavr"]
+resource_local_to_scene = true
+bg_color = Color(0.211765, 0.65098, 0.831373, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1snbq"]
+viewport_path = NodePath("tank/Area3D/health_bar")
+
+[node name="tank_scene" type="Node3D" groups=["enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.785393, 0)
+script = ExtResource("1_0ly5u")
+
+[node name="tank" parent="." instance=ExtResource("2_hllrg")]
+
+[node name="Area3D" type="Area3D" parent="tank" groups=["enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000440001, 0.021638, 0.13665)
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tank/Area3D"]
+transform = Transform3D(0.8, 0, 0, 0, -3.49691e-08, -0.8, 0, 0.8, -3.49691e-08, 0, -0.0621386, 0)
+shape = SubResource("CapsuleShape3D_0x4t3")
+
+[node name="health_bar" type="SubViewport" parent="tank/Area3D"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(128, 128)
+render_target_update_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="tank/Area3D/health_bar" groups=["path"]]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -10.0
+offset_right = 50.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_r3in7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nvavr")
+value = 100.0
+show_percentage = false
+script = ExtResource("3_al066")
+
+[node name="Sprite3D" type="Sprite3D" parent="tank/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91697, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_1snbq")
+
+[connection signal="area_entered" from="tank/Area3D" to="." method="_on_enemy_area_3d_area_entered"]
+[connection signal="value_changed" from="tank/Area3D/health_bar/ProgressBar" to="tank/Area3D/health_bar/ProgressBar" method="_on_value_changed"]
+
+[editable path="tank"]
