@@ -44,7 +44,7 @@ offset_right = 0.151855
 offset_bottom = 0.0559692
 
 [node name="placement_Button" parent="Control" instance=ExtResource("2_syn2g")]
-custom_minimum_size = Vector2(144, 144)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5

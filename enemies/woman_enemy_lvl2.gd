@@ -12,7 +12,7 @@ func _init():
 
 func _create_model():
 	$woman_walking.global_rotation_degrees = Vector3(0, 90, 0)
-	var scale = 0.4
+	var scale = 0.3
 	$woman_walking.scale = Vector3(scale, scale, scale)
 	_movement_animation = $woman_walking/AnimationPlayer
 

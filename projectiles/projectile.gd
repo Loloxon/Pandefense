@@ -22,10 +22,9 @@ func _process(delta):
 		global_position = starting_position.lerp(target.global_position, lerp_pos)
 		global_rotation_degrees += rotation_speed_deg
 		lerp_pos += delta * speed
-		
-	else:
-		queue_free()
+
 
 func destroy_projectile():	
-	AudioManager.play_effect(projectile_sound, "projectile")
 	queue_free()
+	AudioManager.play_effect(projectile_sound, "projectile")
+

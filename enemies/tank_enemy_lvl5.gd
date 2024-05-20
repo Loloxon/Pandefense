@@ -5,14 +5,14 @@ class_name TankEnemy5 extends "res://enemies/enemy.gd"
 
 func _init():
 	_speed = 0.01
-	_max_hp = 50
-	_kill_reward = 15
-	_kill_score = 1
+	_max_hp = 100
+	_kill_reward = 50
+	_kill_score = 5
 	super._init()
 
 func _create_model():
 	$tank.global_rotation_degrees = Vector3(0, 90, 0)
-	var scale = 0.4
+	var scale = 0.3
 	$tank.scale = Vector3(scale, scale, scale)
 	_movement_animation = $tank/AnimationPlayer
 

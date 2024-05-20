@@ -5,7 +5,8 @@ class_name WaveManager extends Node
 var _main:Main
 var _map:Map
 var wave:Array[Enemy]
-var delays:Array[float]
+var delays_before:Array[float]
+var delays_after:Array[float]
 var WOMAN_ENEMY_LVL_2_SCENE = preload("res://scenes/enemies/woman_enemy_lvl2_scene.tscn")
 var WOMAN_ENEMY_LVL_3_SCENE = preload("res://scenes/enemies/woman_enemy_lvl3_scene.tscn")
 var TANK_ENEMY_LVL_5_SCENE = preload("res://scenes/enemies/tank_enemy_lvl5_scene.tscn")
@@ -18,7 +19,7 @@ func _init(main, map):
 	_map = map
 
 func spawn_wave():
-	_create_wave(4, 2, 1)
+	_create_wave(4, 3, 2)
 	_move_wave()
 	#while true:
 		#print(wave)
@@ -51,19 +52,22 @@ func _create_wave(woman2, woman3, tank5):
 	for i in range(woman2):
 		var enemy = WOMAN_ENEMY_LVL_2_SCENE.instantiate()
 		wave.append(enemy)
-		delays.append(1.5)
+		delays_before.append(1)
+		delays_after.append(0.5)
 		enemy.connect("enemy_killed", _can_spawn_next_wave)
 		enemies_remaining += 1
 	for i in range(woman3):
 		var enemy = WOMAN_ENEMY_LVL_3_SCENE.instantiate()
 		wave.append(enemy)
-		delays.append(0.75)
+		delays_before.append(0.5)
+		delays_after.append(0.25)
 		enemy.connect("enemy_killed", _can_spawn_next_wave)
 		enemies_remaining += 1
 	for i in range(tank5):
 		var enemy = TANK_ENEMY_LVL_5_SCENE.instantiate()
 		wave.append(enemy)
-		delays.append(3)
+		delays_before.append(0)
+		delays_after.append(6)
 		enemy.connect("enemy_killed", _can_spawn_next_wave)
 		enemies_remaining += 1
 	wave_spawned = true
@@ -80,9 +84,11 @@ func _can_spawn_next_wave():
 func _move_wave():
 	for i in range(len(wave)):
 		var enemy = wave[i]
-		var delay = delays[i]
-		await _main.get_tree().create_timer(delay).timeout
+		var delay_before = delays_before[i]
+		var delay_after = delays_after[i]
+		await _main.get_tree().create_timer(delay_before).timeout
 		move_along(enemy, _map.get_path())
+		await _main.get_tree().create_timer(delay_after).timeout
 		
 		
 func move_along(e, path):

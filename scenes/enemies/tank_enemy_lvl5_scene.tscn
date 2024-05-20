@@ -19,7 +19,7 @@ bg_color = Color(0.211765, 0.65098, 0.831373, 1)
 viewport_path = NodePath("tank/Area3D/health_bar")
 
 [node name="tank_scene" type="Node3D" groups=["enemy"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.785393, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64, 0)
 script = ExtResource("1_0ly5u")
 
 [node name="tank" parent="." instance=ExtResource("2_hllrg")]
