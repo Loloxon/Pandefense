@@ -37,13 +37,13 @@ func _generate_path(add_loops:bool = false):
 	var x = 0
 	var y = int(path_config.map_height/2.0)
 	
-	while x < path_config.map_length:
+	while x < path_config.map_length-4:
 		if not _path.has(Vector2i(x,y)):
 			_path.append(Vector2i(x,y))
 		
 		var choice:int = randi_range(0,2)
 
-		if choice == 0 or x < 2 or x % 2 == 0 or x == path_config.map_length-1:
+		if choice == 0 or x < 2 or x % 2 == 0 or x >= path_config.map_length-2-4:
 			x += 1
 		elif choice == 1 and y < path_config.map_height-2 and not _path.has(Vector2i(x,y+1)):
 			y += 1
@@ -87,7 +87,9 @@ func _add_loops():
 	while loops_generated:
 		loops_generated = false
 		for i in range(_path.size()):
-			var loop:Array[Vector2i] = _is_loop_option(i)
+			var loop:Array[Vector2i]
+			if _path[i].x < path_config.map_length-4-3:
+				loop = _is_loop_option(i)
 			# If the loops size > 0, then _is_loop_option found a loop... So add
 			# it to the array!
 			if loop.size() > 0:

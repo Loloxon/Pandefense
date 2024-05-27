@@ -33,24 +33,42 @@ func _display_path(main):
 
 func _display_complete_grid(main):
 	for x in range(path_config.map_length):
-		for y in range(path_config.map_height):
-			if not _path_generator.get_path().has(Vector2i(x,y)):
-				var tile:Node3D = tile_config.tile_empty[0].instantiate()
-				
-				if not (_path_generator.get_path().has(Vector2i(x-1,y)) 
-					or _path_generator.get_path().has(Vector2i(x+1,y)) 
-					or _path_generator.get_path().has(Vector2i(x,y-1))
-					or _path_generator.get_path().has(Vector2i(x,y+1))
-					or _path_generator.get_path().has(Vector2i(x+1,y+1))
-					or _path_generator.get_path().has(Vector2i(x-1,y+1))
-					or _path_generator.get_path().has(Vector2i(x-1,y-1))
-					or _path_generator.get_path().has(Vector2i(x+1,y-1))):
-					tile = tile_config.tile_empty.pick_random().instantiate()
+		if x < path_config.map_length-4:
+			for y in range(path_config.map_height):
+				if not _path_generator.get_path().has(Vector2i(x,y)):
+					var tile:Node3D = tile_config.tile_empty[0].instantiate()
 					
+					if not (_path_generator.get_path().has(Vector2i(x-1,y)) 
+						or _path_generator.get_path().has(Vector2i(x+1,y)) 
+						or _path_generator.get_path().has(Vector2i(x,y-1))
+						or _path_generator.get_path().has(Vector2i(x,y+1))
+						or _path_generator.get_path().has(Vector2i(x+1,y+1))
+						or _path_generator.get_path().has(Vector2i(x-1,y+1))
+						or _path_generator.get_path().has(Vector2i(x-1,y-1))
+						or _path_generator.get_path().has(Vector2i(x+1,y-1))):
+						tile = tile_config.tile_empty.pick_random().instantiate()
+						
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+					tile.global_rotation_degrees = Vector3(0, randi_range(0,3)*90, 0)
+		elif x < path_config.map_length-2:
+			for y in range(path_config.map_height):
+				if y > 3 and y < path_config.map_height-3:
+					var tile:Node3D  = tile_config.tile_panda_base.pick_random().instantiate()
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+					tile.global_rotation_degrees = Vector3(0, randi_range(0,3)*90, 0)
+				else:
+					var tile:Node3D  = tile_config.tile_base.instantiate()
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+					tile.global_rotation_degrees = Vector3(0, randi_range(0,3)*90, 0)
+		else:
+			for y in range(path_config.map_height):
+				var tile:Node3D  = tile_config.tile_base.instantiate()
 				main.add_child(tile)
 				tile.global_position = Vector3(x, 0, y)
 				tile.global_rotation_degrees = Vector3(0, randi_range(0,3)*90, 0)
-
 
 func _score_to_tile(tile_score):
 	var tile:Node3D = tile_config.tile_empty[0].instantiate()

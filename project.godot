@@ -23,6 +23,10 @@ AudioManager="*res://scenes/audio_manager/audio_manager.tscn"
 
 enabled=PackedStringArray("res://addons/godot_state_charts/plugin.cfg")
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [layer_names]
 
 3d_physics/layer_1="Path"

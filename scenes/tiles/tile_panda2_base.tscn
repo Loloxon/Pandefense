@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcr8341lq6772"]
+
+[ext_resource type="PackedScene" uid="uid://cn3r8ffrnogna" path="res://assets/final/pandas_base/panda2_sit/panda2_sit.glb" id="1_apf6u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sbe8j"]
+size = Vector3(1, 0.2, 1)
+
+[node name="tile_panda2_based" type="Area3D" groups=["base"]]
+
+[node name="panda2_sit" parent="." instance=ExtResource("1_apf6u")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_sbe8j")
