@@ -39,7 +39,7 @@ func _physics_process(_delta):
 			var collission:CollisionObject3D = rayResult.get("collider")
 			_draggable.visible = true
 			_draggable.global_position = Vector3(collission.global_position.x, 0.2, collission.global_position.z)
-			print(collission.get_groups())
+			#print(collission.get_groups())
 			if collission.get_groups()[0] == "empty":
 				apply_material_on_children(_draggable, false)
 				_is_location_valid = true

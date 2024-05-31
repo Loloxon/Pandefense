@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cy11hu3vxlyui"
+path.s3tc="res://.godot/imported/kungfupanda-83b0e8da92b9afe6eca0c5646ed0da9d_Po.png-bdaeb5d2944b8d9d368be1c9ca415cee.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://assets/final/towers/animals/kungfupanda-83b0e8da92b9afe6eca0c5646ed0da9d_Po.png"
+dest_files=["res://.godot/imported/kungfupanda-83b0e8da92b9afe6eca0c5646ed0da9d_Po.png-bdaeb5d2944b8d9d368be1c9ca415cee.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

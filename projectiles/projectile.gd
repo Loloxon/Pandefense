@@ -26,5 +26,6 @@ func _process(delta):
 
 func destroy_projectile():	
 	queue_free()
+	print("projectile deletion")
 	AudioManager.play_effect(projectile_sound, "projectile")
 

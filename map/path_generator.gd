@@ -30,25 +30,31 @@ func generate_path():
 ## loop could be placed. Note that loops can contain loops within them, making for some
 ## interesting results!
 func _generate_path(add_loops:bool = false):
-	_path.clear()
 	_loop_count = 0
-	randomize()
 	
-	var x = 0
-	var y = int(path_config.map_height/2.0)
+	var correct_path = false
 	
-	while x < path_config.map_length-4:
-		if not _path.has(Vector2i(x,y)):
-			_path.append(Vector2i(x,y))
+	while not correct_path:	
+		_path.clear()
+		randomize()
+		var x = 0
+		var y = int(path_config.map_height/2.0)
 		
-		var choice:int = randi_range(0,2)
+		while x < path_config.map_length-4:
+			if not _path.has(Vector2i(x,y)):
+				_path.append(Vector2i(x,y))
+			
+			var choice:int = randi_range(0,2)
 
-		if choice == 0 or x < 2 or x % 2 == 0 or x >= path_config.map_length-2-4:
-			x += 1
-		elif choice == 1 and y < path_config.map_height-2 and not _path.has(Vector2i(x,y+1)):
-			y += 1
-		elif choice == 2 and y > 1 and not _path.has(Vector2i(x,y-1)):
-			y -= 1
+			if choice == 0 or x < 2 or x % 2 == 0 or x >= path_config.map_length-2-4:
+				x += 1
+			elif choice == 1 and y < path_config.map_height-2 and not _path.has(Vector2i(x,y+1)):
+				y += 1
+			elif choice == 2 and y > 1 and not _path.has(Vector2i(x,y-1)):
+				y -= 1
+				
+		if y == int(path_config.map_height/2.0):
+			correct_path = true
 	
 	if add_loops:
 		# Running add_loops multiple times, as I think the first time it might miss an opportunity.

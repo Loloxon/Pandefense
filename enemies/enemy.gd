@@ -66,10 +66,11 @@ func _kill(by_base:bool):
 
 func _on_enemy_area_3d_area_entered(area):
 	var groups = area.get_groups()
-	if len(groups) > 0 and groups[0] == "base":
+
+	if len(groups) > 0 and groups[0] == "projectile":
+		area.get_node("../..").destroy_projectile()
+		receive_dmg(area.get_node("../../..").tower_dmg)
+		
+	elif len(groups) > 0 and groups[0] == "base":
 		_kill(true)
 		enemy_killed.emit()
-	else:
-		receive_dmg(area.get_node("../../..").tower_dmg)
-		area.get_node("../..").destroy_projectile()
-	
