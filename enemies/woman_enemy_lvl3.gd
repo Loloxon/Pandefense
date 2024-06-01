@@ -26,6 +26,6 @@ func _kill(by_base:bool):
 	_alive = false
 	if not by_base:
 		AudioManager.play_effect(dying_sound, "enemy")
-		$"../../..".money += _kill_reward
-		$"../../..".score += _kill_score
+		GlobalScore.money += _kill_reward
+		GlobalScore.score += _kill_score
 	queue_free()

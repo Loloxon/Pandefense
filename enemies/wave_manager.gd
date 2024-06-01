@@ -1,7 +1,6 @@
 class_name WaveManager extends Node
 
 
-
 var _main:Main
 var _map:Map
 var wave:Array[Enemy]
@@ -29,16 +28,17 @@ var delays_after = [[1, 1, 6],
 					[0.5, 0.5, 6],
 					[0.5, 0.5, 6],
 					[1, 1, 4]]
-var wave_idx:int = 10
+var wave_idx:int = 1
 
 func _init(main, map):
 	_main = main
 	_map = map
 
 func spawn_wave():
-	var delay_multiplayer = 1-round(wave_idx/5)*0.2
+	var delay_multiplayer = 1.5-round(wave_idx/5)*0.2
 	var count_multiplayer = 1+round(wave_idx/5)*0.3
 	var valid_wave_idx = wave_idx%5
+		
 	_create_wave(waves[valid_wave_idx][0], delays_before[valid_wave_idx][0], delays_after[valid_wave_idx][0],
 				waves[valid_wave_idx][1], delays_before[valid_wave_idx][1], delays_after[valid_wave_idx][1],
 				waves[valid_wave_idx][2], delays_before[valid_wave_idx][2], delays_after[valid_wave_idx][2],
@@ -81,6 +81,7 @@ func _create_wave(woman2, woman2_delays_before, woman2_delays_after,
 	tank5 = round(tank5*count_multiplayer)
 	delays_before_total.clear()
 	delays_after_total.clear()
+		
 	for i in range(woman2):
 		var enemy = WOMAN_ENEMY_LVL_2_SCENE.instantiate()
 		wave.append(enemy)
@@ -118,9 +119,10 @@ func _move_wave():
 		var enemy = wave[i]
 		var delay_before = delays_before_total[i]
 		var delay_after = delays_after_total[i]
-		await _main.get_tree().create_timer(delay_before).timeout
-		move_along(enemy, _map.get_path())
-		await _main.get_tree().create_timer(delay_after).timeout
+		if _main:
+			await _main.get_tree().create_timer(delay_before).timeout
+			move_along(enemy, _map.get_path())
+			await _main.get_tree().create_timer(delay_after).timeout
 		
 		
 func move_along(e, path):

@@ -3,7 +3,7 @@ extends Node3D
 @onready var _instance:Node3D
 @onready var health_bar = $base_health/ProgressBar
 
-var _max_hp:float = 18
+var _max_hp:float = 30
 var _current_hp:float
 var _alive:bool = true
 
@@ -25,7 +25,7 @@ func _change_health_bar():
 
 func _kill():
 	_alive = false
-	queue_free()
+	get_tree().change_scene_to_file("res://scenes/game_over/game_over.tscn")
 
 func _check_if_dying():
 	if _current_hp<=0:

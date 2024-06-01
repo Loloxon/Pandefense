@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioManager="*res://scenes/audio_manager/audio_manager.tscn"
+GlobalScore="*res://main/global_score.gd"
 
 [editor_plugins]
 
