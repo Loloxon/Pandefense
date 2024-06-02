@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgam1qbvbk4ka"]
+
+[ext_resource type="Texture2D" uid="uid://db2wohqxo8mih" path="res://images/game_completed_screen.jpg" id="1_5dyj2"]
+[ext_resource type="Script" path="res://scenes/game_over/game_completed.gd" id="1_ch1gu"]
+[ext_resource type="Texture2D" uid="uid://qlbuc5bblyo7" path="res://images/pandefense_logo.png" id="2_pansl"]
+
+[node name="game_completed" type="CanvasLayer"]
+script = ExtResource("1_ch1gu")
+
+[node name="game_over_label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 401.0
+offset_top = 52.0
+offset_right = -386.0
+offset_bottom = -508.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Congratulations!
+You've defended the pandas!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play_again_completed" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 496.0
+offset_top = 476.0
+offset_right = -490.0
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "play again"
+
+[node name="score_label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 385.0
+offset_top = 267.0
+offset_right = -368.0
+offset_bottom = -314.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Your score was: 0"
+
+[node name="quit_completed" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 543.0
+offset_top = 561.0
+offset_right = -539.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "quit"
+
+[node name="GameCompletedScreen" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(868, 362)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("1_5dyj2")
+
+[node name="PandefenseLogo" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(974, 422)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_pansl")
+
+[connection signal="pressed" from="play_again_completed" to="." method="_on_play_again_completed_pressed"]
+[connection signal="pressed" from="quit_completed" to="." method="_on_quit_completed_pressed"]

@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgjqf6q5q2770"]
+
+[ext_resource type="Script" path="res://scenes/game_over/game_over.gd" id="1_s2t47"]
+[ext_resource type="Texture2D" uid="uid://cmv7sulcl3cl5" path="res://images/game_over_screen.jpeg" id="2_1rekv"]
+
+[node name="game_over" type="CanvasLayer"]
+script = ExtResource("1_s2t47")
+
+[node name="game_over_label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 401.0
+offset_top = 52.0
+offset_right = -386.0
+offset_bottom = -508.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Game Over!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play_again" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 496.0
+offset_top = 476.0
+offset_right = -490.0
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "play again"
+
+[node name="score_label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 385.0
+offset_top = 267.0
+offset_right = -368.0
+offset_bottom = -314.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Your score was: 0"
+
+[node name="quit" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 543.0
+offset_top = 561.0
+offset_right = -539.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "quit"
+
+[node name="GameOverScreen" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(594, 326)
+scale = Vector2(1.2, 1.233)
+texture = ExtResource("2_1rekv")
+
+[connection signal="pressed" from="play_again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

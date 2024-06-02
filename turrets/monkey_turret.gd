@@ -14,6 +14,11 @@ var _waiting_for_projectile:bool = false
 @onready var _movement_animation:AnimationPlayer = $monkey/AnimationPlayer
 
 
+func _process(delta):
+	if GlobalScore.game_ended:
+		queue_free()
+
+
 func _on_patrol_zone_area_entered(area):
 	var enemy_node = area #.get_node("../..") #considered bad practice -> replace later if possible!
 	

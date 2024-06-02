@@ -15,4 +15,15 @@ res://scenes/enemies/woman_enemy_lvl2_scene.tscn
 res://scenes/enemies/tank_enemy_lvl5_scene.tscn
 res://scenes/tiles/fake_base.tscn
 res://scenes/buttons/placement_button.tscn
+res://scenes/game_over.tscn
+res://scenes/game_over/game_over.gd
+res://scenes/game_over/game_over.tscn
+res://map/fake_base.gd
+res://main/main.gd
+res://main/global_score.gd
+res://enemies/tank_enemy_lvl5.gd
+res://enemies/woman_enemy_lvl2.gd
+res://enemies/woman_enemy_lvl3.gd
 res://enemies/wave_manager.gd
+res://scenes/game_over/game_completed.tscn
+res://scenes/game_over/game_completed.gd

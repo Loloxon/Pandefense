@@ -17,6 +17,10 @@ func _init():
 	_check_validity()
 	
 
+func _process(delta):
+	if GlobalScore.game_ended:
+		queue_free()
+
 func get_info():
 	return str("HP ", _current_hp, "/", _max_hp)
 
