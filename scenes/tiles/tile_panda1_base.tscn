@@ -1,13 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://rnotej3muxgp"]
+[gd_scene load_steps=5 format=3 uid="uid://rnotej3muxgp"]
 
 [ext_resource type="PackedScene" uid="uid://q8ong7ebyx88" path="res://assets/final/pandas_base/panda1_sit/panda1_sit.glb" id="1_b6ddj"]
+[ext_resource type="PackedScene" uid="uid://st1qspi2fq4l" path="res://assets/final/pandas_base/panda1_fall/panda1_fall.glb" id="1_fhp0j"]
+[ext_resource type="Script" path="res://pandas_base/panda1_fall.gd" id="2_hgo0w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sbe8j"]
 size = Vector3(1, 0.2, 1)
 
 [node name="tile_panda1_based" type="Area3D" groups=["base"]]
 
+[node name="panda1_fall" parent="." instance=ExtResource("1_fhp0j")]
+script = ExtResource("2_hgo0w")
+
+[node name="Cylinder_001_0_001" parent="panda1_fall/Sketchfab_model_008/Root_001/Cylinder_002" index="0"]
+transform = Transform3D(-0.384616, 0.923077, 1.18424e-15, -0.923077, -0.384616, -1.77636e-15, -1.18424e-15, -1.77636e-15, 1, 0.0841191, -0.0699997, 6)
+
 [node name="panda1_sit" parent="." instance=ExtResource("1_b6ddj")]
+visible = false
 
 [node name="Cylinder_001_0_001" parent="panda1_sit/Sketchfab_model_008/Root_001/Cylinder_002" index="0"]
 transform = Transform3D(-0.384616, 0.923077, 0, -0.923077, -0.384616, 2.84217e-14, 0, 1.42109e-14, 1, 0.0841191, -0.0699998, 6)
@@ -16,4 +25,5 @@ transform = Transform3D(-0.384616, 0.923077, 0, -0.923077, -0.384616, 2.84217e-1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 shape = SubResource("BoxShape3D_sbe8j")
 
+[editable path="panda1_fall"]
 [editable path="panda1_sit"]

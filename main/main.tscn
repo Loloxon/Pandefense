@@ -28,7 +28,7 @@ current = true
 fov = 60.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.252062, -0.917448, 0.30782, 0.651928, 0.0740867, 0.754653, -0.715161, 0.390896, 0.579435, 26.2966, 14.6521, 15.1409)
+transform = Transform3D(0.639049, -0.589394, -0.494197, 0.651928, 0.074087, 0.754653, -0.408175, -0.804441, 0.431588, -19.0181, 14.6521, 8.48825)
 light_energy = 1.2
 shadow_enabled = true
 

@@ -28,7 +28,7 @@ var delays_after = [[1, 1, 6],
 					[0.5, 0.5, 6],
 					[0.5, 0.5, 6],
 					[1, 1, 4]]
-var wave_idx:int = 1
+var wave_idx:int = 2
 
 func _init(main, map):
 	_main = main
@@ -45,24 +45,6 @@ func spawn_wave():
 				delay_multiplayer, count_multiplayer)
 	wave_idx+=1
 	_move_wave()
-	#while true:
-		#print(wave)
-		#for e in wave:
-			#if e.is_alive():
-				#print(e.get_info())
-		#await _main.get_tree().create_timer(1).timeout
-
-
-func simulate_fights():
-	while true:
-		for e in wave:
-			if e.is_alive():
-				e.receive_dmg(0.2)
-				if randf() < 0.1 and e.is_alive():
-					e.heal_dmg(10)
-				if randf() < 0.01 and e.is_alive():
-					e.instakill()
-		await _main.get_tree().create_timer(0.1).timeout
 
 
 func kill_enemy(enemy):
