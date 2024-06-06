@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1mr8s41r1syu"]
+
+[ext_resource type="Texture2D" uid="uid://2e861e5h61ug" path="res://images/start_game_bg.png" id="1_0yptc"]
+[ext_resource type="Script" path="res://scenes/game_over/game_start.gd" id="1_5lw8c"]
+[ext_resource type="Texture2D" uid="uid://v3bvtcyn7vqo" path="res://images/lumberjack.png" id="2_q3x2l"]
+[ext_resource type="Texture2D" uid="uid://cmqudxdyu37mr" path="res://images/solider.png" id="3_ccct5"]
+[ext_resource type="Texture2D" uid="uid://c1lpqs433jci" path="res://images/tank.png" id="4_6wwlj"]
+[ext_resource type="Texture2D" uid="uid://qlbuc5bblyo7" path="res://images/pandefense_logo.png" id="5_hx8th"]
+[ext_resource type="Texture2D" uid="uid://boi3p225tsgw4" path="res://images/hippo.png" id="6_t8tx8"]
+[ext_resource type="Texture2D" uid="uid://m66qbajnl7mq" path="res://images/monkey.jpg" id="7_ejtik"]
+[ext_resource type="Texture2D" uid="uid://cawq6ip6a2r1" path="res://images/penguin.png" id="8_psoew"]
+
+[node name="game_start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5lw8c")
+
+[node name="start_game" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 463.0
+offset_top = 537.0
+offset_right = -430.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "start game"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 232.0
+offset_right = -195.0
+offset_bottom = -473.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "Pandefense"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartGameBg" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(627, 333)
+scale = Vector2(1.11556, 1.16721)
+texture = ExtResource("1_0yptc")
+
+[node name="Lumberjack" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(137, 209)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_q3x2l")
+
+[node name="Solider" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(118, 491)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ccct5")
+
+[node name="Tank" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(404, 353)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_6wwlj")
+
+[node name="PandefenseLogo" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(687, 470)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_hx8th")
+
+[node name="Hippo" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(985, 512)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_t8tx8")
+
+[node name="Monkey" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1053, 280)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ejtik")
+
+[node name="Penguin" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(869, 278)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_psoew")
+
+[connection signal="pressed" from="start_game" to="." method="_on_start_game_pressed"]
