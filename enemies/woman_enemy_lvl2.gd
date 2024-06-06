@@ -8,6 +8,7 @@ func _init():
 	_max_hp = 10
 	_kill_reward = 15
 	_kill_score = 1
+	dmg = 2
 	super._init()
 
 func _create_model():

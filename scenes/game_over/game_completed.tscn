@@ -64,17 +64,16 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "quit"
 
-[node name="GameCompletedScreen" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(868, 362)
-scale = Vector2(1.75, 1.75)
-texture = ExtResource("1_5dyj2")
-
 [node name="PandefenseLogo" type="Sprite2D" parent="."]
-z_index = -1
 position = Vector2(974, 422)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_pansl")
+
+[node name="GameCompletedScreen" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(794, 336)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("1_5dyj2")
 
 [connection signal="pressed" from="play_again_completed" to="." method="_on_play_again_completed_pressed"]
 [connection signal="pressed" from="quit_completed" to="." method="_on_quit_completed_pressed"]

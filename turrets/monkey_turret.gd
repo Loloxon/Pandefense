@@ -41,7 +41,7 @@ func follow_target(target, delta):
 	var target_basis:Basis = Basis.looking_at(
 		Vector3(target_vector.x, 0, target_vector.z))
 	$monkey.basis = $monkey.basis.slerp(target_basis, _slerp_progress)
-	_slerp_progress += delta
+	_slerp_progress += delta*2
 
 	if _slerp_progress > 1:
 		$StateChart.send_event("to_attacking")
@@ -50,13 +50,14 @@ func follow_target(target, delta):
 func _on_patrolling_state_processing(_delta):
 	if _enemies_in_range.size() > 0:
 		_current_enemy = _enemies_in_range[0]
-		#print("Enemy spotted")
+		print("Enemy spotted")
 		$StateChart.send_event("to_targeting")
 
 func _on_targeting_state_entered():
 	_current_enemy_targeted = false
 	_slerp_progress = 0
-	#print("Start of targetting")
+
+	print("Start of targetting")
 
 func _on_targeting_state_physics_processing(delta):
 	if _current_enemy != null and _enemies_in_range.has(_current_enemy):

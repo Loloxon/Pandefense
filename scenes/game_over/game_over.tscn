@@ -64,8 +64,8 @@ text = "quit"
 
 [node name="GameOverScreen" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(594, 326)
-scale = Vector2(1.2, 1.233)
+position = Vector2(577.2, 323)
+scale = Vector2(1.16609, 0.980273)
 texture = ExtResource("2_1rekv")
 
 [connection signal="pressed" from="play_again" to="." method="_on_play_again_pressed"]

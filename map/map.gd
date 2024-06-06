@@ -3,6 +3,7 @@ class_name Map extends Object
 const tile_config: MapTilesConfig = preload("res://resources/basic_tiles_config.res")
 const path_config: PathGeneratorConfig = preload("res://resources/basic_path_config.res")
 var _path_generator: PathGenerator
+var _gate
 
 func _init():
 	_path_generator = PathGenerator.new()
@@ -33,7 +34,24 @@ func _display_path(main):
 
 func _display_complete_grid(main):
 	for x in range(path_config.map_length):
-		if x < path_config.map_length-4:
+		if x == path_config.map_length-1:
+			for y in range(path_config.map_height):
+				var tile:Node3D  = tile_config.tile_base_fence.instantiate()
+				main.add_child(tile)
+				tile.global_position = Vector3(x, 0, y)
+				tile.global_rotation_degrees = Vector3(0, 180, 0)
+				
+				if y == 0:
+					tile  = tile_config.tile_base_fence.instantiate()
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+					tile.global_rotation_degrees = Vector3(0, -90, 0)
+				elif y == path_config.map_height-1:
+					tile  = tile_config.tile_base_fence.instantiate()
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+					tile.global_rotation_degrees = Vector3(0, 90, 0)
+		elif x < path_config.map_length-5:
 			for y in range(path_config.map_height):
 				if not _path_generator.get_path().has(Vector2i(x,y)):
 					var tile:Node3D = tile_config.tile_empty[0].instantiate()
@@ -45,24 +63,51 @@ func _display_complete_grid(main):
 						or _path_generator.get_path().has(Vector2i(x+1,y+1))
 						or _path_generator.get_path().has(Vector2i(x-1,y+1))
 						or _path_generator.get_path().has(Vector2i(x-1,y-1))
-						or _path_generator.get_path().has(Vector2i(x+1,y-1))):
+						or _path_generator.get_path().has(Vector2i(x+1,y-1)))\
+						and x < path_config.map_length-6:
 						tile = tile_config.tile_empty.pick_random().instantiate()
 					
-						if x > path_config.map_length-6:
-							tile = tile_config.tile_empty[0].instantiate()
-					
 					main.add_child(tile)
 					tile.global_position = Vector3(x, 0, y)
 					tile.global_rotation_degrees = Vector3(0, randi_range(0,3)*90, 0)
+		elif x < path_config.map_length-4:
+			for y in range(path_config.map_height):
+				if y != int(path_config.map_height/2.0):
+					var tile:Node3D  = tile_config.tile_base_fence.instantiate()
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+				
+				
+				if y == 0:
+					var tile:Node3D  = tile_config.tile_base_fence.instantiate()
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+					tile.global_rotation_degrees = Vector3(0, -90, 0)
+				elif y == path_config.map_height-1:
+					var tile:Node3D  = tile_config.tile_base_fence.instantiate()
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+					tile.global_rotation_degrees = Vector3(0, 90, 0)
 		else:
 			for y in range(path_config.map_height):
-				if y%2==1 and x%2==0:
-					var tile:Node3D  = tile_config.tile_panda_base.pick_random().instantiate()
+				if y == 0:
+					var tile:Node3D  = tile_config.tile_base_fence.instantiate()
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+					tile.global_rotation_degrees = Vector3(0, -90, 0)
+				elif y == path_config.map_height-1:
+					var tile:Node3D  = tile_config.tile_base_fence.instantiate()
+					main.add_child(tile)
+					tile.global_position = Vector3(x, 0, y)
+					tile.global_rotation_degrees = Vector3(0, 90, 0)
+				else:
+					var tile:Node3D  = tile_config.tile_base.instantiate()
 					main.add_child(tile)
 					tile.global_position = Vector3(x, 0, y)
 					tile.global_rotation_degrees = Vector3(0, randi_range(0,3)*90, 0)
-				else:
-					var tile:Node3D  = tile_config.tile_base.instantiate()
+				if y%2 == 1 and x%2 == 0:
+					var tile:Node3D  = tile_config.tile_panda_base.pick_random().instantiate()
+					_gate.pandas.append(tile)
 					main.add_child(tile)
 					tile.global_position = Vector3(x, 0, y)
 					tile.global_rotation_degrees = Vector3(0, randi_range(0,3)*90, 0)
@@ -75,7 +120,8 @@ func _score_to_tile(tile_score):
 		tile = tile_config.tile_start.instantiate()
 		tile_rotation = Vector3(0, 270, 0)
 	elif tile_score == 8:
-		tile = tile_config.tile_end.instantiate()
+		tile = tile_config.tile_base_gate.instantiate()
+		_gate = tile
 		#tile_rotation = Vector3(0, 90, 0)
 		
 	elif tile_score == 10:

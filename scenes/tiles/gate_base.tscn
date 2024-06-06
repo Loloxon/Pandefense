@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bakd6lriwfuky"]
+[gd_scene load_steps=11 format=3 uid="uid://bakd6lriwfuky"]
 
-[ext_resource type="PackedScene" uid="uid://dng7v70xpk8o1" path="res://assets/GLTF format/tile.glb" id="1_bs4mp"]
-[ext_resource type="Script" path="res://map/fake_base.gd" id="1_ga1bg"]
-[ext_resource type="PackedScene" uid="uid://cblshugbukexh" path="res://assets/GLTF format/detail_crystalLarge.glb" id="2_yaa8q"]
-[ext_resource type="PackedScene" uid="uid://chr7js7gnkm4t" path="res://assets/GLTF format/detail_crystal.glb" id="3_ovbu2"]
-[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="4_71mk6"]
+[ext_resource type="Script" path="res://map/fake_base.gd" id="1_xkxxq"]
+[ext_resource type="PackedScene" uid="uid://bx3etq01kbgo7" path="res://assets/final/base/gate.glb" id="2_mun1v"]
+[ext_resource type="PackedScene" uid="uid://dng7v70xpk8o1" path="res://assets/GLTF format/tile.glb" id="3_m1qke"]
+[ext_resource type="PackedScene" uid="uid://cblshugbukexh" path="res://assets/GLTF format/detail_crystalLarge.glb" id="4_lcr1a"]
+[ext_resource type="PackedScene" uid="uid://chr7js7gnkm4t" path="res://assets/GLTF format/detail_crystal.glb" id="5_1ifos"]
+[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="6_mo8bm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d8ocp"]
 
@@ -18,28 +19,34 @@ bg_color = Color(0.0196078, 0.0196078, 0.0196078, 0.501961)
 resource_local_to_scene = true
 bg_color = Color(0.211765, 0.65098, 0.831373, 1)
 
-[node name="fake_base" type="Area3D" groups=["base"]]
+[node name="gate_base" type="Area3D" groups=["base"]]
 collision_layer = 5
 collision_mask = 7
-script = ExtResource("1_ga1bg")
+script = ExtResource("1_xkxxq")
 
-[node name="tile2" parent="." instance=ExtResource("1_bs4mp")]
+[node name="gate" parent="." instance=ExtResource("2_mun1v")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.376463, 0.135, 1.96164)
 
-[node name="detail_crystalLarge2" parent="." instance=ExtResource("2_yaa8q")]
+[node name="tile2" parent="." instance=ExtResource("3_m1qke")]
+
+[node name="detail_crystalLarge2" parent="." instance=ExtResource("4_lcr1a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000490248, 0.190703, -0.00625953)
+visible = false
 
-[node name="detail_crystal2" parent="." instance=ExtResource("3_ovbu2")]
+[node name="detail_crystal2" parent="." instance=ExtResource("5_1ifos")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.381593, 0.151568, 0.325018)
+visible = false
 
-[node name="detail_crystal3" parent="." instance=ExtResource("3_ovbu2")]
+[node name="detail_crystal3" parent="." instance=ExtResource("5_1ifos")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.257131, 0.154286, 0.283943)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.493777, 0)
 shape = SubResource("BoxShape3D_d8ocp")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0944649, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0944649, 1.14316, 0)
 billboard = 1
 texture = SubResource("ViewportTexture_aqynd")
 
@@ -65,7 +72,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_735i3")
 theme_override_styles/fill = SubResource("StyleBoxFlat_igfx6")
 value = 100.0
 show_percentage = false
-script = ExtResource("4_71mk6")
+script = ExtResource("6_mo8bm")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="value_changed" from="base_health/ProgressBar" to="base_health/ProgressBar" method="_on_value_changed"]
