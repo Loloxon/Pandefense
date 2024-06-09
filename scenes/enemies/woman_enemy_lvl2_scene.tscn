@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://enemies/woman_enemy_lvl2.gd" id="1_0oa7y"]
 [ext_resource type="PackedScene" uid="uid://cf0sdfcuf7h3w" path="res://assets/enemies-final/lvl2_walking.fbx" id="2_0hutc"]
-[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="3_7iq7f"]
+[ext_resource type="Script" path="res://scenes/health_bar/progress_bar.gd" id="3_7iq7f"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_40dy7"]
 radius = 1.0

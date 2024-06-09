@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://enemies/tank_enemy_lvl5.gd" id="1_0ly5u"]
 [ext_resource type="PackedScene" uid="uid://c3y7oj1d6brts" path="res://assets/enemies-final/lvl5_tank (1024).glb" id="2_hllrg"]
-[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="3_al066"]
+[ext_resource type="Script" path="res://scenes/health_bar/progress_bar.gd" id="3_7u4t4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0x4t3"]
 radius = 2.59956
@@ -55,7 +55,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_r3in7")
 theme_override_styles/fill = SubResource("StyleBoxFlat_nvavr")
 value = 100.0
 show_percentage = false
-script = ExtResource("3_al066")
+script = ExtResource("3_7u4t4")
 
 [node name="Sprite3D" type="Sprite3D" parent="tank/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91697, 0)

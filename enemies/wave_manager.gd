@@ -18,25 +18,25 @@ var waves = [[6, 0, 0],
 			[2, 8, 1],
 			[4, 4, 2],
 			[0, 0, 4]]
-var delays_before = [[1, 1, 0],
+var delays_before = [[0.5, 0, 0],
 					[0.5, 0, 0],
 					[0.5, 0, 0],
 					[0.5, 0, 0],
-					[1, 1, 0]]
-var delays_after = [[1, 1, 6],
+					[0.5, 0, 0]]
+var delays_after = [[0.5, 0.5, 6],
 					[0.5, 0.5, 6],
 					[0.5, 0.5, 6],
 					[0.5, 0.5, 6],
-					[1, 1, 4]]
-var wave_idx:int = 2
+					[0.5, 0.5, 4]]
+var wave_idx:int = 0
 
 func _init(main, map):
 	_main = main
 	_map = map
 
 func spawn_wave():
-	var delay_multiplayer = 1.5-round(wave_idx/5)*0.2
-	var count_multiplayer = 1+round(wave_idx/5)*0.3
+	var delay_multiplayer = 1.0/(floor(wave_idx/5)+1)
+	var count_multiplayer = 1+floor(wave_idx/5)*0.5
 	var valid_wave_idx = wave_idx%5
 		
 	_create_wave(waves[valid_wave_idx][0], delays_before[valid_wave_idx][0], delays_after[valid_wave_idx][0],

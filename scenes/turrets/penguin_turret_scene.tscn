@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://cydpa4ly2d8x0"]
+
+[ext_resource type="Script" path="res://turrets/penguin_turret.gd" id="1_rx5lj"]
+[ext_resource type="PackedScene" uid="uid://cm4gjmtg7s4vq" path="res://scenes/projectiles/fish_scene.tscn" id="2_ewlyy"]
+[ext_resource type="PackedScene" uid="uid://xnx37tgp7ndi" path="res://assets/final/towers/bottoms/alaskan_cliff_rock_chunk_2.glb" id="3_gr5g2"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="5_oxp5f"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="6_uij83"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="7_smpe6"]
+[ext_resource type="PackedScene" uid="uid://cvjddv0435fos" path="res://assets/final/towers/animals/penguin.glb" id="8_kkh6f"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="8_vtfr2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tcibm"]
+height = 1.61249
+radius = 2.98673
+
+[node name="penguin_turret_scene" type="Node3D"]
+script = ExtResource("1_rx5lj")
+tower_projectile = ExtResource("2_ewlyy")
+
+[node name="rock" parent="." instance=ExtResource("3_gr5g2")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.188889, 0)
+
+[node name="PatrolZone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PatrolZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.191328, 0)
+shape = SubResource("CylinderShape3D_tcibm")
+
+[node name="StateChart" type="Node" parent="."]
+script = ExtResource("5_oxp5f")
+
+[node name="CompoundState" type="Node" parent="StateChart"]
+script = ExtResource("6_uij83")
+initial_state = NodePath("Patrolling")
+
+[node name="Patrolling" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("7_smpe6")
+
+[node name="Targeting" type="Node" parent="StateChart/CompoundState/Patrolling"]
+script = ExtResource("8_vtfr2")
+to = NodePath("../../Targeting")
+event = &"to_targeting"
+
+[node name="Targeting" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("7_smpe6")
+
+[node name="Attacking" type="Node" parent="StateChart/CompoundState/Targeting"]
+script = ExtResource("8_vtfr2")
+to = NodePath("../../Attacking")
+event = &"to_attacking"
+
+[node name="Patrolling" type="Node" parent="StateChart/CompoundState/Targeting"]
+script = ExtResource("8_vtfr2")
+to = NodePath("../../Patrolling")
+event = &"to_patrolling"
+
+[node name="Attacking" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("7_smpe6")
+
+[node name="Patrolling" type="Node" parent="StateChart/CompoundState/Attacking"]
+script = ExtResource("8_vtfr2")
+to = NodePath("../../Patrolling")
+event = &"to_patrolling"
+
+[node name="penguin" parent="." instance=ExtResource("8_kkh6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.235087, 0)
+
+[node name="Sketchfab_model" parent="penguin" index="0"]
+transform = Transform3D(-0.6, 5.24537e-08, 2.29282e-15, 0, -2.62268e-08, 0.6, 5.24537e-08, 0.6, 2.62268e-08, 0, 0.0941973, 0)
+
+[node name="projectile_spawn" type="Node3D" parent="penguin"]
+transform = Transform3D(1.66667, 0, 0, 0, 1.66667, 0, 0, 0, 1.66667, 0.000577865, 0.517707, -0.290926)
+
+[connection signal="area_entered" from="PatrolZone" to="." method="_on_patrol_zone_area_entered"]
+[connection signal="area_exited" from="PatrolZone" to="." method="_on_patrol_zone_area_exited"]
+[connection signal="state_processing" from="StateChart/CompoundState/Patrolling" to="." method="_on_patrolling_state_processing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Targeting" to="." method="_on_targeting_state_entered"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Targeting" to="." method="_on_targeting_state_physics_processing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Attacking" to="." method="_on_attacking_state_entered"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attacking" to="." method="_on_attacking_state_physics_processing"]
+
+[editable path="penguin"]

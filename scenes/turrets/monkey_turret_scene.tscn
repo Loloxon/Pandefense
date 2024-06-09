@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvpgx5dmcfpy2"]
+[gd_scene load_steps=10 format=3 uid="uid://cvpgx5dmcfpy2"]
 
-[ext_resource type="PackedScene" uid="uid://b6a0glf6yo3mt" path="res://assets/GLTF format/towerRound_base.glb" id="1_0tf78"]
 [ext_resource type="Script" path="res://turrets/monkey_turret.gd" id="1_kq1ws"]
-[ext_resource type="PackedScene" uid="uid://cm4gjmtg7s4vq" path="res://scenes/projectiles/banana_scene.tscn" id="2_egvb7"]
+[ext_resource type="PackedScene" uid="uid://ceydbk7xrqdu3" path="res://scenes/projectiles/banana_scene.tscn" id="2_egvb7"]
 [ext_resource type="PackedScene" uid="uid://b5t68sc5il7pn" path="res://assets/final/towers/bottoms/wood_chopping_trunk_base.glb" id="3_g14gu"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="4_fygqd"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="5_lplbf"]
@@ -36,9 +35,6 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 0.5, 0, -1, -2.18557e-08, 0, 0
 
 [node name="Object_2_001" parent="wood_chopping_trunk_base/Sketchfab_model_004/Low poly Trunk_obj_cleaner_materialmerger_gles" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 0, 2.84217e-14, 1, 0, 0, 0)
-
-[node name="tower_base" parent="." instance=ExtResource("1_0tf78")]
-visible = false
 
 [node name="PatrolZone" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

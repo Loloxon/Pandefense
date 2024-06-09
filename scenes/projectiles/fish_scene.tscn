@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm4gjmtg7s4vq"]
+
+[ext_resource type="Script" path="res://projectiles/fish_projectile.gd" id="1_u0gxy"]
+[ext_resource type="PackedScene" uid="uid://bbwnhr3nk1yhq" path="res://assets/final/towers/food/fish.glb" id="2_rodpr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pl34u"]
+radius = 0.0178249
+height = 0.0819496
+
+[node name="fish_scene" type="Node3D" groups=["projectile"]]
+script = ExtResource("1_u0gxy")
+
+[node name="fish" parent="." instance=ExtResource("2_rodpr")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="Sketchfab_model" parent="fish" index="0"]
+transform = Transform3D(0.584894, 0.811109, 1.11022e-16, -0.811109, 0.584894, -6.93889e-16, -5.13169e-16, 4.07428e-16, 1, 21.8065, 13.7896, 13.3231)
+
+[node name="Area3D" type="Area3D" parent="fish" groups=["projectile"]]
+transform = Transform3D(166.667, 0, 0, 0, 166.667, 0, 0, 0, 100, 0, 30.008, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fish/Area3D" groups=["projectile"]]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, -0.00412252, -0.174172, 0)
+shape = SubResource("CapsuleShape3D_pl34u")
+
+[editable path="fish"]

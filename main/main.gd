@@ -8,7 +8,7 @@ func _ready():
 	
 	wave_manager = WaveManager.new(self, map)
 	
-	GlobalScore.money = 100
+	GlobalScore.money = 40
 	GlobalScore.game_ended = false
 
 func _process(delta):
@@ -26,7 +26,7 @@ func _on_active_state_entered():
 
 
 func ready_for_next_wave():
-	if wave_manager.wave_idx == 3:
+	if wave_manager.wave_idx == 15:
 		get_tree().change_scene_to_file("res://scenes/game_over/game_completed.tscn")
 		
 	$WaveState.send_event("to_complete")

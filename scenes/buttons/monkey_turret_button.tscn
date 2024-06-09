@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpowmsroiunph"]
+
+[ext_resource type="Script" path="res://buttons/monkey_turret_button.gd" id="1_sili8"]
+[ext_resource type="PackedScene" uid="uid://cydpa4ly2d8x0" path="res://scenes/turrets/penguin_turret_scene.tscn" id="2_h3diw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ug3ce"]
+
+[node name="monkey_turret_button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ug3ce")
+script = ExtResource("1_sili8")
+button_draggable = ExtResource("2_h3diw")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

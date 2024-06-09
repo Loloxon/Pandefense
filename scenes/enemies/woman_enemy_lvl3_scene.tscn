@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cus8ewxk4bj5p"]
 
 [ext_resource type="Script" path="res://enemies/woman_enemy_lvl3.gd" id="1_53fw3"]
-[ext_resource type="Script" path="res://scenes/healt_bar/progress_bar.gd" id="3_o3tqo"]
+[ext_resource type="Script" path="res://scenes/health_bar/progress_bar.gd" id="3_o3tqo"]
 [ext_resource type="PackedScene" uid="uid://cmc4cqoxc6ucl" path="res://assets/enemies-final/lvl3_running.fbx" id="4_5k8a3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_40dy7"]
