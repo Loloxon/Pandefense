@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Tower Defense Tutorial 2"
+config/name="Pandefense"
 run/main_scene="res://scenes/game_over/game_start.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
@@ -19,6 +19,13 @@ config/icon="res://icon.svg"
 
 AudioManager="*res://scenes/audio_manager/audio_manager.tscn"
 GlobalScore="*res://main/global_score.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/resizable=false
+window/name="Pandefense"
 
 [editor_plugins]
 

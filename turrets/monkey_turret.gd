@@ -1,39 +1,11 @@
-extends Node3D
+extends "res://turrets/turret.gd"
 
-@export var attack_speed_rate:int = 500
-@export var tower_projectile:PackedScene = null
-@export var tower_dmg:int = 4
-
-var _enemies_in_range:Array[Node3D]
-var _slerp_progress:float = 0
-var _current_enemy_targeted:bool = false
-var _current_enemy:Node3D = null
-var _latest_projectile_fired:int
-var _latest_animation:int
-var _waiting_for_projectile:bool = false
-@onready var _movement_animation:AnimationPlayer = $monkey/AnimationPlayer
+func _ready():
+	attack_speed_rate = 500
+	tower_dmg = 3
+	_movement_animation = $monkey/AnimationPlayer
 
 
-func _process(delta):
-	if GlobalScore.game_ended:
-		queue_free()
-
-
-func _on_patrol_zone_area_entered(area):
-	var enemy_node = area #.get_node("../..") #considered bad practice -> replace later if possible!
-	
-	if _current_enemy == null:
-		_current_enemy = enemy_node
-
-	_enemies_in_range.append(enemy_node) 
-
-
-func _on_patrol_zone_area_exited(area):
-	_enemies_in_range.erase(area)#.get_node("../..")) #considered bad practice -> replace later if possible!
-
-
-func set_patrolling(patrolling: bool):
-	$PatrolZone.monitoring = patrolling
 	
 func follow_target(target, delta):
 	var target_vector = $monkey.global_position.direction_to(
@@ -47,23 +19,6 @@ func follow_target(target, delta):
 		$StateChart.send_event("to_attacking")
 
 
-func _on_patrolling_state_processing(_delta):
-	if _enemies_in_range.size() > 0:
-		_current_enemy = _enemies_in_range[0]
-		print("Enemy spotted")
-		$StateChart.send_event("to_targeting")
-
-func _on_targeting_state_entered():
-	_current_enemy_targeted = false
-	_slerp_progress = 0
-
-	print("Start of targetting")
-
-func _on_targeting_state_physics_processing(delta):
-	if _current_enemy != null and _enemies_in_range.has(_current_enemy):
-		follow_target(_current_enemy, delta)
-	else:
-		$StateChart.send_event("to_patrolling")
 
 func _on_attacking_state_physics_processing(delta):
 	if _current_enemy != null and _enemies_in_range.has(_current_enemy):
@@ -91,8 +46,4 @@ func _fire_projectile_if_possible():
 		projectile.starting_position = $monkey/projectile_spawn.global_position
 		projectile.target = _current_enemy
 		add_child(projectile)
-
-func _on_attacking_state_entered():
-	_latest_projectile_fired = 0
-	_latest_animation = 0
 	

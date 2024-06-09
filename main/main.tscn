@@ -1,11 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://72lu3y2bauhu"]
+[gd_scene load_steps=14 format=3 uid="uid://72lu3y2bauhu"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_v46vx"]
-[ext_resource type="PackedScene" uid="uid://bp7qr10cgion5" path="res://scenes/buttons/placement_button.tscn" id="2_syn2g"]
+[ext_resource type="PackedScene" uid="uid://bp7qr10cgion5" path="res://scenes/buttons/penguin_turret_button.tscn" id="2_syn2g"]
+[ext_resource type="Texture2D" uid="uid://cou1iq062mjjj" path="res://images/monkey_turret.jpg" id="3_gwy8r"]
 [ext_resource type="PackedScene" uid="uid://cvpgx5dmcfpy2" path="res://scenes/turrets/monkey_turret_scene.tscn" id="4_2ving"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="5_5dvxe"]
+[ext_resource type="Texture2D" uid="uid://c082vppcw4kco" path="res://images/penguin_turret.jpg" id="5_axnjb"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="6_0lr6o"]
+[ext_resource type="PackedScene" uid="uid://cydpa4ly2d8x0" path="res://scenes/turrets/penguin_turret_scene.tscn" id="6_mxkvs"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="7_5crt2"]
+[ext_resource type="Texture2D" uid="uid://bwcu567veg558" path="res://images/bear_turret.jpg" id="7_igcng"]
+[ext_resource type="PackedScene" uid="uid://crbhgmq7i4x8s" path="res://scenes/turrets/bear_turret_scene.tscn" id="7_n456q"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="8_dkxsf"]
 
 [sub_resource type="Environment" id="Environment_wmip2"]
@@ -42,7 +47,8 @@ anchor_bottom = 1.003
 offset_right = 0.151855
 offset_bottom = 0.0559692
 
-[node name="placement_Button" parent="Control" instance=ExtResource("2_syn2g")]
+[node name="monkey_placement_Button" parent="Control" instance=ExtResource("2_syn2g")]
+clip_contents = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = 7
@@ -50,15 +56,54 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -48.0
-offset_top = -99.0
-offset_right = 48.0
-offset_bottom = -3.0
+offset_left = -175.5
+offset_top = -110.0
+offset_right = -75.4998
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
 expand_icon = true
+button_icon = ExtResource("3_gwy8r")
 button_draggable = ExtResource("4_2ving")
+activity_cost = 15
+
+[node name="penguin_placement_Button" parent="Control" instance=ExtResource("2_syn2g")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.4999
+offset_top = -110.0
+offset_right = 49.5001
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+expand_icon = true
+button_icon = ExtResource("5_axnjb")
+button_draggable = ExtResource("6_mxkvs")
 activity_cost = 40
+
+[node name="bear_placement_Button" parent="Control" instance=ExtResource("2_syn2g")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 74.5001
+offset_top = -110.0
+offset_right = 174.5
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+expand_icon = true
+button_icon = ExtResource("7_igcng")
+button_draggable = ExtResource("7_n456q")
+activity_cost = 150
 
 [node name="money_label" type="Label" parent="Control"]
 layout_mode = 0

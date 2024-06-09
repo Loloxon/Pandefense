@@ -6,7 +6,7 @@ class_name WomanEnemy3 extends "res://enemies/enemy.gd"
 func _init():
 	_speed = 0.05
 	_max_hp = 5
-	_kill_reward = 20
+	_kill_reward = 5
 	_kill_score = 2
 	dmg = 1
 	super._init()

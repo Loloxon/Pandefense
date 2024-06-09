@@ -3,20 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3cvdg0tfn1xw"
-path="res://.godot/imported/penguin_3.jpg-5f5d6ce482dd98a140465520c6b563cb.ctex"
+path.s3tc="res://.godot/imported/penguin_3.jpg-5f5d6ce482dd98a140465520c6b563cb.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://assets/final/towers/animals/penguin_3.jpg"
-dest_files=["res://.godot/imported/penguin_3.jpg-5f5d6ce482dd98a140465520c6b563cb.ctex"]
+dest_files=["res://.godot/imported/penguin_3.jpg-5f5d6ce482dd98a140465520c6b563cb.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -32,4 +33,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

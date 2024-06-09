@@ -2,8 +2,8 @@ extends Node3D
 
 class_name Projectile
 
-@export var speed:float=2.5
-@export var rotation_speed_deg:Vector3 = Vector3(10, 0, 15)
+@export var speed:float
+@export var rotation_speed_deg:Vector3
 @export var projectile_sound = load("res://audio/banana_splash_short.mp3")
 
 var starting_position:Vector3
@@ -13,11 +13,13 @@ var lerp_pos:float = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	global_position = starting_position
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if target == null:
+		destroy_projectile()
 	if target != null and lerp_pos < 1:
 		global_position = starting_position.lerp(target.global_position, lerp_pos)
 		global_rotation_degrees += rotation_speed_deg
@@ -26,6 +28,5 @@ func _process(delta):
 
 func destroy_projectile():	
 	queue_free()
-	print("projectile deletion")
 	AudioManager.play_effect(projectile_sound, "projectile")
 

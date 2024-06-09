@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmqudxdyu37mr" path="res://images/solider.png" id="3_ccct5"]
 [ext_resource type="Texture2D" uid="uid://c1lpqs433jci" path="res://images/tank.png" id="4_6wwlj"]
 [ext_resource type="Texture2D" uid="uid://qlbuc5bblyo7" path="res://images/pandefense_logo.png" id="5_hx8th"]
-[ext_resource type="Texture2D" uid="uid://boi3p225tsgw4" path="res://images/hippo.png" id="6_t8tx8"]
+[ext_resource type="Texture2D" uid="uid://didjdnjw133rk" path="res://images/bear.png" id="7_1t3og"]
 [ext_resource type="Texture2D" uid="uid://m66qbajnl7mq" path="res://images/monkey.jpg" id="7_ejtik"]
 [ext_resource type="Texture2D" uid="uid://cawq6ip6a2r1" path="res://images/penguin.png" id="8_psoew"]
 
@@ -24,10 +24,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 463.0
-offset_top = 537.0
-offset_right = -430.0
-offset_bottom = -36.0
+offset_left = 498.0
+offset_top = 576.0
+offset_right = -465.0
+offset_bottom = -49.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 48
@@ -51,49 +51,49 @@ vertical_alignment = 1
 
 [node name="StartGameBg" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(627, 333)
-scale = Vector2(1.11556, 1.16721)
+position = Vector2(654, 362)
+scale = Vector2(1.11556, 1.2395)
 texture = ExtResource("1_0yptc")
 
 [node name="Lumberjack" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(137, 209)
-scale = Vector2(0.6, 0.6)
+position = Vector2(176, 264)
+scale = Vector2(0.515078, 0.5175)
 texture = ExtResource("2_q3x2l")
 
 [node name="Solider" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(118, 491)
-scale = Vector2(0.3, 0.3)
+position = Vector2(167, 550)
+scale = Vector2(0.275654, 0.273)
 texture = ExtResource("3_ccct5")
 
 [node name="Tank" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(404, 353)
+position = Vector2(463, 397)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_6wwlj")
 
 [node name="PandefenseLogo" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(687, 470)
+position = Vector2(911, 570)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_hx8th")
 
 [node name="Hippo" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(985, 512)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("6_t8tx8")
+position = Vector2(1137, 597)
+scale = Vector2(0.848889, 0.848889)
+texture = ExtResource("7_1t3og")
 
 [node name="Monkey" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(1053, 280)
+position = Vector2(1160, 301)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_ejtik")
 
 [node name="Penguin" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(869, 278)
+position = Vector2(912, 338)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_psoew")
 
