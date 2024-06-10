@@ -59,12 +59,55 @@ All the other tasks that weren't listed had been performed by all of the crew
 
 _______________________________________________________________________________________________________________________________
 
-
 ### Technologies
 
 * [Godot game engine](https://godotengine.org/)
 * [Blender](https://www.blender.org/)
 
+_______________________________________________________________________________________________________________________________
+
+### Final results
+At the beginning of the game, the start screen appears. To start the game, users need to press the "Start Game" button.
+
+<p align="center">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/start%20screen.png" height="250">
+</p>
 
 
+Once the game starts, the player's task is to defend pandas. This can be accomplished by strategically placing towers with animals that will attack the approaching enemies. Every enemy has its own HP. Once it reaches zero, it vanishes from the screen.
 
+<p align="center">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/game_start.png" height="250">
+</p>
+
+
+Each tower has its own price - the higher the price, the more effective its attack. In Pandefense, the tower with the lowest price and effectiveness is the monkey throwing bananas. Next is the penguin throwing fish, and the most effective is the bear throwing honey.
+
+<p align="center">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/towers.png" height="150">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/towers_cost.png" height="150">
+</p>
+
+
+Money is earned by killing enemies. The current amount is displayed at the top of the screen.
+
+<p align="center">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/money.png" height="250">
+</p>
+
+
+Waves can be triggered by pressing the "Spawn Wave" button. Each wave is progressively more difficult with more enemies appearing, moving faster and having more HP.
+
+<p align="center">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/game_start.png" height="180">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/game_middle.png" height="180">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/game_end.png" height="180">
+</p>
+
+
+The game ends in two scenarios: success, when a certain number of levels are completed or failure, if all the pandas are defeated and disappear from the screen.
+
+<p align="center">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/game_won.png" height="200">
+    <img src="https://github.com/Loloxon/Pandefense/blob/d5f53f97fb3106eebac56d619b6ea4c3fa10b316/images/game_over.png" height="200">
+</p>
