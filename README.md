@@ -26,7 +26,7 @@ At the beginning of the project, we created a plan for the implementation and di
   * The towers cost gold which is obtained by killing the mobs ✅
   * The mobs come in waves separated by a certain period and differentiating in the number of mobs - the game gets harder with time ✅
   * The player must be able to stop the game and resume it, see how much gold they have, and spend it on towers ✅
-  * The towers are resided by animals that attack the mobs - it has to be visible and distinguishable
+  * The towers are resided by animals that attack the mobs - it has to be visible and distinguishable ✅
   * The score is counted with the killed mobs and displayed on the screen ✅
       
 * **SHOULD**
