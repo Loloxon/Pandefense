@@ -20,21 +20,21 @@ ________________________________________________________________________________
 At the beginning of the project, we created a plan for the implementation and divided the functionalities into three sections based on their importance:
 
 * **MUST**
-  * The main object of the game is a plane with a marked-out path for the mobs, places for the towers, and a base with a certain amount of health points
-  * The mobs only move on the path and don't attack towers, damaging only the base when they reach it
-  * The towers can be placed anywhere on the map besides on the path and the base
-  * The towers cost gold which is obtained by killing the mobs
-  * The mobs come in waves separated by a certain period and differentiating in the number of mobs - the game gets harder with time
-  * The player must be able to stop the game and resume it, see how much gold they have, and spend it on towers
+  * The main object of the game is a plane with a marked-out path for the mobs, places for the towers, and a base with a certain amount of health points ✅
+  * The mobs only move on the path and don't attack towers, damaging only the base when they reach it ✅
+  * The towers can be placed anywhere on the map besides on the path and the base ✅
+  * The towers cost gold which is obtained by killing the mobs ✅
+  * The mobs come in waves separated by a certain period and differentiating in the number of mobs - the game gets harder with time ✅
+  * The player must be able to stop the game and resume it, see how much gold they have, and spend it on towers ✅
   * The towers are resided by animals that attack the mobs - it has to be visible and distinguishable
-  * The score is counted with the killed mobs and displayed on the screen
+  * The score is counted with the killed mobs and displayed on the screen ✅
       
 * **SHOULD**
   * The player should be able to input their nickname before the game begins and see it during the gameplay
-  * There should be different types of towers differing in the animal that resides it, its range, damage, and cost
-  * There should be different types of mobs differing in their health points, the amount of damage they deal to the base and their movement speed
+  * There should be different types of towers differing in the animal that resides it, its range, damage, and cost ✅
+  * There should be different types of mobs differing in their health points, the amount of damage they deal to the base and their movement speed ✅
   * The player can spend gold on passive bonuses, lasting all game, that help them in the game, ex. the base has more maximum HP, the bonus gives the player a passive income, the bonus strengthens some specific type of animal, etc.
-  * Different types of mobs are valued differently in the gamescore
+  * Different types of mobs are valued differently in the gamescore ✅
     
 * **COULD**
   * The graphics are of great quality - the game is pretty
@@ -62,9 +62,8 @@ ________________________________________________________________________________
 
 ### Technologies
 
-*Note: this section will be updated during the duration of the project in accordance with the resources we've used*
-
 * [Godot game engine](https://godotengine.org/)
+* [Blender](https://www.blender.org/)
 
 
 
