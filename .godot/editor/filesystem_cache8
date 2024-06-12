@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717926327
+::res://::1718206533
 default_bus_layout.tres::AudioBusLayout::3433973905247650074::1715761699::0::1::::<><>::
 icon.svg::CompressedTexture2D::7849736505738642964::1710795279::1710795279::1::::<><>::
 README.md::TextFile::-1::1710793798::0::1::::<><>::
@@ -66,37 +66,7 @@ banana.glb::PackedScene::1170042549248929965::1712061783::1712061787::1::::<><>:
 banana_banana.jpg::CompressedTexture2D::4603821879741436651::1712061783::1712061787::1::::<><>::
 ::res://assets/edited-NK/::1716316689
 walking_custom.res::Animation::9093639316457170434::1716316689::0::1::::<><>::
-::res://assets/enemies-final/::1716316692
-lvl1_running-019a138e5eb9327cc4205c8360adff48_ao_met_rough_Ch22_1001_Glossiness.png::CompressedTexture2D::3587875564699873068::1716316689::1716316689::1::::<><>::
-lvl1_running-019a138e5eb9327cc4205c8360adff48_Ch22_1001_Diffuse.png::CompressedTexture2D::220072790188989521::1716316689::1716316689::1::::<><>::
-lvl1_running-019a138e5eb9327cc4205c8360adff48_Ch22_1001_Normal.png::CompressedTexture2D::1712599108095272135::1716316689::1716316689::1::::<><>::
-lvl1_running-019a138e5eb9327cc4205c8360adff48_Ch22_1002_Diffuse.png::CompressedTexture2D::5045369991871294292::1716316689::1716316689::1::::<><>::
-lvl1_running-019a138e5eb9327cc4205c8360adff48_Ch22_1002_Normal.png::CompressedTexture2D::7016890078643304904::1716316689::1716316689::1::::<><>::
-lvl1_running-864bf54ad92488cf4cbd2212edf21314_ao_met_rough_Ch22_1001_Glossiness.png::CompressedTexture2D::8361829130502487333::1716316690::1716316690::1::::<><>::
-lvl1_running-864bf54ad92488cf4cbd2212edf21314_Ch22_1001_Diffuse.png::CompressedTexture2D::8325573800904038988::1716316690::1716316690::1::::<><>::
-lvl1_running-864bf54ad92488cf4cbd2212edf21314_Ch22_1001_Normal.png::CompressedTexture2D::1465746646147113713::1716316690::1716316690::1::::<><>::
-lvl1_running-864bf54ad92488cf4cbd2212edf21314_Ch22_1002_Diffuse.png::CompressedTexture2D::2233854292450492749::1716316690::1716316690::1::::<><>::
-lvl1_running-864bf54ad92488cf4cbd2212edf21314_Ch22_1002_Normal.png::CompressedTexture2D::8812869040485951873::1716316690::1716316690::1::::<><>::
-lvl1_running-5579b01d5ee4a29c2502d75035588a49_ao_met_rough_Ch22_1001_Glossiness.png::CompressedTexture2D::6137466470217474489::1716316689::1716316689::1::::<><>::
-lvl1_running-5579b01d5ee4a29c2502d75035588a49_Ch22_1001_Diffuse.png::CompressedTexture2D::5937755819047661551::1716316689::1716316689::1::::<><>::
-lvl1_running-5579b01d5ee4a29c2502d75035588a49_Ch22_1001_Normal.png::CompressedTexture2D::7473062155382824577::1716316689::1716316689::1::::<><>::
-lvl1_running-5579b01d5ee4a29c2502d75035588a49_Ch22_1002_Diffuse.png::CompressedTexture2D::4772883115618874738::1716316689::1716316689::1::::<><>::
-lvl1_running-5579b01d5ee4a29c2502d75035588a49_Ch22_1002_Normal.png::CompressedTexture2D::4890648097505374244::1716316689::1716316689::1::::<><>::
-lvl1_walking-7d4b915d225993c9d32df4eb6e33b95f_ao_met_rough_Ch22_1001_Glossiness.png::CompressedTexture2D::7173840331275347088::1716316690::1716316690::1::::<><>::
-lvl1_walking-7d4b915d225993c9d32df4eb6e33b95f_Ch22_1001_Diffuse.png::CompressedTexture2D::6414784289023866019::1716316690::1716316690::1::::<><>::
-lvl1_walking-7d4b915d225993c9d32df4eb6e33b95f_Ch22_1001_Normal.png::CompressedTexture2D::6295445296649446822::1716316690::1716316690::1::::<><>::
-lvl1_walking-7d4b915d225993c9d32df4eb6e33b95f_Ch22_1002_Diffuse.png::CompressedTexture2D::5132785863536628441::1716316690::1716316690::1::::<><>::
-lvl1_walking-7d4b915d225993c9d32df4eb6e33b95f_Ch22_1002_Normal.png::CompressedTexture2D::2161899146101314505::1716316690::1716316690::1::::<><>::
-lvl1_walking-7337c66076947c85950bb63a2aa1c5a6_ao_met_rough_Ch22_1001_Glossiness.png::CompressedTexture2D::2015915088787934781::1716316690::1716316690::1::::<><>::
-lvl1_walking-7337c66076947c85950bb63a2aa1c5a6_Ch22_1001_Diffuse.png::CompressedTexture2D::4165788665887992224::1716316690::1716316690::1::::<><>::
-lvl1_walking-7337c66076947c85950bb63a2aa1c5a6_Ch22_1001_Normal.png::CompressedTexture2D::7628275091091072447::1716316690::1716316690::1::::<><>::
-lvl1_walking-7337c66076947c85950bb63a2aa1c5a6_Ch22_1002_Diffuse.png::CompressedTexture2D::1975245828838969296::1716316690::1716316690::1::::<><>::
-lvl1_walking-7337c66076947c85950bb63a2aa1c5a6_Ch22_1002_Normal.png::CompressedTexture2D::6232623728824062292::1716316690::1716316690::1::::<><>::
-lvl1_walking-c024ccefaf65e325a7475c85f161bd37_ao_met_rough_Ch22_1001_Glossiness.png::CompressedTexture2D::185298257446257543::1716316691::1716316691::1::::<><>::
-lvl1_walking-c024ccefaf65e325a7475c85f161bd37_Ch22_1001_Diffuse.png::CompressedTexture2D::4794584699983711281::1716316690::1716316690::1::::<><>::
-lvl1_walking-c024ccefaf65e325a7475c85f161bd37_Ch22_1001_Normal.png::CompressedTexture2D::1851305032983435985::1716316690::1716316690::1::::<><>::
-lvl1_walking-c024ccefaf65e325a7475c85f161bd37_Ch22_1002_Diffuse.png::CompressedTexture2D::433386547918563864::1716316690::1716316690::1::::<><>::
-lvl1_walking-c024ccefaf65e325a7475c85f161bd37_Ch22_1002_Normal.png::CompressedTexture2D::5736037660186023673::1716316690::1716316690::1::::<><>::
+::res://assets/enemies-final/::1718206472
 lvl2_running-2e1ac8637331df4430e9471256bc2d3b_Kachujin_diffuse.png::CompressedTexture2D::1377206080324510583::1716316691::1716316691::1::::<><>::
 lvl2_running-2e1ac8637331df4430e9471256bc2d3b_Kachujin_diffuse_body.png::CompressedTexture2D::4126996884616718177::1716316691::1716316691::1::::<><>::
 lvl2_running-2e1ac8637331df4430e9471256bc2d3b_Kachujin_normal.png::CompressedTexture2D::1199743804910924370::1716316691::1716316691::1::::<><>::
@@ -175,12 +145,6 @@ lvl3_walking-d85ead6ac031c1d41a650410c2c0f0a3_FemaleFitA_Body_diffuse.png::Compr
 lvl3_walking-d85ead6ac031c1d41a650410c2c0f0a3_FemaleFitA_Body_diffuse_3.png::CompressedTexture2D::8851699387227680998::1716316692::1716316692::1::::<><>::
 lvl3_walking-d85ead6ac031c1d41a650410c2c0f0a3_FemaleFitA_eyelash_diffuse.png::CompressedTexture2D::5104747802416000174::1716316692::1716316692::1::::<><>::
 lvl3_walking-d85ead6ac031c1d41a650410c2c0f0a3_FemaleFitA_StdNM.png::CompressedTexture2D::6074108048046176102::1716316692::1716316692::1::::<><>::
-lvl4_digger.glb::PackedScene::1977830134887825365::1716316692::1716316692::1::::<><>::
-lvl4_digger_black_baseColor.png::CompressedTexture2D::5660237764185443244::1716316692::1716316692::1::::<><>::
-lvl4_digger_bolt_baseColor.png::CompressedTexture2D::461324464313705622::1716316692::1716316692::1::::<><>::
-lvl4_digger_matii_baseColor.png::CompressedTexture2D::7837928089650952207::1716316692::1716316692::1::::<><>::
-lvl4_digger_tyar_baseColor.png::CompressedTexture2D::709152181350262708::1716316692::1716316692::1::::<><>::
-lvl4_digger_yellow_baseColor.png::CompressedTexture2D::4249505768412884405::1716316692::1716316692::1::::<><>::
 lvl5_tank (1024).glb::PackedScene::6789642513284597300::1716316692::1716316692::1::::<><>::
 lvl5_tank (1024)_0.png::CompressedTexture2D::5332035043249194491::1716316692::1716316692::1::::<><>::
 lvl5_tank (1024)_1.jpg::CompressedTexture2D::8613261415006655420::1716316692::1716316692::1::::<><>::
@@ -194,20 +158,6 @@ lvl5_tank (1024)_8.jpg::CompressedTexture2D::7294447618275911364::1716316692::17
 lvl5_tank (1024)_9.png::CompressedTexture2D::8968983974809039075::1716316692::1716316692::1::::<><>::
 lvl5_tank (1024)_10.jpg::CompressedTexture2D::8784476170592318377::1716316692::1716316692::1::::<><>::
 lvl5_tank (1024)_11.jpg::CompressedTexture2D::7053005860229147365::1716316692::1716316692::1::::<><>::
-::res://assets/enemies-final/lvl1_running.fbm/::1716316690
-Ch22_1001_Diffuse.png::CompressedTexture2D::1438167752903290684::1716316955::1716316690::1::::<><>::
-Ch22_1001_Glossiness.png::CompressedTexture2D::565944095929138857::1716316955::1716316690::1::::<><>::
-Ch22_1001_Normal.png::CompressedTexture2D::6970947322215386845::1716316955::1716316690::1::::<><>::
-Ch22_1001_Specular.png::CompressedTexture2D::1556443359689956760::1716316955::1716316690::1::::<><>::
-Ch22_1002_Diffuse.png::CompressedTexture2D::4311254087387914169::1716316955::1716316690::1::::<><>::
-Ch22_1002_Normal.png::CompressedTexture2D::8618697832797078871::1716316955::1716316690::1::::<><>::
-::res://assets/enemies-final/lvl1_walking.fbm/::1716316691
-Ch22_1001_Diffuse.png::CompressedTexture2D::4497957441110639147::1716316691::1716316691::1::::<><>::
-Ch22_1001_Glossiness.png::CompressedTexture2D::4527301467912376180::1716316691::1716316691::1::::<><>::
-Ch22_1001_Normal.png::CompressedTexture2D::5607649589257144596::1716316691::1716316691::1::::<><>::
-Ch22_1001_Specular.png::CompressedTexture2D::4775347707979230753::1716316691::1716316691::1::::<><>::
-Ch22_1002_Diffuse.png::CompressedTexture2D::6715185224176900731::1716316691::1716316691::1::::<><>::
-Ch22_1002_Normal.png::CompressedTexture2D::40817084389634935::1716316691::1716316691::1::::<><>::
 ::res://assets/enemies-final/lvl2_running.fbm/::1716316691
 Kachujin_diffuse.png::CompressedTexture2D::2502684549720219982::1716316691::1716316691::1::::<><>::
 Kachujin_diffuse_body.png::CompressedTexture2D::4366650796348671244::1716316691::1716316691::1::::<><>::
@@ -366,7 +316,7 @@ wood_chopping_trunk_base_Image_0_5.png::CompressedTexture2D::6987780932696647841
 wood_chopping_trunk_base_Image_1.png::CompressedTexture2D::9042102968492608851::1717149847::1717154141::1::::<><>::
 wood_chopping_trunk_base_Image_1_4.png::CompressedTexture2D::1879030552859880654::1717149847::1717154141::1::::<><>::
 wood_chopping_trunk_base_Image_2.png::CompressedTexture2D::819254979388124598::1717149847::1717154141::1::::<><>::
-::res://assets/final/towers/food/::1717836519
+::res://assets/final/towers/food/::1718206499
 banana.glb::PackedScene::5952349139354902044::1717149847::1717149847::1::::<><>::
 banana_banana.jpg::CompressedTexture2D::5814359708412475702::1717149847::1717149847::1::::<><>::
 fish.glb::PackedScene::2502828596140296686::1717149847::1717149847::1::::<><>::
@@ -379,10 +329,6 @@ honey_bear_bottle_3.png::CompressedTexture2D::7216347654337963797::1717149847::1
 honey_bear_bottle_4.jpg::CompressedTexture2D::3418502303477594621::1717149847::1717836519::1::::<><>::
 honey_bear_bottle_5.png::CompressedTexture2D::4657894945319690730::1717149847::1717836519::1::::<><>::
 honey_bear_bottle_6.png::CompressedTexture2D::3513040661028358650::1717149847::1717836519::1::::<><>::
-honey_spill.glb::PackedScene::3124147481172170787::1717149847::1717149847::1::::<><>::
-watermelon-9c0276cdea340f8e0eceea09569fe8bb_Diffuse.001.png::CompressedTexture2D::8658123084080498169::1717149868::1717149872::1::::<><>::
-::res://assets/final/towers/food/watermelon.fbm/::1717149884
-Diffuse.001.png::CompressedTexture2D::6488109655795300854::1717149868::1717149884::1::::<><>::
 ::res://assets/GLTF format/::1710793851
 detail_crystal.glb::PackedScene::5301217705729552637::1710793798::1710793829::1::::<><>::
 detail_crystalLarge.glb::PackedScene::4866844832554412629::1710793798::1710793830::1::::<><>::
@@ -763,13 +709,13 @@ panda_theme_song.ogg::AudioStreamOggVorbis::2221553328087503862::1715761699::171
 bear_turret_button.gd::GDScript::-1::1717926758::0::1::::<>Button<>::
 monkey_turret_button.gd::GDScript::-1::1717771722::0::1::::<>Button<>::
 penguin_turret_button.gd::GDScript::-1::1717772219::0::1::::<>Button<>::
-::res://enemies/::1717926347
+::res://enemies/::1717934794
 enemies_config.gd::GDScript::-1::1717926347::0::1::::EnemiesConfig<>Resource<>::
 enemy.gd::GDScript::-1::1717926347::0::1::::Enemy<>Node3D<>::
-tank_enemy_lvl5.gd::GDScript::-1::1717761562::0::1::::TankEnemy5<>Node3D<>::
-wave_manager.gd::GDScript::-1::1717761562::0::1::::WaveManager<>Node<>::
-woman_enemy_lvl2.gd::GDScript::-1::1717761562::0::1::::WomanEnemy2<>Node3D<>::
-woman_enemy_lvl3.gd::GDScript::-1::1717761562::0::1::::WomanEnemy3<>Node3D<>::
+tank_enemy_lvl5.gd::GDScript::-1::1717927428::0::1::::TankEnemy5<>Node3D<>::
+wave_manager.gd::GDScript::-1::1717934794::0::1::::WaveManager<>Node<>::
+woman_enemy_lvl2.gd::GDScript::-1::1717927416::0::1::::WomanEnemy2<>Node3D<>::
+woman_enemy_lvl3.gd::GDScript::-1::1717927420::0::1::::WomanEnemy3<>Node3D<>::
 ::res://godot_state_charts_examples/::1712061783
 new_theme.tres::Theme::1319215900418314941::1712061783::0::1::::<><>::
 ::res://godot_state_charts_examples/ant_hill/::1712061783
@@ -850,29 +796,29 @@ terrain_tiles.tres::TileSet::5047831526213325618::1712061783::0::1::::<><>::uid:
 ::res://godot_state_charts_examples/stepping/::1712061783
 stepping.gd::GDScript::-1::1712061783::0::1::::<>Node2D<>::
 stepping.tscn::PackedScene::571145321256240574::1712061783::0::1::::<><>::res://godot_state_charts_examples/stepping/stepping.gd<>uid://bcwkugn6v3oy7::::res://addons/godot_state_charts/utilities/state_chart_debugger.tscn<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/parallel_state.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd
-::res://images/::1717927216
+::res://images/::1718206431
 bear.png::CompressedTexture2D::7727518441504603580::1717761562::1717761562::1::::<><>::
-bear_turret.jpg::CompressedTexture2D::3935973591527765797::1717927155::1717927219::1::::<><>::
+bear_turret.jpg::CompressedTexture2D::3935973591527765797::1718206394::1718206536::1::::<><>::
 game_completed_screen.jpg::CompressedTexture2D::7286550262477836559::1717324227::1717324227::1::::<><>::
 game_over_screen.jpeg::CompressedTexture2D::5660435579503186220::1717324227::1717324227::1::::<><>::
 hippo.png::CompressedTexture2D::3387307840593408481::1717761562::1717761562::1::::<><>::
 lumberjack.png::CompressedTexture2D::1531867514319489746::1717761562::1717761562::1::::<><>::
 monkey.jpg::CompressedTexture2D::908172686460591472::1717761562::1717761562::1::::<><>::
-monkey_turret.jpg::CompressedTexture2D::5798366542001792527::1717927168::1717927219::1::::<><>::
+monkey_turret.jpg::CompressedTexture2D::5798366542001792527::1718206396::1718206537::1::::<><>::
 pandefense_logo.png::CompressedTexture2D::1145826237812105188::1717324227::1717324227::1::::<><>::
 penguin.png::CompressedTexture2D::141743675124684696::1717761562::1717761562::1::::<><>::
-penguin_turret.jpg::CompressedTexture2D::6597364595841421762::1717927216::1717927219::1::::<><>::
+penguin_turret.jpg::CompressedTexture2D::6597364595841421762::1718206400::1718206536::1::::<><>::
 solider.png::CompressedTexture2D::5649358446134372489::1717761562::1717761562::1::::<><>::
 start_game_bg.png::CompressedTexture2D::1905416682775446206::1717761562::1717761562::1::::<><>::
 tank.png::CompressedTexture2D::194747052246860976::1717761562::1717761562::1::::<><>::
-::res://main/::1717927089
+::res://main/::1717934761
 global_score.gd::GDScript::-1::1717324227::0::1::::<>Node<>::
-main.gd::GDScript::-1::1717775561::0::1::::Main<>Node3D<>::
-main.tscn::PackedScene::2302486307532405442::1717927089::0::1::::<><>::res://main/main.gd<>uid://bp7qr10cgion5::::res://scenes/buttons/penguin_turret_button.tscn<>uid://rjptj7suj20g::::res://images/cannon_monkey.png<>uid://cvpgx5dmcfpy2::::res://scenes/turrets/monkey_turret_scene.tscn<>uid://deswoyxkhl2d6::::res://images/cannon_penguin.png<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>uid://cydpa4ly2d8x0::::res://scenes/turrets/penguin_turret_scene.tscn<>res://addons/godot_state_charts/atomic_state.gd<>uid://bwcu567veg558::::res://images/bear_turret.jpg<>uid://crbhgmq7i4x8s::::res://scenes/turrets/bear_turret_scene.tscn<>res://addons/godot_state_charts/transition.gd
-::res://map/::1717927057
+main.gd::GDScript::-1::1717934699::0::1::::Main<>Node3D<>::
+main.tscn::PackedScene::2302486307532405442::1717934761::0::1::::<><>::res://main/main.gd<>uid://bp7qr10cgion5::::res://scenes/buttons/penguin_turret_button.tscn<>uid://cou1iq062mjjj::::res://images/monkey_turret.jpg<>uid://cvpgx5dmcfpy2::::res://scenes/turrets/monkey_turret_scene.tscn<>res://addons/godot_state_charts/state_chart.gd<>uid://c082vppcw4kco::::res://images/penguin_turret.jpg<>res://addons/godot_state_charts/compound_state.gd<>uid://cydpa4ly2d8x0::::res://scenes/turrets/penguin_turret_scene.tscn<>res://addons/godot_state_charts/atomic_state.gd<>uid://bwcu567veg558::::res://images/bear_turret.jpg<>uid://crbhgmq7i4x8s::::res://scenes/turrets/bear_turret_scene.tscn<>res://addons/godot_state_charts/transition.gd
+::res://map/::1717934761
 fake_base.gd::GDScript::-1::1717761562::0::1::::<>Node3D<>::
 map.gd::GDScript::-1::1717761562::0::1::::Map<>Object<>::
-map.tscn::PackedScene::7021510803344267330::1717927057::0::1::::<><>::res://map/map.gd
+map.tscn::PackedScene::7021510803344267330::1717934761::0::1::::<><>::res://map/map.gd
 map_tiles_config.gd::GDScript::-1::1717761562::0::1::::MapTilesConfig<>Resource<>::
 path_generator.gd::GDScript::-1::1717153676::0::1::::PathGenerator<>Object<>::
 path_generator_config.gd::GDScript::-1::1717926347::0::1::::PathGeneratorConfig<>Resource<>::
@@ -880,10 +826,10 @@ path_generator_config.gd::GDScript::-1::1717926347::0::1::::PathGeneratorConfig<
 red_transparent.material::StandardMaterial3D::5431174046568134699::1712061783::0::1::::<><>::
 ::res://pandas_base/::1717761562
 panda1_fall.gd::GDScript::-1::1717761562::0::1::::<>Node3D<>::
-::res://projectiles/::1717926670
-banana_projectile.gd::GDScript::-1::1717776369::0::1::::BananaProjectile<>Node3D<>::
+::res://projectiles/::1717927919
+banana_projectile.gd::GDScript::-1::1717927919::0::1::::BananaProjectile<>Node3D<>::
 fish_projectile.gd::GDScript::-1::1717836494::0::1::::HoneyProjectile<>Node3D<>::
-honey_projectile.gd::GDScript::-1::1717926670::0::1::::FishProjectile<>Node3D<>::
+honey_projectile.gd::GDScript::-1::1717927335::0::1::::FishProjectile<>Node3D<>::
 projectile.gd::GDScript::-1::1717926626::0::1::::Projectile<>Node3D<>::
 ::res://resources/::1717926347
 basic_enemies_config.res::Resource/Resource::9020982673102247300::1717761562::0::1::::<><>::res://enemies/enemies_config.gd<>uid://cus8ewxk4bj5p::::res://scenes/enemies/woman_enemy_lvl3_scene.tscn
@@ -893,49 +839,49 @@ basic_tiles_config.res::Resource/MapTilesConfig::2585107968423127086::1717926347
 ::res://scenes/audio_manager/::1717426381
 audio_manager.gd::GDScript::-1::1716127244::0::1::::<>Node3D<>::
 audio_manager.tscn::PackedScene::8329149424274235104::1717426381::0::1::::<><>::res://scenes/audio_manager/audio_manager.gd<>uid://6wewnre1mw0m::::res://audio/panda_theme_song.ogg
-::res://scenes/buttons/::1717927057
-bear_turret_button.tscn::PackedScene::1929814403960990880::1717927057::0::1::::<><>::res://buttons/bear_turret_button.gd
-monkey_turret_button.tscn::PackedScene::3469512802517710553::1717927057::0::1::::<><>::res://buttons/monkey_turret_button.gd<>uid://cydpa4ly2d8x0::::res://scenes/turrets/penguin_turret_scene.tscn
-penguin_turret_button.tscn::PackedScene::3506316661100580400::1717927057::0::1::::<><>::res://buttons/penguin_turret_button.gd
-::res://scenes/enemies/::1717927057
-tank_enemy_lvl5_scene.tscn::PackedScene::8627538676833804072::1717927057::0::1::::<><>::res://enemies/tank_enemy_lvl5.gd<>uid://c3y7oj1d6brts::::res://assets/enemies-final/lvl5_tank (1024).glb<>res://scenes/health_bar/progress_bar.gd
+::res://scenes/buttons/::1717934762
+bear_turret_button.tscn::PackedScene::1929814403960990880::1717934762::0::1::::<><>::res://buttons/bear_turret_button.gd
+monkey_turret_button.tscn::PackedScene::3469512802517710553::1717934762::0::1::::<><>::res://buttons/monkey_turret_button.gd<>uid://cydpa4ly2d8x0::::res://scenes/turrets/penguin_turret_scene.tscn
+penguin_turret_button.tscn::PackedScene::3506316661100580400::1717934761::0::1::::<><>::res://buttons/penguin_turret_button.gd
+::res://scenes/enemies/::1717934761
+tank_enemy_lvl5_scene.tscn::PackedScene::8627538676833804072::1717934761::0::1::::<><>::res://enemies/tank_enemy_lvl5.gd<>uid://c3y7oj1d6brts::::res://assets/enemies-final/lvl5_tank (1024).glb<>res://scenes/health_bar/progress_bar.gd
 woman_enemy_lvl2_scene.tscn::PackedScene::3478271799242710657::1717761995::0::1::::<><>::res://enemies/woman_enemy_lvl2.gd<>uid://cf0sdfcuf7h3w::::res://assets/enemies-final/lvl2_walking.fbx<>res://scenes/health_bar/progress_bar.gd
 woman_enemy_lvl3_scene.tscn::PackedScene::6215789035194202119::1717761995::0::1::::<><>::res://enemies/woman_enemy_lvl3.gd<>res://scenes/health_bar/progress_bar.gd<>uid://cmc4cqoxc6ucl::::res://assets/enemies-final/lvl3_running.fbx
-::res://scenes/game_over/::1717927057
-game_completed.gd::GDScript::-1::1717324227::0::1::::<>CanvasLayer<>::
-game_completed.tscn::PackedScene::7581170990336536200::1717761562::0::1::::<><>::uid://db2wohqxo8mih::::res://images/game_completed_screen.jpg<>res://scenes/game_over/game_completed.gd<>uid://qlbuc5bblyo7::::res://images/pandefense_logo.png
-game_over.gd::GDScript::-1::1717324227::0::1::::<>CanvasLayer<>::
-game_over.tscn::PackedScene::5213535884180990833::1717927057::0::1::::<><>::res://scenes/game_over/game_over.gd<>uid://cmv7sulcl3cl5::::res://images/game_over_screen.jpeg
+::res://scenes/game_over/::1717935153
+game_completed.gd::GDScript::-1::1717931575::0::1::::<>CanvasLayer<>::
+game_completed.tscn::PackedScene::7581170990336536200::1717934762::0::1::::<><>::uid://db2wohqxo8mih::::res://images/game_completed_screen.jpg<>res://scenes/game_over/game_completed.gd<>uid://qlbuc5bblyo7::::res://images/pandefense_logo.png
+game_over.gd::GDScript::-1::1717931695::0::1::::<>CanvasLayer<>::
+game_over.tscn::PackedScene::5213535884180990833::1717934762::0::1::::<><>::res://scenes/game_over/game_over.gd<>uid://cmv7sulcl3cl5::::res://images/game_over_screen.jpeg
 game_start.gd::GDScript::-1::1717761562::0::1::::<>Control<>::
-game_start.tscn::PackedScene::9010036630217466860::1717927057::0::1::::<><>::uid://2e861e5h61ug::::res://images/start_game_bg.png<>res://scenes/game_over/game_start.gd<>uid://v3bvtcyn7vqo::::res://images/lumberjack.png<>uid://cmqudxdyu37mr::::res://images/solider.png<>uid://c1lpqs433jci::::res://images/tank.png<>uid://qlbuc5bblyo7::::res://images/pandefense_logo.png<>uid://boi3p225tsgw4::::res://images/hippo.png<>uid://m66qbajnl7mq::::res://images/monkey.jpg<>uid://cawq6ip6a2r1::::res://images/penguin.png
+game_start.tscn::PackedScene::9010036630217466860::1717935153::0::1::::<><>::uid://2e861e5h61ug::::res://images/start_game_bg.png<>res://scenes/game_over/game_start.gd<>uid://v3bvtcyn7vqo::::res://images/lumberjack.png<>uid://cmqudxdyu37mr::::res://images/solider.png<>uid://c1lpqs433jci::::res://images/tank.png<>uid://qlbuc5bblyo7::::res://images/pandefense_logo.png<>uid://didjdnjw133rk::::res://images/bear.png<>uid://m66qbajnl7mq::::res://images/monkey.jpg<>uid://cawq6ip6a2r1::::res://images/penguin.png
 ::res://scenes/health_bar/::1717926347
 health_bar.tscn::PackedScene::8195431442301262081::1717761995::0::1::::<><>::res://scenes/health_bar/progress_bar.gd
 health_bar_colors.tres::GradientTexture1D::4070838908446336502::1717926347::0::1::::<><>::
 progress_bar.gd::GDScript::-1::1717762006::0::1::::<>ProgressBar<>::
-::res://scenes/projectiles/::1717927057
-banana_scene.tscn::PackedScene::5103326320543578816::1717927057::0::1::::<><>::res://projectiles/banana_projectile.gd<>uid://qw1ou5px26td::::res://assets/custom_models/banana.glb
-fish_scene.tscn::PackedScene::5675355479959669726::1717927057::0::1::::<><>::res://projectiles/fish_projectile.gd<>uid://bbwnhr3nk1yhq::::res://assets/final/towers/food/fish.glb
-honey_scene.tscn::PackedScene::5808385880039178086::1717927057::0::1::::<><>::res://projectiles/fish_projectile.gd<>uid://dxu4luaultvy8::::res://assets/final/towers/food/honey_bear_bottle.glb
-::res://scenes/tiles/::1717927057
-fence_base.tscn::PackedScene::4527002321461371648::1717927057::0::1::::<><>::res://map/fake_base.gd<>uid://bykrbjfsmbpi7::::res://assets/final/base/fence.glb<>uid://dng7v70xpk8o1::::res://assets/GLTF format/tile.glb
-gate_base.tscn::PackedScene::2407302576234679428::1717761995::0::1::::<><>::res://map/fake_base.gd<>uid://bx3etq01kbgo7::::res://assets/final/base/gate.glb<>uid://dng7v70xpk8o1::::res://assets/GLTF format/tile.glb<>uid://cblshugbukexh::::res://assets/GLTF format/detail_crystalLarge.glb<>uid://chr7js7gnkm4t::::res://assets/GLTF format/detail_crystal.glb<>res://scenes/health_bar/progress_bar.gd
+::res://scenes/projectiles/::1717934762
+banana_scene.tscn::PackedScene::5103326320543578816::1717934762::0::1::::<><>::res://projectiles/banana_projectile.gd<>uid://qw1ou5px26td::::res://assets/custom_models/banana.glb
+fish_scene.tscn::PackedScene::5675355479959669726::1717934761::0::1::::<><>::res://projectiles/fish_projectile.gd<>uid://bbwnhr3nk1yhq::::res://assets/final/towers/food/fish.glb
+honey_scene.tscn::PackedScene::5808385880039178086::1717934762::0::1::::<><>::res://projectiles/fish_projectile.gd<>uid://dxu4luaultvy8::::res://assets/final/towers/food/honey_bear_bottle.glb
+::res://scenes/tiles/::1717934762
+fence_base.tscn::PackedScene::4527002321461371648::1717934761::0::1::::<><>::res://map/fake_base.gd<>uid://bykrbjfsmbpi7::::res://assets/final/base/fence.glb<>uid://dng7v70xpk8o1::::res://assets/GLTF format/tile.glb
+gate_base.tscn::PackedScene::2407302576234679428::1717934762::0::1::::<><>::res://map/fake_base.gd<>uid://bx3etq01kbgo7::::res://assets/final/base/gate.glb<>uid://dng7v70xpk8o1::::res://assets/GLTF format/tile.glb<>uid://cblshugbukexh::::res://assets/GLTF format/detail_crystalLarge.glb<>uid://chr7js7gnkm4t::::res://assets/GLTF format/detail_crystal.glb<>res://scenes/health_bar/progress_bar.gd
 tile_base.tscn::PackedScene::8189003945953655390::1717149847::0::1::::<><>::uid://dng7v70xpk8o1::::res://assets/GLTF format/tile.glb
 tile_corner.tscn::PackedScene::8043981019844944305::1713385629::0::1::::<><>::uid://dktivlhj2gvnd::::res://assets/GLTF format/tile_cornerRound.glb
 tile_crossing.tscn::PackedScene::3406769077771099046::1712061783::0::1::::<><>::uid://bin122uev8bv0::::res://assets/GLTF format/tile_crossing.glb
 tile_empty.tscn::PackedScene::8455550720518737473::1712061783::0::1::::<><>::uid://dng7v70xpk8o1::::res://assets/GLTF format/tile.glb
 tile_end.tscn::PackedScene::1068356949815731036::1712061783::0::1::::<><>::uid://bn7ru2qw0n51i::::res://assets/GLTF format/tile_endRoundSpawn.glb
-tile_panda1_base.tscn::PackedScene::1220931445917932247::1717927057::0::1::::<><>::uid://q8ong7ebyx88::::res://assets/final/pandas_base/panda1_sit/panda1_sit.glb<>uid://st1qspi2fq4l::::res://assets/final/pandas_base/panda1_fall/panda1_fall.glb<>res://pandas_base/panda1_fall.gd
+tile_panda1_base.tscn::PackedScene::1220931445917932247::1717934761::0::1::::<><>::uid://q8ong7ebyx88::::res://assets/final/pandas_base/panda1_sit/panda1_sit.glb<>uid://st1qspi2fq4l::::res://assets/final/pandas_base/panda1_fall/panda1_fall.glb<>res://pandas_base/panda1_fall.gd
 tile_panda2_base.tscn::PackedScene::2563948019643308979::1717149847::0::1::::<><>::uid://cn3r8ffrnogna::::res://assets/final/pandas_base/panda2_sit/panda2_sit.glb
 tile_panda3_base.tscn::PackedScene::7403670643154043129::1717149847::0::1::::<><>::uid://bg4nhl3yh0xkg::::res://assets/final/pandas_base/panda3_sit/panda3_sit.glb
 tile_start.tscn::PackedScene::6648493976480992972::1712061783::0::1::::<><>::uid://bxhgo00nuvxf1::::res://assets/GLTF format/tile_endSpawn.glb
 tile_straight.tscn::PackedScene::509472588529701720::1712061783::0::1::::<><>::uid://d1536hsmbsop5::::res://assets/GLTF format/tile_straight.glb
 trees.tscn::PackedScene::1150413689801720859::1717149847::0::1::::<><>::uid://b24ael4xe7bvp::::res://assets/GLTF format/detail_tree.glb<>uid://cfmwnsfmblns3::::res://assets/others/tile.glb
-::res://scenes/turrets/::1717927057
-bear_turret_scene.tscn::PackedScene::5968552477162471224::1717927057::0::1::::<><>::res://turrets/bear_turret.gd<>uid://co0vjcpopwoao::::res://scenes/projectiles/honey_scene.tscn<>uid://csx0mu4qyyuda::::res://assets/final/towers/animals/bear.glb<>uid://xnx37tgp7ndi::::res://assets/final/towers/bottoms/alaskan_cliff_rock_chunk_2.glb<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd
-monkey_turret_scene.tscn::PackedScene::6278179706195220239::1717927057::0::1::::<><>::res://turrets/monkey_turret.gd<>uid://ceydbk7xrqdu3::::res://scenes/projectiles/banana_scene.tscn<>uid://b5t68sc5il7pn::::res://assets/final/towers/bottoms/wood_chopping_trunk_base.glb<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd<>uid://bhoxgtpu77w8u::::res://assets/monkey/monkey.fbx
-penguin_turret_scene.tscn::PackedScene::6464479044149346483::1717927057::0::1::::<><>::res://turrets/penguin_turret.gd<>uid://cm4gjmtg7s4vq::::res://scenes/projectiles/fish_scene.tscn<>uid://xnx37tgp7ndi::::res://assets/final/towers/bottoms/alaskan_cliff_rock_chunk_2.glb<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>uid://cvjddv0435fos::::res://assets/final/towers/animals/penguin.glb<>res://addons/godot_state_charts/transition.gd
-::res://turrets/::1717926347
-bear_turret.gd::GDScript::-1::1717838226::0::1::::<>Node3D<>::
-monkey_turret.gd::GDScript::-1::1717926347::0::1::::<>Node3D<>::
+::res://scenes/turrets/::1717934762
+bear_turret_scene.tscn::PackedScene::5968552477162471224::1717934762::0::1::::<><>::res://turrets/bear_turret.gd<>uid://co0vjcpopwoao::::res://scenes/projectiles/honey_scene.tscn<>uid://csx0mu4qyyuda::::res://assets/final/towers/animals/bear.glb<>uid://xnx37tgp7ndi::::res://assets/final/towers/bottoms/alaskan_cliff_rock_chunk_2.glb<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd
+monkey_turret_scene.tscn::PackedScene::6278179706195220239::1717934761::0::1::::<><>::res://turrets/monkey_turret.gd<>uid://ceydbk7xrqdu3::::res://scenes/projectiles/banana_scene.tscn<>uid://b5t68sc5il7pn::::res://assets/final/towers/bottoms/wood_chopping_trunk_base.glb<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>res://addons/godot_state_charts/transition.gd<>uid://bhoxgtpu77w8u::::res://assets/monkey/monkey.fbx
+penguin_turret_scene.tscn::PackedScene::6464479044149346483::1717934761::0::1::::<><>::res://turrets/penguin_turret.gd<>uid://cm4gjmtg7s4vq::::res://scenes/projectiles/fish_scene.tscn<>uid://xnx37tgp7ndi::::res://assets/final/towers/bottoms/alaskan_cliff_rock_chunk_2.glb<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/atomic_state.gd<>uid://cvjddv0435fos::::res://assets/final/towers/animals/penguin.glb<>res://addons/godot_state_charts/transition.gd
+::res://turrets/::1717928886
+bear_turret.gd::GDScript::-1::1717927347::0::1::::<>Node3D<>::
+monkey_turret.gd::GDScript::-1::1717928886::0::1::::<>Node3D<>::
 penguin_turret.gd::GDScript::-1::1717835239::0::1::::<>Node3D<>::
 turret.gd::GDScript::-1::1717835076::0::1::::<>Node3D<>::
